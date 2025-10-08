@@ -1,0 +1,7 @@
+{
+  "name": "bachelor-thesis",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "exit 1"
+  }
+}

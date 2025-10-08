@@ -1,0 +1,1 @@
+docker run --rm -v .:/work -w /work ghcr.io/typst/typst:v0.13.1 compile --font-path fonts --ignore-system-fonts main.typ output.pdf
