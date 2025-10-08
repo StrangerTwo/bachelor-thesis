@@ -1,7 +1,8 @@
 {
   "name": "bachelor-thesis",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "exit 1"
+    "dev": "node index.js"
   }
 }
