@@ -7,7 +7,7 @@
   region: "CZ",
 )
 #set par(
-  leading: 1.5em,
+  leading: 1.1em,
 )
 
 #set document(
@@ -28,6 +28,7 @@
     y: 2.5cm,
   ),
 )
+#set par(spacing: 2em)
 
 #include "src/declarations.typ"
 

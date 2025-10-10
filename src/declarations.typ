@@ -2,8 +2,9 @@
 
 Prohlašuji:
 
-Tuto práci jsem vypracoval samostatně. Veškeré literární prameny a informace,
-které jsem v práci využil, jsou uvedeny v seznamu použité literatury.
+Práci s názvem #config.thesis() jsem vypracoval samostatně. Veškeré literární prameny a informace, které jsem v práci využil, jsou uvedeny v seznamu použité literatury.
+
+#v(1.5em)
 
 Byl jsem seznámen s tím, že se na moji práci vztahují práva a povinnosti
 vyplývající ze zákona č. 121/2000 Sb., o právu autorském, o právech
@@ -29,10 +30,31 @@ Univerzity Pardubice.
 
 V Pardubicích dne #config.today()
 
-#h(1fr) #config.author()
+#v(1em)
+
+#h(1fr) #config.author() v. r.
 
 #pagebreak()
 
-Poděkování:
+#v(1fr)
+
+*#upper("Poděkování:")*
+
+Chtěl bych poděkovat vedoucí mé bakalářské práce Ing. Renátě Máchové, Ph.D,
+za odborné vedení, četné konzultace a za odborné rady, které mi při zpracování této bakalářské práce věnovala.
+
+Dále bych chtěl poděkovat panu Ing. Tomáši Pelikánovi, Ing. Ladislavu Cihlovi a Petru Lankovi
+z Dopravního podniku města Pardubic, a.s., za technické konzultace, spolupráci při
+stanovování funkčních požadavků a hodnotné poznatky z praxe.
+Díky nim jsem měl tuto skvělou příležitost pracovat na projektu, který má dopad na tisíce lidí denně.
+
+Chtěl bych poděkovat panu Ing. Jiřímu Formánkovi a Středí škole informatiky a ekonomie - DELTA
+za vzdělání a příležitosti pro můj osobní rozvoj.
+Za jejich pomoci jsem mohl uchopit příležitost, která se nemnohokdy naskytne.
+
+Tato příležitost se naskytla v roce 2021 na události Foxconn Funnovation Week, kdy
+studenti střední školy soutěžili ve vlastní kategorii Foxconn in the City with Students
+a v pohobě hackatonu realizovali projekt, který vylepší život v Pardubicích.
+Za to společnosti Foxconn děkuji.
 
 #pagebreak()

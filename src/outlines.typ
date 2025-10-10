@@ -1,5 +1,6 @@
 = Anotace a klíčová slova:
-Stručný obsah práce ve 3-4 větách, zapsaný v jazyce práce.
+Cílem této bakalářské práce je provést zhodnocení současného stavu a vytvořit návrh vylepšení Informačního systému pro zobrazování poloh vozidel MHD. Práce se zaměří na specifikaci
+požadavků, návrh a bezpečnost nového informačního systému.
 
 #pagebreak()
 
