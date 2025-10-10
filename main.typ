@@ -32,11 +32,22 @@
 
 #include "src/declarations.typ"
 
-#show heading: h => {
-  set text(
-    size: 12pt,
-  )
-  upper(h)
-}
-
 #include "src/outlines.typ"
+
+
+#show heading.where(depth: 1): it => {
+  pagebreak()
+  set text(size: 16pt)
+  it
+}
+#show heading.where(depth: 2): set text(size: 14pt)
+#show heading.where(depth: 3): set text(size: 13pt)
+
+#set heading(numbering: "1.")
+
+#include "src/01_Identifikace_IS.typ"
+
+#include "src/02_Specifikace_pozadavku_IS.typ"
+
+#include "src/03_Navrh_implementace_IS.typ"
+
