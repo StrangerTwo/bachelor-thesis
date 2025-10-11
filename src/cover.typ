@@ -7,7 +7,7 @@
 #set align(center)
 
 #upper(config.university())
-#v(1em)
+
 #upper(config.faculty())
 
 #v(1fr)

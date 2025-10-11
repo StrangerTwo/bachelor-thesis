@@ -1,10 +1,10 @@
 #import "config.typ" as config
 
+#show heading: h => upper(h)
+
 Prohlašuji:
 
 Práci s názvem #config.thesis() jsem vypracoval samostatně. Veškeré literární prameny a informace, které jsem v práci využil, jsou uvedeny v seznamu použité literatury.
-
-#v(1.5em)
 
 Byl jsem seznámen s tím, že se na moji práci vztahují práva a povinnosti
 vyplývající ze zákona č. 121/2000 Sb., o právu autorském, o právech
@@ -17,8 +17,6 @@ je Univerzita Pardubice oprávněna ode mne požadovat přiměřený příspěve
 úhradu nákladů, které na vytvoření díla vynaložila, a to podle okolností až do
 jejich skutečné výše.
 
-#v(1.5em)
-
 Beru na vědomí, že v souladu s § 47b zákona č. 111/1998 Sb., o vysokých
 školách a o změně a doplnění dalších zákonů (zákon o vysokých školách), ve
 znění pozdějších předpisů, a směrnicí Univerzity Pardubice č. 7/2019 Pravidla
@@ -30,15 +28,13 @@ Univerzity Pardubice.
 
 V Pardubicích dne #config.today()
 
-#v(1em)
-
 #h(1fr) #config.author() v. r.
 
 #pagebreak()
 
 #v(1fr)
 
-*#upper("Poděkování:")*
+= Poděkování:
 
 Chtěl bych poděkovat vedoucí mé bakalářské práce Ing. Renátě Máchové, Ph.D,
 za odborné vedení, četné konzultace a za odborné rady, které mi při zpracování této bakalářské práce věnovala.

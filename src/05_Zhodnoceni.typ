@@ -1,0 +1,1 @@
+= Závěrečné zhodnocení

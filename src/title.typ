@@ -8,13 +8,13 @@
 #counter(page).update(1)
 
 #config.university()
-#v(1em)
+
 #config.faculty()
 
 #v(1fr)
 
 #config.thesis()
-#v(1em)
+
 Bakalářská práce
 
 #v(1fr)
