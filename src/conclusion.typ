@@ -1,5 +1,7 @@
 #show heading: h => upper(h)
 
+#pagebreak()
+
 = Závěr
 
 #pagebreak()

@@ -34,6 +34,9 @@
     spacing: 2em,
   )
   set cite(style: "chicago-notes")
+  show figure.where(
+    kind: table,
+  ): set figure.caption(position: top)
   doc
 }
 
