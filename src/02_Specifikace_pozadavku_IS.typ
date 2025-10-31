@@ -8,8 +8,8 @@ Důležitým funkčním požadavkem pro nový IS bude možnost nové data o jíz
 
 V Pardubicích se jedná například o zvláštní spoje dopravní posily při událostech jako je např. Velká pardubická, nebo Zlatá přilba.
 
-yes, @databases
-yes, @onlineSecurity
-yes, @isManagement
-yes, @modernIT
-yes, @springBoot
+test, @databases
+test, @onlineSecurity
+test, @isManagement
+test, @modernIT
+test, @springBoot
