@@ -76,7 +76,25 @@ Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobraz
 
 === Otevřená data ČR
 
-Pro účel zvěřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ). // TODO: CITE
+Pro účel zvěřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ). Tento informační systém vznikl na základě vyhlášky Ministerstva dopravy ČR z roku 2014 @vyhlaskaCISJR a zprostředkovává veřejně dostupná data ve strojově čitelném formátu.
+
+Data na FTP uložišti obsahují vícero druhů informací.
+
++ Jízdní řády #underline[vlakových spojení] ve formátu *XML*
++ Jízdní řády #underline[autobusové dopravy] ve formátu *JDF*
+
+Pro potřeby požadovaného informačního systému budou využívány jízdní řády městské hromadné dopravy dopravce IČO 63217066 Dopravní podnik města Pardubic a.s.
+
+==== Datový formát JDF
+
+Datový formát JDF je popsán dokumentací vydanou součástí metodického pokynu ministerstva dopravy. @jdfSpec
+
+Tento datový formát disponuje informacemi o názvech, časováním a kilometráží autobusových spojů s dodatečnou možností označit spoj, či zastávku kódovou značkou.
+
+Značnou nevýhodou tohoto datového formátu je absence geografických dat. GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
 
 === Zdroj dat o polohách vozidel
 
+Dopravní podnik města Pardubic a.s. v roce 2019 vydala zakázku pro vytvoření digitální rádiové sítě v Pardubicích. @dpmpRadiovaSit
+
+Na základě tohoto kroku v následujících letech vytvořili aplikační rozhraní poskytující informace o vozidlech dopravce, všechně aktuální polohy.

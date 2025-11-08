@@ -32,6 +32,7 @@ information system, design,
 
 #outline(
   title: "Obsah",
+  depth: 3,
 )
 
 #pagebreak()
