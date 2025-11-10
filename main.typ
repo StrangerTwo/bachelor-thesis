@@ -1,4 +1,7 @@
 #import "src/config.typ" as config
+#import "@preview/vlna:0.1.1" as vlna
+
+#show: vlna.apply-vlna
 
 #show: config.defaults
 
@@ -25,6 +28,8 @@
     #show: config.body
 
     #include "src/introduction.typ"
+
+    #set heading(numbering: "1.")
 
     #include "src/01_Identifikace_IS.typ"
 

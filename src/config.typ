@@ -33,10 +33,8 @@
     justify: true,
     spacing: 2em,
   )
-  set cite(style: "chicago-notes")
-  show figure.where(
-    kind: table,
-  ): set figure.caption(position: top)
+  show figure.where(kind: table): set figure.caption(position: top)
+  show figure.caption: set align(left)
   doc
 }
 
@@ -62,8 +60,6 @@
 }
 
 #let body(doc) = {
-  set heading(numbering: (n1, ..x) => numbering("1.", n1 - 1, ..x))
-
   show heading: set block(
     below: 1.5em,
   )

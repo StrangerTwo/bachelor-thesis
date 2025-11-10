@@ -2,10 +2,10 @@
   margin: (rest: 0pt),
 )
 
-#image("../attachments/navrh_zadani.svg")
+#image("../attachments/zadani.svg")
 
 #pagebreak()
 
-#image("../attachments/podklad_pro_zadani.svg")
+#image("../attachments/zadani_2.svg")
 
 #pagebreak()

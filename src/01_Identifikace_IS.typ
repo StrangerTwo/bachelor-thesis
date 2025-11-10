@@ -2,7 +2,7 @@
 
 == Základní charakteristika aplikace
 
-Informační systém pro zobrazování poloh vozidel MHD má v Pardubickém kraji
+Informační systém pro zobrazování poloh vozidel MHD má
 za úkol zpřístupnit veřejnosti informace o aktuálních polohách spojů,
 jejich zpožděních, nebo jiných provozních událostech, které se týkají cestujících.
 
@@ -83,7 +83,7 @@ Data na FTP uložišti obsahují vícero druhů informací.
 + Jízdní řády #underline[vlakových spojení] ve formátu *XML*
 + Jízdní řády #underline[autobusové dopravy] ve formátu *JDF*
 
-Pro potřeby požadovaného informačního systému budou využívány jízdní řády městské hromadné dopravy dopravce IČO 63217066 Dopravní podnik města Pardubic a.s.
+Pro potřeby požadovaného informačního systému budou využívány jízdní řády autobusové dopravy ve formátu JDF
 
 ==== Datový formát JDF
 
@@ -95,6 +95,3 @@ Značnou nevýhodou tohoto datového formátu je absence geografických dat. GPS
 
 === Zdroj dat o polohách vozidel
 
-Dopravní podnik města Pardubic a.s. v roce 2019 vydala zakázku pro vytvoření digitální rádiové sítě v Pardubicích. @dpmpRadiovaSit
-
-Na základě tohoto kroku v následujících letech vytvořili aplikační rozhraní poskytující informace o vozidlech dopravce, všechně aktuální polohy.
