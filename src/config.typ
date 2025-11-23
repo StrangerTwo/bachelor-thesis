@@ -81,3 +81,12 @@
   )
   doc
 }
+
+#let todoBlock(body) = {
+  block(
+    fill: gradient.repeat(..color.map.rainbow),
+    inset: 8pt,
+    radius: 4pt,
+    body,
+  )
+}
