@@ -26,7 +26,6 @@ Informační systémy se skládají z prvků několika druhů:
 
 Identifikaci klíčových částí informačního systému lze provádět pomocí mnoha metod.
 
-
 === Analýza podle funkčních oblastí IS
 
 Informační systém je možné rozdělit na funkční celky, které reprezentují hlavní skupiny aktivit, které IS zajištuje. @Pressman2014
@@ -59,6 +58,31 @@ Analýza spočívá v identifikaci:
 - infrastrukturní prvky (server, cloud, služby třetích stran)
 
 Tento přístup je důležitý pro vyzobrazení technologických limitů, existenci kritických integrací, nebo využití nových technologií.
+
+== Teoretické metody a přístupy používané při návrhu IS
+
+V této části popíšu jaké postupy využiji ve své práci pro návrh nového IS.
+
+@Sommerville2015 @SommervilleSawyer1997
+
+=== UML diagram
+
+=== BPMN diagram
+
+=== Use-case model
+
+=== Identifikace problémových míst a optimalizace procesů
+
+
+Při zpracovávání procesního diagramu je nutné zaměřit se na následující oblasti. Při správné identifikaci všech kritických oblastí již ve fázi analýzi, dokážeme vytvořit jejich řešení v rámci návrhu nového IS.
+@WardPeppard2002
+
+/ Pain points: co jsou pain points
+
+/ Úzká místa: co jsou úzká místa
+
+/ Redundantní kroky: co jsou redundantní kroky
+
 
 == Základní charakteristika aplikace
 
