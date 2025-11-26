@@ -56,3 +56,4 @@ information system, design,
 
 // #terms()
 / CIS JŘ: Celostátní informační systém o jízdních řádech
+/ API: Aplication Programming Interface - Aplikační programové rozhraní

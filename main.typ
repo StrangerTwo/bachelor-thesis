@@ -29,7 +29,7 @@
 
     #include "src/introduction.typ"
 
-    #set heading(numbering: "1.")
+    #show: config.headings
 
     #include "src/01_Identifikace_IS.typ"
 

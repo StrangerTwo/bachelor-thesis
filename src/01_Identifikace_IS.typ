@@ -14,19 +14,23 @@ Informační systémy pomáhají při rozhodování, správě, analýze a vizual
 
 Informační systémy se skládají z prvků několika druhů:
 
-/ Hardware: fyzická zařizení, jako třeba servery, počítatě, mobilní telefony, které sbírají a zpracovávají data. V kontextu informačního systému můžeme rozdělit na zařízení klientské a serverové. Např. servery zpracovávají větší množství dat a připravují je pro stovky klientských zařízení. Klientská zařízení následně dotazují serverové komponenty pro data personalizované pro jejich situaci (např. dle GPS polohy)
+===== Hardware
+fyzická zařizení, jako třeba servery, počítatě, mobilní telefony, které sbírají a zpracovávají data. V kontextu informačního systému lze rozdělit na zařízení klientské a serverové. Např. servery zpracovávají větší množství dat a připravují je pro stovky klientských zařízení. Klientská zařízení následně dotazují serverové komponenty pro data personalizované pro jejich situaci (např. dle GPS polohy)
 
-/ Software: aplikace a programy, které využívají hardware pro sbírají data, zpracovávají informace a např. je zobrazují cestujícím. Hlavnímy druhy software jsou databázové systémy, informační systémy pro správu dat. Je to díky těmto software aplikacích, které umožňují efektivní zpracovávání a distribuci informací.
+===== Software
+aplikace a programy, které využívají hardware pro sbírají data, zpracovávají informace a např. je zobrazují cestujícím. Hlavnímy druhy software jsou databázové systémy, informační systémy pro správu dat. Je to díky těmto software aplikacích, které umožňují efektivní zpracovávání a distribuci informací.
 
-/ Data: informace, které jsou v informačním systému shromažďovány a zpracovávány. Mohou zahrnovat data o jízdních řádech, geografické informace o polohách vozidel, nebo actuální feed informací o zpoždění. Data jsou základem pro rozhodování a plánování. Díky historickým datům je možné zpracovávat statistiku a vytvořit optimalizovaný jízdní řád na příští období.
+===== Data
+jsou v informačním systému shromažďovány a zpracovávány. Mohou zahrnovat data o jízdních řádech, geografické informace o polohách vozidel, nebo actuální feed informací o zpoždění. Data jsou základem pro rozhodování a plánování. Díky historickým datům je možné zpracovávat statistiku a vytvořit optimalizovaný jízdní řád na příští období.
 
-/ Lidé: uživatelé a správci systému. Buďto k systému přistupují za účelem získání informací, nebo chtějí využít nashromážděná data pro provedení analýz, nebo ověření hypotéz pro jejich další rozhodování. Lidé musí být pro práci s informačním systémem proškoleni, aby mohli svoji práci provádět efektivně a nedocházelo při jejich práci k chybám. @Danel2013
+===== Lidé
+uživatelé a správci systému. Buďto k systému přistupují za účelem získání informací, nebo chtějí využít nashromážděná data pro provedení analýz, nebo ověření hypotéz pro jejich další rozhodování. Lidé musí být pro práci s informačním systémem proškoleni, aby mohli svoji práci provádět efektivně a nedocházelo při jejich práci k chybám. @Danel2013
 
 == Metodický přístup k identifikaci klíčových částí IS
 
 Identifikaci klíčových částí informačního systému lze provádět pomocí mnoha metod.
 
-=== Analýza podle funkčních oblastí IS
+===== Analýza podle funkčních oblastí IS
 
 Informační systém je možné rozdělit na funkční celky, které reprezentují hlavní skupiny aktivit, které IS zajištuje. @Pressman2014
 
@@ -39,21 +43,21 @@ Tento příštup umožňuje strukturovaně popsat:
 
 Tento způsob identifikace se uplatňuje především u systémů, které poskytují více navzájem samostatných, ale propojených funkcí.
 
-=== Procesně orientovaná analýza
+===== Procesně orientovaná analýza
 
 Systém je analyzován podle toho, jaké podnikové procesy podporuje.
 V této analýze je kladen důraz na přesnou identifikaci částí IS, které mají přímý dopad na chod organizace. @Dumas2018
 
 Při správném zpracování této analýzy, dokáže odhalit úzká místa podnikových procesů, nebo manuální operace, které by bylo možné z části, nebo plně automatizovat.
 
-=== Analýza architektury a komponent
+===== Analýza architektury a komponent
 
 Rozbor architektury systému lze provést z hlediska systémového inženýrství.
 @Blanchard2010
 Analýza spočívá v identifikaci:
 
 - softwarových komponent,
-- API a integračních rozhraní,
+- Aplikační programové rozhraní (API) a integračních rozhraní,
 - datové uložiště a formáty dat,
 - infrastrukturní prvky (server, cloud, služby třetích stran)
 
@@ -62,27 +66,27 @@ Tento přístup je důležitý pro vyzobrazení technologických limitů, existe
 == Teoretické metody a přístupy používané při návrhu IS
 
 V této části popíšu jaké postupy využiji ve své práci pro návrh nového IS.
-
 @Sommerville2015 @SommervilleSawyer1997
 
-=== UML diagram
+===== Identifikace problémových míst a optimalizace procesů
 
-=== BPMN diagram
+Při zpracovávání procesního diagramu je nutné zaměřit se na následující oblasti. Díky správné identifikaci všech kritických oblastí již ve fázi analýzi, je ve fázi návrhu nového IS možné vytvořit řešení.
+@WardPeppard2002 @Dumas2018
 
-=== Use-case model
+===== Pain points
+co jsou pain points
 
-=== Identifikace problémových míst a optimalizace procesů
+===== Úzká místa
+co jsou úzká místa
 
+===== Redundantní kroky
+co jsou redundantní kroky
 
-Při zpracovávání procesního diagramu je nutné zaměřit se na následující oblasti. Při správné identifikaci všech kritických oblastí již ve fázi analýzi, dokážeme vytvořit jejich řešení v rámci návrhu nového IS.
-@WardPeppard2002
+===== UML diagram
 
-/ Pain points: co jsou pain points
+===== BPMN diagram
 
-/ Úzká místa: co jsou úzká místa
-
-/ Redundantní kroky: co jsou redundantní kroky
-
+===== Use-case model
 
 == Základní charakteristika aplikace
 
@@ -99,20 +103,6 @@ Aplikace by měla sloužit jako dodatečný komunikační kanál dopravce, aby s
 
 Jednoduchá klientská aplikace by se měla rozšířit mezi větší část cestujících
 a stát se aktivně využívaným místem pro zobrazování aktuálních situací, které ovlivňují cestující.
-
-=== Cíle
-
-#set enum(numbering: "1)")
-
-+ Rozšířit aplikaci na 90% zastávek v podobě QR kódu obsahující přehled odjezdů spojů ze zaztávky do září 2026
-+ Vytvořit administrativní backoffice aplikace pro možnost publikování provozních upozornění pro cestující do ledna 2026
-+ Optimalizace klientské aplikace aby došlo ke snížení zátěže aplikačního serveru o 10% v příštích 12 měsicích
-
-=== Metriky
-
-+ Kontrola vystavených QR kódů
-+ Zavedením administrativního backoffice do provozu
-+ Dle analytických dat nashromážděných v nadcházejících 12 měsicích
 
 == Klíčové procesy aplikace
 

@@ -90,3 +90,11 @@
     body,
   )
 }
+
+#let headings(doc) = {
+  set heading(numbering: "1.")
+  show heading.where(level: 5): it => [
+    #block(it.body)
+  ]
+  doc
+}

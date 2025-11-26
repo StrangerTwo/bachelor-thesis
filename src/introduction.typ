@@ -8,6 +8,7 @@ Novou výzvou pro dopravce je informovat své cestující o aktuálním dění. 
 Existující řešení aplikace pro zobrazování poloh vozidel již nesplňuje stále se navyšující požadavky na informační systém.
 
 Cílem práce je provést zhodnocení současného stavu a vytvořit návrh vylepšení Informačního systému pro zobrazování poloh vozidel MHD.
-Cíl bude splněn následujícím obsahem práce. V úvodu bude projednány teoretické východiska, na základě kterých identifikujeme stav a klíčové části aktuálního informačního systému.
+Cíl bude splněn následujícím obsahem práce. V~úvodu budou projednány teoretická východiska.
+Následně bude identifikován stav a klíčové části aktuálního informačního systému.
 Bude vytvořena specifikace požadavků s návrhem pro nový informační systém.
-Ve finále bude popsána nutnost informační bezpečnosti a specifika pro dohled nad provozem aplikace.
+V závěrečné části bude popsána nutnost informační bezpečnosti a specifika pro dohled nad provozem aplikace.
