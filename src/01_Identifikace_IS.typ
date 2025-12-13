@@ -2,17 +2,17 @@
 
 = Identifikace klíčových částí aktuálního IS
 
-Pro porozumění tématu se nyní zaměříme na definice a teoretická východiska pro tuto práci.
+Za účelem porozumění tématu nyní výjmenujeme definice a teoretická východiska pro tuto práci.
 
 Bude třeba vymezit hranice informačního systému. Upřesnit jeho roli pro fungování podniku. Dekomponovat jej na jeho části a určit, jakými procesními kroky je možné celý systém zefektivnit.
 
 == Informační systém
 
 Informační systém (IS) je organizovaná množina prvků, které spolupracují za účelem sběru, zpracovávání, koordinace a procesování informací.
-@Bruckner_2012
+
 Informační systémy pomáhají při rozhodování, správě, analýze a vizualizaci procesů podniku.
 
-Informační systémy se skládají z prvků několika druhů:
+Informační systémy se skládají z několika prvků @Bruckner_2012 @Danel2013:
 
 ===== Hardware
 fyzická zařizení, jako třeba servery, počítatě, mobilní telefony, které sbírají a zpracovávají data. V kontextu informačního systému lze rozdělit na zařízení klientské a serverové. Např. servery zpracovávají větší množství dat a připravují je pro stovky klientských zařízení. Klientská zařízení následně dotazují serverové komponenty pro data personalizované pro jejich situaci (např. dle GPS polohy)
@@ -24,7 +24,7 @@ aplikace a programy, které využívají hardware pro sbírají data, zpracováv
 jsou v informačním systému shromažďovány a zpracovávány. Mohou zahrnovat data o jízdních řádech, geografické informace o polohách vozidel, nebo actuální feed informací o zpoždění. Data jsou základem pro rozhodování a plánování. Díky historickým datům je možné zpracovávat statistiku a vytvořit optimalizovaný jízdní řád na příští období.
 
 ===== Lidé
-uživatelé a správci systému. Buďto k systému přistupují za účelem získání informací, nebo chtějí využít nashromážděná data pro provedení analýz, nebo ověření hypotéz pro jejich další rozhodování. Lidé musí být pro práci s informačním systémem proškoleni, aby mohli svoji práci provádět efektivně a nedocházelo při jejich práci k chybám. @Danel2013
+uživatelé a správci systému. Buďto k systému přistupují za účelem získání informací, nebo chtějí využít nashromážděná data pro provedení analýz, nebo ověření hypotéz pro jejich další rozhodování. Lidé musí být pro práci s informačním systémem proškoleni, aby mohli svoji práci provádět efektivně a nedocházelo při jejich práci k chybám.
 
 == Metodický přístup k identifikaci klíčových částí IS
 
@@ -113,6 +113,7 @@ Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interkt
 #figure(
   image("../images/current_index.png", width: 80%),
   caption: [Ukázka aplikace],
+  supplement: [test],
 ) <currentIndex>
 
 === Detail spoje jedoucího vozidla

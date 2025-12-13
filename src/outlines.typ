@@ -52,8 +52,10 @@ information system, design,
   target: figure.where(kind: "chart"),
 )
 
+#pagebreak()
 #heading("Seznam zkratek a značek", outlined: true)
 
 // #terms()
 / CIS JŘ: Celostátní informační systém o jízdních řádech
-/ API: Aplication Programming Interface - Aplikační programové rozhraní
+/ API: Aplikační programové rozhraní
+/ IS: Informační systém

@@ -34,7 +34,15 @@
     spacing: 2em,
   )
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.caption: set align(left)
+  show figure.caption: it => {
+    set align(left)
+    it.supplement
+    [ ]
+    context it.counter.display(it.numbering)
+    [: ]
+
+    it.body
+  }
   doc
 }
 
