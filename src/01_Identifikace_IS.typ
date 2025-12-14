@@ -112,8 +112,12 @@ Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interkt
 
 #figure(
   image("../images/current_index.png", width: 80%),
-  caption: [Ukázka aplikace],
-  supplement: [test],
+  caption: [
+    Ukázka aplikace
+
+    #set align(right)
+    Zdroj: @onlineDpmp Online poloha vozů MHD Pardubice
+  ],
 ) <currentIndex>
 
 === Detail spoje jedoucího vozidla
