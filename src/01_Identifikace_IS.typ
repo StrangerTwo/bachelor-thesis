@@ -3,19 +3,17 @@
 = Identifikace klíčových částí aktuálního IS
 
 Za účelem porozumění tématu nyní výjmenujeme definice a teoretická východiska pro tuto práci.
-
-Bude třeba vymezit hranice informačního systému. Upřesnit jeho roli pro fungování podniku. Dekomponovat jej na jeho části a určit, jakými procesními kroky je možné celý systém zefektivnit.
+Bude třeba vymezit hranice informačního systému (IS). Upřesnit jeho roli pro fungování podniku.
+Dekomponovat jej na jeho části a určit, jakými procesními kroky je možné celý systém zefektivnit.
 
 == Informační systém
 
-Informační systém (IS) je organizovaná množina prvků, které spolupracují za účelem sběru, zpracovávání, koordinace a procesování informací.
-
-Informační systémy pomáhají při rozhodování, správě, analýze a vizualizaci procesů podniku.
-
-Informační systémy se skládají z několika prvků @Bruckner_2012 @Danel2013:
+IS je organizovaná množina prvků, které spolupracují za účelem sběru, zpracovávání, koordinace a procesování informací.
+IS pomáhají při rozhodování, správě, analýze a vizualizaci procesů podniku.
+IS se skládají z n8sledujících prvků @Bruckner_2012 @Danel2013:
 
 ===== Hardware
-fyzická zařizení, jako třeba servery, počítatě, mobilní telefony, které sbírají a zpracovávají data. V kontextu informačního systému lze rozdělit na zařízení klientské a serverové. Např. servery zpracovávají větší množství dat a připravují je pro stovky klientských zařízení. Klientská zařízení následně dotazují serverové komponenty pro data personalizované pro jejich situaci (např. dle GPS polohy)
+fyzická zařizení, jako třeba servery, počítatě, mobilní telefony, které sbírají a zpracovávají data. V kontextu IS lze rozdělit na zařízení klientské a serverové. Např. servery zpracovávají větší množství dat a připravují je pro stovky klientských zařízení. Klientská zařízení následně dotazují serverové komponenty pro data personalizované pro jejich situaci (např. dle GPS polohy)
 
 ===== Software
 aplikace a programy, které využívají hardware pro sbírají data, zpracovávají informace a např. je zobrazují cestujícím. Hlavnímy druhy software jsou databázové systémy, informační systémy pro správu dat. Je to díky těmto software aplikacích, které umožňují efektivní zpracovávání a distribuci informací.
@@ -28,65 +26,53 @@ uživatelé a správci systému. Buďto k systému přistupují za účelem zís
 
 == Metodický přístup k identifikaci klíčových částí IS
 
-Identifikaci klíčových částí informačního systému lze provádět pomocí mnoha metod.
+Identifikaci klíčových částí IS lze provádět pomocí mnoha metod.
 
-===== Analýza podle funkčních oblastí IS
+===== Funkční analýza IS
 
-Informační systém je možné rozdělit na funkční celky, které reprezentují hlavní skupiny aktivit, které IS zajištuje. @Pressman2014
+Funkční analýza se zaměřuje na identifikaci funkcí, které systém poskytuje, bez ohledu na jejich technickou implementaci. Jejím výsledkem je přehled jednotlivých funkcionalit systému, rozdělených podle logických celků. @Sommerville2015
 
-Tento příštup umožňuje strukturovaně popsat:
+Tato analýza umožňuje strukturovaně popsat:
 
 - klíčové moduly systému,
 - vazby mezi nimi,
 - datové toky,
 - technické a procesní závislosti.
 
-Tento způsob identifikace se uplatňuje především u systémů, které poskytují více navzájem samostatných, ale propojených funkcí.
+Díky funkční analýze lze jednoduše určit hranice systému a jeho hlavních komponent.
 
-===== Procesně orientovaná analýza
+#config.todo[
+  + Identifikace a analýza business procesů: Pochopení stávajících procesů (AS-IS) a návrh nových (TO-BE) s využitím IS, např. proces objednávky, skladové hospodářství.
+  + Definice funkcí systému: Co přesně má systém umět? (např. správa dat, zadávání transakcí, generování reportů, automatické notifikace).
+  + Stanovení uživatelských rolí a oprávnění: Kdo bude systém používat (manažer, skladník, účetní) a jaké akce bude moci provádět.
+  + Specifikace datových modelů: Jaká data se budou v systému spravovat, jejich struktura a vztahy (např. zákazník, produkt, objednávka).
+  + Definice vstupů a výstupů: Jaká data systém přijímá (vstupy) a jaké informace generuje (výstupy).
+  + Uživatelské rozhraní (UI) a zkušenost (UX): Jak bude systém vypadat a jak se bude ovládat.
+]
+
+===== Procesní analýza (Business Process Analysis)
 
 Systém je analyzován podle toho, jaké podnikové procesy podporuje.
-V této analýze je kladen důraz na přesnou identifikaci částí IS, které mají přímý dopad na chod organizace. @Dumas2018
+V této analýze je kladen důraz na přesnou identifikaci částí IS, které mají přímý dopad na chod organizace. Cílem je pochopit tok činností, vstupy, výstupy a odpovědnosti. @Dumas2018
 
-Při správném zpracování této analýzy, dokáže odhalit úzká místa podnikových procesů, nebo manuální operace, které by bylo možné z části, nebo plně automatizovat.
+Při správném zpracování této analýzy, propojí reálné procesy organizace s IS.
+Dokáže odhalit neefektivní procesy a problémová místa podnikových procesů.
+Slouží jako podklad pro manuální operace, které by bylo možné z části, nebo plně automatizovat.
 
-===== Analýza architektury a komponent
+#config.todo[
+  + Definice cílů: Stanovení, čeho chceme analýzou dosáhnout (např. zkrácení doby zpracování, snížení chyb).
+  + Mapování současného stavu (As-Is): Detailní zaznamenání všech kroků, aktérů, systémů a dat v procesu (pomocí diagramů, flowchartů).
+  + Analýza dat: Identifikace bottlenecks, plýtvání (NVA), rizik a příležitostí.
+  + Návrh budoucího stavu (To-Be): Vytvoření optimalizovaného procesu, který řeší zjištěné problémy.
+  + Implementace a monitoring: Zavedení změn a průběžné sledování jejich účinnosti.
+]
 
-Rozbor architektury systému lze provést z hlediska systémového inženýrství.
-@Blanchard2010
-Analýza spočívá v identifikaci:
+===== Modelování procesů pomocí BPMN
 
-- softwarových komponent,
-- Aplikační programové rozhraní (API) a integračních rozhraní,
-- datové uložiště a formáty dat,
-- infrastrukturní prvky (server, cloud, služby třetích stran)
+Business Process Model and Notation (BPMN) je standardizovaný jazyk pro grafické modelování procesů. @omg2013bpmn202 @freund2012reallifebpmn @weske2024bpm
+Byl vytvořen s cílem sjednotit způsob jejich dokumentace a zlepšit komunikaci mezi technickými a netechnickými účastníky projektu.
 
-Tento přístup je důležitý pro vyzobrazení technologických limitů, existenci kritických integrací, nebo využití nových technologií.
-
-== Teoretické metody a přístupy používané při návrhu IS
-
-V této části popíšu jaké postupy využiji ve své práci pro návrh nového IS.
-@Sommerville2015 @SommervilleSawyer1997
-
-===== Identifikace problémových míst a optimalizace procesů
-
-Při zpracovávání procesního diagramu je nutné zaměřit se na následující oblasti. Díky správné identifikaci všech kritických oblastí již ve fázi analýzi, je ve fázi návrhu nového IS možné vytvořit řešení.
-@WardPeppard2002 @Dumas2018
-
-===== Pain points
-co jsou pain points
-
-===== Úzká místa
-co jsou úzká místa
-
-===== Redundantní kroky
-co jsou redundantní kroky
-
-===== UML diagram
-
-===== BPMN diagram
-
-===== Use-case model
+Modely BPMN jsou jedním z průmyslových standardů. Umožňuje identifikovat, které části procesu jsou v IS podporovány. K jakým interakcím uživatele se systémem dochází.
 
 == Základní charakteristika aplikace
 
@@ -108,28 +94,31 @@ a stát se aktivně využívaným místem pro zobrazování aktuálních situac�
 
 === Zobrazování aktuálních poloh na mapě
 
-Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interktivní mapě. Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na aplikačním serveru.
+Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interktivní mapě. Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na aplikačním serveru. To je vidět na @currentIndex
 
-#figure(
+#config.imageFigure(
   [
     #figure(
       image("../images/current_index.png", width: 80%),
       caption: [Ukázka aplikace],
     ) <currentIndex>
   ],
-  caption: [Zdroj: @onlineDpmp],
-  numbering: none,
-  outlined: false,
+  [@onlineDpmp],
 )
 
 === Detail spoje jedoucího vozidla
 
 Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho rozkliknutí je k dispozici zobrazení detail tohoto spoje.
 
-#figure(
-  image("../images/current_detail.png", width: 80%),
-  caption: [Detail spoje],
-) <currentDetail>
+#config.imageFigure(
+  [
+    #figure(
+      image("../images/current_detail.png", width: 80%),
+      caption: [Detail spoje],
+    ) <currentDetail>
+  ],
+  [@onlineDpmp],
+)
 
 === Filtrování linky uživatelem
 
@@ -139,40 +128,26 @@ Aplikaci může uživatel obsluhovat pomocí postranní lišty, ve které má k 
 
 Vyhledávání zastávky je dalším prvkem postranní lišty.
 
-#figure(
-  image("../images/current_sidebar.png", width: 80%),
-  caption: [Postranní lišta aplikace],
-) <currentSidebar>
+#config.imageFigure(
+  [
+    #figure(
+      image("../images/current_sidebar.png", width: 80%),
+      caption: [Postranní lišta aplikace],
+    ) <currentSidebar>
+  ],
+  [@onlineDpmp],
+)
 
 === Přehled odjezdů ze zastávky
 
 Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobrazit její detail. Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
 
-#figure(
-  image("../images/current_station_detail.png", width: 80%),
-  caption: [Detail zastávky],
-) <currentSidebar>
-
-== Prerekvizity klíčových procesů
-
-=== Otevřená data ČR
-
-Pro účel zvěřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ). Tento informační systém vznikl na základě vyhlášky Ministerstva dopravy ČR z roku 2014 @vyhlaskaCISJR a zprostředkovává veřejně dostupná data ve strojově čitelném formátu.
-
-Data na FTP uložišti obsahují vícero druhů informací.
-
-+ Jízdní řády #underline[vlakových spojení] ve formátu *XML*
-+ Jízdní řády #underline[autobusové dopravy] ve formátu *JDF*
-
-Pro potřeby požadovaného informačního systému budou využívány jízdní řády autobusové dopravy ve formátu JDF
-
-==== Datový formát JDF
-
-Datový formát JDF je popsán dokumentací vydanou součástí metodického pokynu ministerstva dopravy. @jdfSpec
-
-Tento datový formát disponuje informacemi o názvech, časováním a kilometráží autobusových spojů s dodatečnou možností označit spoj, či zastávku kódovou značkou.
-
-Značnou nevýhodou tohoto datového formátu je absence geografických dat. GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
-
-=== Zdroj dat o polohách vozidel
-
+#config.imageFigure(
+  [
+    #figure(
+      image("../images/current_station_detail.png", width: 80%),
+      caption: [Detail zastávky],
+    ) <currentSidebar>
+  ],
+  [@onlineDpmp],
+)

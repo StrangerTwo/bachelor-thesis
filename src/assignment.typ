@@ -1,6 +1,6 @@
-#set page(
-  margin: (rest: 0pt),
-)
+// #set page(
+//   margin: (rest: 0pt),
+// )
 
 #image("../attachments/zadani.svg")
 

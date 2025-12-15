@@ -59,3 +59,6 @@ information system, design,
 / CIS JŘ: Celostátní informační systém o jízdních řádech
 / API: Aplikační programové rozhraní
 / IS: Informační systém
+/ BPMN: Business Process Model and Notation
+/ UI: Uživatelské rozhraní
+/ UX: Uživatelský žážitek (zkušenost)

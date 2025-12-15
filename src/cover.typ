@@ -14,7 +14,7 @@
 
 BAKALÁŘSKÁ PRÁCE
 
-#v(1fr)
+#v(2fr)
 
 #config.year() #h(1fr) #config.author()
 

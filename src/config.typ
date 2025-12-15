@@ -34,11 +34,6 @@
     spacing: 2em,
   )
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.caption: it => {
-    set align(left)
-    set par(spacing: 1em)
-    it
-  }
   doc
 }
 
@@ -101,4 +96,25 @@
     #block(it.body)
   ]
   doc
+}
+
+#let imageFigure(body, source) = {
+  show figure.caption: set align(right)
+  figure(
+    [
+      #show figure.caption: set align(left)
+      #body
+    ],
+    caption: [Zdroj: #source],
+    numbering: none,
+    outlined: false,
+  )
+}
+
+#let todo(body) = {
+  block(
+    fill: luma(230),
+    inset: 8pt,
+    radius: 4pt,
+  )[#body]
 }

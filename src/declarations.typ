@@ -4,7 +4,9 @@
 
 Prohlašuji:
 
-Práci s názvem #config.thesis() jsem vypracoval samostatně. Veškeré literární prameny a informace, které jsem v práci využil, jsou uvedeny v seznamu použité literatury.
+#linebreak()
+
+Práci s názvem *#config.thesis()* jsem vypracoval samostatně. Veškeré literární prameny a informace, které jsem v práci využil, jsou uvedeny v seznamu použité literatury.
 
 Byl jsem seznámen s tím, že se na moji práci vztahují práva a povinnosti
 vyplývající ze zákona č. 121/2000 Sb., o právu autorském, o právech
@@ -24,11 +26,13 @@ pro odevzdávání, zveřejňování a formální úpravu závěrečných prací
 pozdějších dodatků, bude práce zveřejněna prostřednictvím Digitální knihovny
 Univerzity Pardubice.
 
-#v(1fr)
+#v(2fr)
 
 V Pardubicích dne #config.today()
 
 #h(1fr) #config.author() v. r.
+
+#v(1fr)
 
 #pagebreak()
 
