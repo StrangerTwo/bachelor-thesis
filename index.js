@@ -1,10 +1,12 @@
-import { watch } from "fs";
+import { readFileSync, watch } from "fs";
 import { exec } from "child_process";
 
 // Folder to watch (recursively)
 const WATCH_DIR = "."; // change to your target folder
 // Shell script to run
-const SCRIPT = "sh build.sh"; // change to your script path
+const SCRIPT = readFileSync("build.sh").toString().trim();
+
+console.log("Loaded script:", SCRIPT);
 
 console.log(`Watching for file changes in ${WATCH_DIR}...`);
 

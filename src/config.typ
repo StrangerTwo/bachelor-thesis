@@ -34,7 +34,11 @@
     spacing: 2em,
   )
   show figure.where(kind: table): set figure.caption(position: top)
-  show figure.caption: set align(left)
+  show figure.caption: it => {
+    set align(left)
+    set par(spacing: 1em)
+    it
+  }
   doc
 }
 

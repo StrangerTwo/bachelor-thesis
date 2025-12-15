@@ -111,14 +111,16 @@ a stát se aktivně využívaným místem pro zobrazování aktuálních situac�
 Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interktivní mapě. Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na aplikačním serveru.
 
 #figure(
-  image("../images/current_index.png", width: 80%),
-  caption: [
-    Ukázka aplikace
-
-    #set align(right)
-    Zdroj: @onlineDpmp Online poloha vozů MHD Pardubice
+  [
+    #figure(
+      image("../images/current_index.png", width: 80%),
+      caption: [Ukázka aplikace],
+    ) <currentIndex>
   ],
-) <currentIndex>
+  caption: [Zdroj: @onlineDpmp],
+  numbering: none,
+  outlined: false,
+)
 
 === Detail spoje jedoucího vozidla
 
