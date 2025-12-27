@@ -55,10 +55,13 @@ information system, design,
 #pagebreak()
 #heading("Seznam zkratek a značek", outlined: true)
 
-// #terms()
-/ CIS JŘ: Celostátní informační systém o jízdních řádech
-/ API: Aplikační programové rozhraní
-/ IS: Informační systém
-/ BPMN: Business Process Model and Notation
-/ UI: Uživatelské rozhraní
-/ UX: Uživatelský žážitek (zkušenost)
+#let terms = (
+  "CIS JŘ": "Celostátní informační systém o jízdních řádech",
+  "API": "Aplikační programové rozhraní",
+  "IS": "Informační systém",
+  "BPMN": "Business Process Model and Notation",
+  "UI": "Uživatelské rozhraní",
+  "UX": "Uživatelský žážitek (zkušenost)",
+)
+
+#for (term) in terms.keys().sorted() [/ #term: #terms.at(term)]

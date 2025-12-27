@@ -2,7 +2,9 @@
 
 todo, @onlineSecurity
 
-== Firebase authentikace
+== Authentikace
+
+== Autorizace
 
 == Debug stránka v ADMIN
 

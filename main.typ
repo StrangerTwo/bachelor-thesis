@@ -1,6 +1,6 @@
 #import "src/config.typ" as config
-// #import "@preview/vlna:0.1.1" as vlna
-// #show: vlna.apply-vlna
+#import "@preview/vlna:0.1.1" as vlna
+#show: vlna.apply-vlna
 
 #show: config.defaults
 
@@ -30,15 +30,17 @@
 
     #show: config.headings
 
-    #include "src/01_Identifikace_IS.typ"
+    #include "src/01_Teoreticka_vychodiska.typ"
 
-    #include "src/02_Specifikace_pozadavku_IS.typ"
+    #include "src/02_Identifikace_IS.typ"
 
-    #include "src/03_Navrh_implementace_IS.typ"
+    #include "src/03_Specifikace_pozadavku_IS.typ"
 
-    #include "src/04_Bezpecnost_IS.typ"
+    #include "src/04_Navrh_implementace_IS.typ"
 
-    #include "src/05_Zhodnoceni.typ"
+    #include "src/05_Bezpecnost_IS.typ"
+
+    #include "src/06_Zhodnoceni.typ"
   ]
 
   #[
