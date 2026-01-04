@@ -1,0 +1,13 @@
+Klient:
+(timer 10s)
+požádání o data
+send data request
+receive data response
+příjmutí dat
+zobrazení poloh vozidel
+
+Server:
+receive data request
+čtení dat
+zpracování dat
+send data response

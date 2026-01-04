@@ -155,3 +155,19 @@ Samotné zastávky mají vazbu do dat jízdních řádů a proto je za potřebí
   - Informování správce je nutné provést ručně
   - Transformace vstupu a výstupu vyžaduje ruční kontrolu
   - Nahrání dat a vydání nové verze je nutné provést ručně
+
+== Modelování procesů pomocí BPMN
+
+#[
+  #show figure.caption: set align(left)
+  #figure(
+    image("../images/schedule_change_bpmn.png", width: 80%),
+    caption: [Vývojový diagram změny jízdních řádu],
+  ) <scheduleChangeFlowChart>
+
+
+  #figure(
+    image("../images/client_data_request_bpmn.png", height: 50%),
+    caption: [Sekvenční diagram toku dat polohy vozidel],
+  ) <clientDataRequestSequence>
+]
