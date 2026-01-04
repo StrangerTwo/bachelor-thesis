@@ -62,6 +62,7 @@ information system, design,
   "BPMN": "Business Process Model and Notation",
   "UI": "Uživatelské rozhraní",
   "UX": "Uživatelský žážitek (zkušenost)",
+  "DFD": "Data Flow Diagram",
 )
 
 #for (term) in terms.keys().sorted() [/ #term: #terms.at(term)]

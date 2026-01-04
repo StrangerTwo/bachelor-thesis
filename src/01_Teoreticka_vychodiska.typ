@@ -39,14 +39,23 @@ Tato analýza umožňuje strukturovaně popsat:
 
 Díky funkční analýze lze jednoduše určit hranice systému a jeho hlavních komponent.
 
-#config.todo[
-  + Identifikace a analýza business procesů: Pochopení stávajících procesů (AS-IS) a návrh nových (TO-BE) s využitím IS, např. proces objednávky, skladové hospodářství.
-  + Definice funkcí systému: Co přesně má systém umět? (např. správa dat, zadávání transakcí, generování reportů, automatické notifikace).
-  + Stanovení uživatelských rolí a oprávnění: Kdo bude systém používat (manažer, skladník, účetní) a jaké akce bude moci provádět.
-  + Specifikace datových modelů: Jaká data se budou v systému spravovat, jejich struktura a vztahy (např. zákazník, produkt, objednávka).
-  + Definice vstupů a výstupů: Jaká data systém přijímá (vstupy) a jaké informace generuje (výstupy).
-  + Uživatelské rozhraní (UI) a zkušenost (UX): Jak bude systém vypadat a jak se bude ovládat.
-]
+Kroky funkční analýzy:
+
+- *Analýza a sběr požadavků*:
+  - Pochopení problému:
+- *Modelování stávajícího stavu (As-Is)*:
+  - Popis aktuálních funkcí systému
+  - Data Flow Diagram (DFD): grafické znázornění toku dat, procesů a uložišť
+  - Kontextový diagram: Zobrazení hranic systému a interakcí s externím prostředím
+- *Definování funkčních a nefunkčních požadavků*:
+  - Funkční: obsahují požadavky, které IS má naplňovat (př. zobrazit aktuální polohy vozidel)
+  - Nefunkční: obsahují požadavky, které IS nemá překročit (př. výkon, bezpečnost)
+- *Návrh budoucího stavu (To-Be)*:
+  - Definice cílů, jak by měl systém fungovat
+  - Návrh funkcí, které by nový systém měl
+- *Dokumentace*:
+  - Sepsání výsledků analýzy
+  - Přiložení diagramů
 
 ===== Procesní analýza (Business Process Analysis)
 
@@ -57,13 +66,22 @@ Při správném zpracování této analýzy, propojí reálné procesy organizac
 Dokáže odhalit neefektivní procesy a problémová místa podnikových procesů.
 Slouží jako podklad pro manuální operace, které by bylo možné z části, nebo plně automatizovat.
 
-#config.todo[
-  + Definice cílů: Stanovení, čeho chceme analýzou dosáhnout (např. zkrácení doby zpracování, snížení chyb).
-  + Mapování současného stavu (As-Is): Detailní zaznamenání všech kroků, aktérů, systémů a dat v procesu (pomocí diagramů, flowchartů).
-  + Analýza dat: Identifikace bottlenecks, plýtvání (NVA), rizik a příležitostí.
-  + Návrh budoucího stavu (To-Be): Vytvoření optimalizovaného procesu, který řeší zjištěné problémy.
-  + Implementace a monitoring: Zavedení změn a průběžné sledování jejich účinnosti.
-]
+Kroky procesní analýzy:
+
+- *Identifikace a vymezení podniku*:
+  - Obeznámení se s podnikem a jeho podnikovým záměrem
+  - Určení, které části budou analyzovány
+- *Mapování stávajícího stavu (As-Is)*:
+  - Pozorování, dotazovaní a měření operací aktérů za účelem identifikace procesů podniku
+  - Vytvoření procesních map, obsahující vstupy, výstupy, kroky a role
+- *Analýza a identifikace nedostatků*:
+  - Vyhodnocení současného stavu
+  - Hledání defektů, úzkých míst a příležitostí pro zlepšení
+- *Návrh optimalizace (To-Be)*:
+  - Vytvoření modelů budoucího stavu procesů
+- *Implementace a monitorování*:
+  - Zavedení změn (např. implementace nového IS)
+  - Následné sledování, zda dochází k efektivnímu dosahování cílů
 
 ===== Modelování procesů pomocí BPMN
 

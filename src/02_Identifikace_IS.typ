@@ -33,9 +33,8 @@ Aplikaci využívají následující skupiny uživatelů:
 
 == Klíčové funkce aplikace
 
-#config.todo[
-  Cílem funkční analýzy je identifikovat hlavní funkce informačního systému, jejich vzájemné vazby a význam pro podporu provozních procesů organizace. Funkční analýza slouží jako podklad pro návrh cílového řešení a umožňuje odhalit slabá místa, redundance a chybějící funkcionality systému.
-]
+Provedením funkční analýzy IS identifikujeme hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
+Funkční analýza bude sloužit jako podklad pro návrh cílového řešení. Odhalením slabých míst, rendundancí a chybějících funkcionalit.
 
 ===== Zobrazování aktuálních poloh na mapě
 
@@ -116,9 +115,8 @@ Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobraz
 
 == Klíčové procesy aplikace
 
-#config.todo[
-  Cílem procesní analýzy je porozumět skutečnému průběhu činností, které jsou informačním systémem podporovány, a identifikovat oblasti, ve kterých může návrh nového řešení přinést zlepšení.
-]
+Provedením procesní analýzy budeme schopni porozumět skutečnému průběhu činností souvisejících s IS, které v organizaci probíhají.
+Procesní analýza umožní identifikovat oblasti ke zlepšení v návrhu nového řešení.
 
 ===== Aktualizace dat jízdních řádů
 
@@ -156,18 +154,16 @@ Samotné zastávky mají vazbu do dat jízdních řádů a proto je za potřebí
   - Transformace vstupu a výstupu vyžaduje ruční kontrolu
   - Nahrání dat a vydání nové verze je nutné provést ručně
 
-== Modelování procesů pomocí BPMN
+== Modelování procesů
 
-#[
-  #show figure.caption: set align(left)
-  #figure(
-    image("../images/schedule_change_bpmn.png", width: 80%),
-    caption: [Vývojový diagram změny jízdních řádu],
-  ) <scheduleChangeFlowChart>
+#show figure.caption: set align(left)
+#figure(
+  image("../images/schedule_change_bpmn.png", width: 80%),
+  caption: [Vývojový diagram změny jízdních řádu],
+) <scheduleChangeFlowChart>
 
 
-  #figure(
-    image("../images/client_data_request_bpmn.png", height: 50%),
-    caption: [Sekvenční diagram toku dat polohy vozidel],
-  ) <clientDataRequestSequence>
-]
+#figure(
+  image("../images/client_data_request_bpmn.png", height: 50%),
+  caption: [Sekvenční diagram toku dat polohy vozidel],
+) <clientDataRequestSequence>
