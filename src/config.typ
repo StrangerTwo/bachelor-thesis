@@ -67,7 +67,18 @@
     set text(size: 16pt)
     it
   }
-  show heading.where(depth: 2): set text(size: 14pt)
+  show heading.where(depth: 2): it => {
+    set text(size: 14pt)
+    let mVal = "trailing headings to new page"
+    metadata(mVal)
+    context {
+      let m = query(metadata.where(value: mVal).before(here())).last()
+      if m.location().position().y > page.height * 50% {
+        pagebreak()
+      }
+    }
+    it
+  }
   show heading.where(depth: 3): set text(size: 13pt)
   doc
 }
