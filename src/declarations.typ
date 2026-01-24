@@ -6,7 +6,8 @@ Prohlašuji:
 
 #linebreak()
 
-Práci s názvem *#config.thesis()* jsem vypracoval samostatně. Veškeré literární prameny a informace, které jsem v práci využil, jsou uvedeny v seznamu použité literatury.
+Práci s názvem *#config.thesis()* jsem vypracoval samostatně.
+Veškeré literární prameny a informace, které jsem v práci využil, jsou uvedeny v seznamu použité literatury.
 
 Byl jsem seznámen s tím, že se na moji práci vztahují práva a povinnosti
 vyplývající ze zákona č. 121/2000 Sb., o právu autorském, o právech

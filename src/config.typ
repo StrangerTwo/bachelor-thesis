@@ -33,7 +33,6 @@
     justify: true,
     spacing: 2em,
   )
-  show figure.where(kind: table): set figure.caption(position: top)
   doc
 }
 
@@ -109,7 +108,7 @@
   doc
 }
 
-#let imageFigure(body, source) = {
+#let sourcedFigure(body, source) = {
   show figure.caption: set align(right)
   figure(
     [

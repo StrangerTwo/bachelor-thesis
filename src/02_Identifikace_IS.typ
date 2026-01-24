@@ -2,15 +2,24 @@
 
 = Identifikace klíčových částí aktuálního IS
 
-Cílem této kapitoly je vymezit hranice IS, identifikovat jeho hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace. Díky vhodné analýze budou odhaleny slabá místa, redundance a chybějící funkcionality systému.Kombinací metodických přístupů k analýze IS bude vytvořen podklad pro návrh cílového řešení.
+Cílem této kapitoly je provést identifikaci klíčových částí aktuálního IS.
+Budou provedeny kroky procesní analýzy IS 1, *identifikace a vymezení podniku*.
+Následně krok 1 funkční analýzy IS, *analýza a sběr požadavků*.
+Kroky 2 funkční analýzy IS, *modelování stávajícího stavu (As-­Is)*, a procesní analýzy IS, *mapování stávajícího stavu (As-­Is)*, budou sjednoceny do jedné podkapitoly.
 
-== Základní charakteristika aplikace
+Cílem této kapitoly je vymezit hranice IS, identifikovat jeho hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
+Vhodnou analýzou budou odhaleny slabá místa, redundance a chybějící funkcionality systému.
+Kombinací metodických přístupů k analýze IS bude vytvořen podklad pro návrh cílového řešení.
 
-Informační systém pro zobrazování poloh vozidel MHD má
-za úkol zpřístupnit veřejnosti informace o aktuálních polohách spojů,
-jejich zpožděních, nebo jiných provozních událostech, které se týkají cestujících.
+== Identifikace a vymezení podniku
 
-Z povahy aplikace je tedy využívána v moment, kdy je již cestující rozhodnutý cestovat veřejnou hromadnou dopravou a potřebuje zjistit aktuální stav dění. Z tohoto předpokladu vychází požadavky na aplikaci aby byla rychlá, ovladatelná a dostupná v podmínkách se špatným přístupem k internetu.
+První krok procesní analýzy IS.
+Dojde k obeznámení s podnikem, jeho hlavními činnostmi, strategickými cíli a podnikovým záměrem.
+Bude vymezen rozsah podniku, na jeho části podnikové procesy relevantní pro IS.
+
+===== Podnik
+
+#config.todo[TODO]
 
 ===== Mise
 
@@ -22,25 +31,48 @@ Aplikace by měla sloužit jako dodatečný komunikační kanál dopravce, aby s
 Jednoduchá klientská aplikace by se měla rozšířit mezi větší část cestujících
 a stát se aktivně využívaným místem pro zobrazování aktuálních situací, které ovlivňují cestující.
 
+===== Podnikové procesy
+
+#config.todo[TODO]
+
+== Analýza a sběr požadavků
+
+První krok funkční analýzy IS.
+Hlavním cílem bude pochopení problému, který IS řeší.
+V tomto kroce dojde k poznání funkcionalit IS, jejich vlastností a způsoby využívání IS jednotlivými skupinami uživatelů.
+
+===== Základní charakteristika aplikace
+
+Informační systém pro zobrazování poloh vozidel MHD má
+za úkol zpřístupnit veřejnosti informace o aktuálních polohách spojů,
+jejich zpožděních, nebo jiných provozních událostech, které se týkají cestujících.
+
+Z povahy aplikace je tedy využívána v moment, kdy je již cestující rozhodnutý cestovat veřejnou hromadnou dopravou a potřebuje zjistit aktuální stav dění.
+Z tohoto předpokladu vychází požadavky na aplikaci aby byla rychlá, ovladatelná a dostupná v podmínkách se špatným přístupem k internetu.
+
 ===== Skupiny uživatelů
 
 Aplikaci využívají následující skupiny uživatelů:
 
-- *Cestující* - primární uživatel, požaduje informace o aktuálním zpoždění a provozních upozorněních
-- *Dispečeři* - privilegovaný uživatel, zajišťuje přesnost zobrazovaných dat, publikuje provozní upozornění
-- *Administrátoři* - správce aplikačního serveru, zajišťuje bezchybový běh aplikace, sleduje zátěž a provozní log serveru
-- *Vedení* - chce vidět metriky o návštěvnosti a návratnosti uživatelů, popř. jiné statistiky využívání aplikace
+*Cestující* jsou primárním uživatlem IS, požadují informace o aktuálním zpoždění a provozních upozorněních.
+*Dispečeři* jsou privilegovaným uživatelem IS, zajišťují přesnost zobrazovaných dat, publikují provozní upozornění.
+*Administrátoři* jsou správci aplikačního serveru, zajišťují bezchybový běh aplikace, sledují zátěž a provozní log serveru.
+*Vedení* vyžadují znát metriky o návštěvnosti a návratnosti uživatelů, popř.
+jiné statistiky využívání aplikace.
 
-== Klíčové funkce aplikace
+===== Klíčové funkce aplikace
 
-Provedením funkční analýzy IS identifikujeme hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
-Funkční analýza bude sloužit jako podklad pro návrh cílového řešení. Odhalením slabých míst, rendundancí a chybějících funkcionalit.
+Provedením funkční analýzy IS budou identifikovány hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
+Funkční analýza bude sloužit jako podklad pro návrh cílového řešení.
+K jednotlivým funkcionalitám budou popsány jejich vlastností a způsoby, jak s nimi jednotlivé skupiny uživatelů zacházejí.
 
 ===== Zobrazování aktuálních poloh na mapě
 
-Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interktivní mapě. Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na aplikačním serveru. To je vidět na @currentIndex
+Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interktivní mapě.
+Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na aplikačním serveru.
+@currentIndex vyzobrazuje funkci současného IS. 
 
-#config.imageFigure(
+#config.sourcedFigure(
   [
     #figure(
       image("../images/current_index.png", width: 80%),
@@ -54,7 +86,7 @@ Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interkt
 
 Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho rozkliknutí je k dispozici zobrazení detail tohoto spoje.
 
-#config.imageFigure(
+#config.sourcedFigure(
   [
     #figure(
       image("../images/current_detail.png", width: 80%),
@@ -66,13 +98,14 @@ Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho ro
 
 ===== Filtrování linky uživatelem
 
-Aplikaci může uživatel obsluhovat pomocí postranní lišty, ve které má k dispozici dodatečné ovládací prvky. Jedním z nich je možnost filtrovat spoje zobrazené v aplikaci.
+Aplikaci může uživatel obsluhovat pomocí postranní lišty, ve které má k dispozici dodatečné ovládací prvky.
+Jedním z nich je možnost filtrovat spoje zobrazené v aplikaci.
 
 ===== Vyhledání zastávky
 
 Vyhledávání zastávky je dalším prvkem postranní lišty.
 
-#config.imageFigure(
+#config.sourcedFigure(
   [
     #figure(
       image("../images/current_sidebar.png", width: 80%),
@@ -84,9 +117,10 @@ Vyhledávání zastávky je dalším prvkem postranní lišty.
 
 ===== Přehled odjezdů ze zastávky
 
-Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobrazit její detail. Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
+Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobrazit její detail.
+Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
 
-#config.imageFigure(
+#config.sourcedFigure(
   [
     #figure(
       image("../images/current_station_detail.png", width: 80%),
@@ -98,30 +132,39 @@ Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobraz
 
 ===== Přehled klíčových funkcí
 
-
-#figure(
-  table(
-    columns: (auto, auto),
-    align: left,
-    table.header([Funkční oblast], [Vazba na funkci]),
-    "F1 - Zobrazování aktuálních poloh na mapě", "-",
-    "F2 - Detail spoje jedoucího vozidla", "F1",
-    "F3 - Filtrování linky uživatelem", "F1",
-    "F4 - Vyhledání zastávky", "F1",
-    "F5 - Přehled odjezdů ze zastávky", "F4",
-  ),
-  caption: [Identifikace hlavních funkcí systému],
+#config.sourcedFigure(
+  [
+    #figure(
+      table(
+        columns: (auto, auto),
+        align: left,
+        table.header([Funkční oblast], [Vazba na funkci]),
+        "F1 - Zobrazování aktuálních poloh na mapě", "-",
+        "F2 - Detail spoje jedoucího vozidla", "F1",
+        "F3 - Filtrování linky uživatelem", "F1",
+        "F4 - Vyhledání zastávky", "F1",
+        "F5 - Přehled odjezdů ze zastávky", "F4",
+      ),
+      caption: [Identifikace hlavních funkcí systému],
+    ) <currentSidebar>
+  ],
+  [@onlineDpmp],
 )
 
-== Klíčové procesy aplikace
+== Mapování stávajícího stavu
 
-Provedením procesní analýzy budeme schopni porozumět skutečnému průběhu činností souvisejících s IS, které v organizaci probíhají.
+Spojené druhé kroky funkční a procesní analýzy IS.
+
+===== Klíčové procesy aplikace
+
+Nyní bude provedena procesní analýza IS pro porozumění skutečnému průběhu činností souvisejících s IS, které v organizaci probíhají.
 Procesní analýza umožní identifikovat oblasti ke zlepšení v návrhu nového řešení.
 
 ===== Aktualizace dat jízdních řádů
 
 Pravidelný proces, který navazuje na podnikové procesy dopravců.
-Interval mezi výměnnou dat je nepravidelný, vždy v závislosti na změnu jízdních řádů dopravce. Vždy však ke změně jízdního řádu dochází alespoň jednou ročně.
+Interval mezi výměnnou dat je nepravidelný, vždy v závislosti na změnu jízdních řádů dopravce.
+Vždy však ke změně jízdního řádu dochází alespoň jednou ročně.
 
 - *Vstup*: Soubor zdrojových dat jízdního řádu
 - *Výstup*: Transformovaná data, čitelná pro IS
@@ -154,16 +197,25 @@ Samotné zastávky mají vazbu do dat jízdních řádů a proto je za potřebí
   - Transformace vstupu a výstupu vyžaduje ruční kontrolu
   - Nahrání dat a vydání nové verze je nutné provést ručně
 
-== Modelování procesů
+===== Modelování procesů
 
-#show figure.caption: set align(left)
-#figure(
-  image("../images/schedule_change_bpmn.png", width: 80%),
-  caption: [Vývojový diagram změny jízdních řádu],
-) <scheduleChangeFlowChart>
+#config.sourcedFigure(
+  [
+    #figure(
+      image("../images/schedule_change_bpmn.png", width: 80%),
+      caption: [Vývojový diagram změny jízdních řádu],
+    ) <scheduleChangeFlowChart>
+  ],
+  [vlastní zpracování],
+)
 
+#config.sourcedFigure(
+  [
+    #figure(
+      image("../images/client_data_request_bpmn.png", height: 50%),
+      caption: [Sekvenční diagram toku dat polohy vozidel],
+    ) <clientDataRequestSequence>
+  ],
+  [vlastní zpracování],
+)
 
-#figure(
-  image("../images/client_data_request_bpmn.png", height: 50%),
-  caption: [Sekvenční diagram toku dat polohy vozidel],
-) <clientDataRequestSequence>

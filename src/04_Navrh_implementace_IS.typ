@@ -6,7 +6,7 @@ todo, @modernIT
 
 == Uživatelská aplikace
 
-#config.imageFigure(
+#config.sourcedFigure(
   [
 
     #figure(
@@ -21,7 +21,7 @@ todo, @modernIT
 
 todo, @isManagement
 
-#config.imageFigure(
+#config.sourcedFigure(
   [
     #figure(
       image("../images/admin_index.png", width: 80%),
@@ -33,7 +33,7 @@ todo, @isManagement
 
 
 
-#config.imageFigure(
+#config.sourcedFigure(
   [
     #figure(
       image("../images/admin_jdf_upload.png", width: 80%),
