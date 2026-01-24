@@ -30,62 +30,109 @@ Identifikaci klíčových částí IS lze provádět pomocí mnoha metod.
 
 Funkční analýza se zaměřuje na identifikaci funkcí, které systém poskytuje, bez ohledu na jejich technickou implementaci. Jejím výsledkem je přehled jednotlivých funkcionalit systému, rozdělených podle logických celků. @Sommerville2015
 
-Tato analýza umožňuje strukturovaně popsat:
+Tato analýza umožňuje strukturovaně popsat klíčové moduly systému a vazby mezi nimi. Na základě identifikovaných datových toků určit technické a procesní závislosti. Díky funkční analýze lze jednoduše určit hranice systému a jeho hlavních komponent.
 
-- klíčové moduly systému,
-- vazby mezi nimi,
-- datové toky,
-- technické a procesní závislosti.
+Funkční analýza se skládá z celkem pěti navazujících kroků.
 
-Díky funkční analýze lze jednoduše určit hranice systému a jeho hlavních komponent.
+Prvním krokem je *analýza a sběr požadavků*, jehož hlavním cílem je pochopení problému, který IS řeší. Tento krok slouží ke kompletnímu poznání aktuální IS, jeho funkcionalit, vlastností a způsobu využití jednotlivými skupinami uživatelů.
+Jsou identifikovány potřeby uživatelských skupin a základní očekávání kladená na systém.
+@WiegersBeatty2013
 
-Kroky funkční analýzy:
+Druhým krokem funkční analýzy je *modelování stávajícího stavu (As-Is)*.
+Cílem tohoto kroku je detailní popis aktuálních funkcí IS a způsobu jejich realizace.
+Tento krok obsahuje identifikaci hlavních procesů, toků dat a vazeb mezi jednotlivými částmi systému.
+Je možné využít grafického znázornění stávajícícho stavu pomocí diagramů. Diagram toku dat Data Flow Diagram - DFD, zobrazuje tok dat, procesy a uložiště. Kontextový diagram, vymezuje hranice systému a jeho interakce s okolním prostředím.
+@Sommerville2015
 
-- *Analýza a sběr požadavků*:
-  - Pochopení problému:
-- *Modelování stávajícího stavu (As-Is)*:
-  - Popis aktuálních funkcí systému
-  - Data Flow Diagram (DFD): grafické znázornění toku dat, procesů a uložišť
-  - Kontextový diagram: Zobrazení hranic systému a interakcí s externím prostředím
-- *Definování funkčních a nefunkčních požadavků*:
-  - Funkční: obsahují požadavky, které IS má naplňovat (př. zobrazit aktuální polohy vozidel)
-  - Nefunkční: obsahují požadavky, které IS nemá překročit (př. výkon, bezpečnost)
-- *Návrh budoucího stavu (To-Be)*:
-  - Definice cílů, jak by měl systém fungovat
-  - Návrh funkcí, které by nový systém měl
-- *Dokumentace*:
-  - Sepsání výsledků analýzy
-  - Přiložení diagramů
+Třetím krokem je *definování funkčních a nefunkčních požadavků*.
+Na základě poznatků z analýz stávajícího stavu a kladených očekávání dojde k definování požadavků na nový IS.
+Funkční požadavky popisují konkrétní činnosti a služby, které má IS poskytovat. Například zobrazení aktuálních poloh vozidel.
+Nefunkční požadavky stanovují omezení a kvalitativní kritéria systému. Například požadavky na výkon, dostupnost, bezpečnost nebo použitelnost.
+Rozdělení požadavků do dvou kategorií splňuje předpoklad přehledné specifikace pro návrh systému.
+@SommervilleSawyer1997
+
+Čtvrtým krokem je *návrh budoucího stavu (To-Be)*.
+Dle definovaných požadavků jsou dány cíle budoucího řešení.
+Finální návrh budoucího stavu zahrnuje poskytované funkce, způsoby, jakým tyto funkce budou podporovat podnikové procesy, včetně toků dat a uložišť nového IS.
+@isManagement
+
+Posledním krokem je *dokumentace výsledků analýzy*.
+Tento krok zahrnuje systematické sepsání všech zjištěných poznatků, popis analyzovaných funkcí a procesů, a přiložení vytvořených diagramů.
+Dokumentace složí jako podklad pro další fáze vývoje IS. Je vyžívána pro komunikaci mezi analytiky, vývojáři i jinými zainteresovanými stranami a tudíž je třeba klást důraz na přehlednost a srozumitelnost.
+@StairReynolds2018
 
 ===== Procesní analýza (Business Process Analysis)
 
 Systém je analyzován podle toho, jaké podnikové procesy podporuje.
+Slouží k porozumění fungování organizace prostřednictvím jejích podnikových procesů. Na podnik je možné nahlížet jako soustavu vzájemně propojených procesů, které vytvářejí hodnotu pro zákazníka a podporují naplnění strategických cílů organizace.
 V této analýze je kladen důraz na přesnou identifikaci částí IS, které mají přímý dopad na chod organizace. Cílem je pochopit tok činností, vstupy, výstupy a odpovědnosti. @Dumas2018
 
+Procesy vyjedřují posloupnost činností, které transformují vstupy na výstupy a přispívají k naplnění podnikových cílů.
 Při správném zpracování této analýzy, propojí reálné procesy organizace s IS.
 Dokáže odhalit neefektivní procesy a problémová místa podnikových procesů.
 Slouží jako podklad pro manuální operace, které by bylo možné z části, nebo plně automatizovat.
 
-Kroky procesní analýzy:
+Procesní analýza se skládá z následujících kroků.
 
-- *Identifikace a vymezení podniku*:
-  - Obeznámení se s podnikem a jeho podnikovým záměrem
-  - Určení, které části budou analyzovány
-- *Mapování stávajícího stavu (As-Is)*:
-  - Pozorování, dotazovaní a měření operací aktérů za účelem identifikace procesů podniku
-  - Vytvoření procesních map, obsahující vstupy, výstupy, kroky a role
-- *Analýza a identifikace nedostatků*:
-  - Vyhodnocení současného stavu
-  - Hledání defektů, úzkých míst a příležitostí pro zlepšení
-- *Návrh optimalizace (To-Be)*:
-  - Vytvoření modelů budoucího stavu procesů
-- *Implementace a monitorování*:
-  - Zavedení změn (např. implementace nového IS)
-  - Následné sledování, zda dochází k efektivnímu dosahování cílů
+Prvním krokem je *identifikace a vymezení podniku*.
+Dochází k obeznámení se s podnikem, jeho hlavními činnostmi, strategickými cíli a podnikovým záměrem.
+V tomto kroce dojde k vymezení rozsahu analýzy, tedy kterých částí podniku a které procesy budou předmětem zkoumání. Vymezením rozsahu je zajištěna přehlednost a zaměření na klíčové procesy, na které mají vliv na požadavky kladené na IS.
+@Weske2012
+
+Druhým krokem je *mapování stávajícího stavu (As-Is)*.
+Na základě pozorování, dotazování a měření činností jednotlivých aktérů dojde k identifikaci procesů.
+Cílem je zachytit skutečný průběh procesů tak, jak probíhají v praxi, nikoliv tak, jak by měly ideálně probíhat.
+Výsledkem je vytvoření procesních map, obsahující vstupy a výstupy, procesní kroky a role, podílející se na realizaci.
+@Dumas2018
+
+Třetím krokem je *analýza a identifikace nedostatků*.
+Procesy jsou vyhodnoceny z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
+Je kladen důraz na hledání defektů, úzkých míst a činností, které nepřinášejí přidanou hodnotu.
+Identifikací nedostatků lze pojmenovat konkrétní problémy v procesech a formulovat důvody, proč dané procesy změnit, nebo podpořit novým IS.
+@HammerChampy2006
+
+Čtvrtým kromem je *návrh optimalizace (To-Be)*.
+Na zákledně zjištěných nedostatků dojde k návrhu nových procesů po jejich optimalizaci. Zohledňují se možnosti automatizace, digitalizace a podpory IS.
+Je definován cílový stav, u kterého lze porovnat přínosy navrhovaného řešení se současným stavem.
+@FreundRucker2014
+
+Posledním krokem je *implementace a monitorování*.
+Implementace může zahrnovat zavedení nového informačního systému nebo úpravy stávajícího řešení tak, aby opdporovalo optimalizované procesy.
+Po provedení změn je klíčové ověření, zda navrhované změny skutečně přinášení očekávané přínosy.
+Následuje období sledování a vyhodnocování, zda dochází k efektivnímu dosahování stanovených cílů.
+@Davenport1993
 
 ===== Modelování procesů pomocí BPMN
 
-Business Process Model and Notation (BPMN) je standardizovaný jazyk pro grafické modelování procesů. @omg2013bpmn202 @freund2012reallifebpmn @weske2024bpm
+Business Process Model and Notation (BPMN) je standardizovaný jazyk pro grafické modelování procesů.
+@omg2013bpmn202
 Byl vytvořen s cílem sjednotit způsob jejich dokumentace a zlepšit komunikaci mezi technickými a netechnickými účastníky projektu.
 
 Modely BPMN jsou jedním z průmyslových standardů. Umožňuje identifikovat, které části procesu jsou v IS podporovány. K jakým interakcím uživatele se systémem dochází.
+@freund2012reallifebpmn
+
+BPMN poskytuje soubor grafických elementů, pro přehledné modelování procesů. Hromadně se jedná o *komponenty a notace BPMN*:
+@omg2013bpmn202
+
+Mezi základní komponenty patří *Události (Events)*, které označují začátek, konec nebo mezistavy procesu.
+Dále *Aktivity (Activities)*, tedy činnosti vykonávané aktéry nebo systémem. 
+*Brány (Gateways)* jsou rozhodovacími body, které určují průběh procesu na základě podmínek nebo událostí.
+*Toky (Sequence Flow)* jsou šipky zobrazující pořadí aktivit a průběhu procesu.
+*Pule (Pools) a dráhy (Lanes)* vymezují účastníky procesu a jejich odpovědnosti.
+
+Pro analýzu IS je vhodné využít několik typů diagramů. *Typy BPMN diagramů a jejich význam*:
+
+*Diagramy procesů (Process Diagrams)* zobrazují detailní průběh jednotlivých procesů.
+Slouží k zmapování aktivit a rozhodovacích bodů, které IS podporuje.
+@weske2024bpm
+*Kontextové diagramy (Collaboration / Choreography Diagrams)* znázorňují interakci mezi externími aktéry a systémem. Jsou vhodné pro vymezení hranic systému a zobrazení komunikačních toků.
+@omg2013bpmn202
+*Choreography / Conversation diagramy* umožňují sledovat výměnu zpráv účastníků procesu. Tyto diagramy jsou důležité při modelování interakcí napříč různými systémy, nebo moduly IS.
+@freund2012reallifebpmn
+
+Modelování BPMN má *využití při návrhu IS*: @freund2012reallifebpmn @Dumas2018
+
+Ke *zmapování stávajících procesů (As-Is)*, pro identifikaci částí procesů s podporou IS.
+Při *návrhu budoucího stavu (To-Be)*, díky možnosti vyzualizovat procesy po implementaci nového IS.
+Slouží ke *zlepšení komunikace mezi účastníky projektu* jednotným jazykem pro analytiky, vývojáře i netechnické uživatele.
+Každý krok procesu je možné propojit s konkrétní funkcí systému a tím *podporuje identifikaci funkčních požadavků IS*.
