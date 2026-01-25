@@ -10,33 +10,7 @@ Následně krok 3 funkční analýzy IS, *definování funkčních a nefunkční
 
 Krok 3 procesní analýzy IS.
 V tomto kroce dojde k vyhodnocení procesů z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
-
-== Definování funkčních a nefunkčních požadavků
-
-Krok 3 funkční analýzy IS.
-Dojde k definování požadavků na nový IS.
-Požadavky budou vycházet z očekávání uživatelů, nebo jako důsledek analýz předchozích kroků.
-Výsledkem bude tabulka požadavků.
-@Sommerville2015
-
-#config.todo[
-  Správný formát tabulky požadavků
-  - ID požadavku - jednoznačný identifikátor (např. FR-01, NFR-02)
-  - Název - krátké shrnutí požadavku
-  - Popis požadavku - jednoznačný, testovatelný popis
-  - Typ - funkční / nefunkční
-  - Priorita - např. vysoká / střední / nízká
-  - Zdroj - stakeholder, proces, legislativa
-  - Vazba na proces - konkrétní BPMN proces nebo krok
-]
-
-
-
-
-
-
-
-== Prerekvizity klíčových procesů
+@HammerChampy2006
 
 ===== Otevřená data ČR
 
@@ -61,14 +35,79 @@ Tento datový formát disponuje informacemi o názvech, časováním a kilometr�
 Značnou nevýhodou tohoto datového formátu je absence geografických dat.
 GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
 
-===== Zdroj dat o polohách vozidel
+===== Tabulka hlavních procesů
+
+#config.sourcedFigure(
+  [
+    #figure(
+      table(
+        columns: (auto, auto, auto),
+        align: left,
+        table.header([ID],[Proces], [Ruční zásahy]),
+        "P1", "Aktualizace dat jízdních řádů", [
+          - informování správce o změně
+          - vydání nové verze
+        ],
+        "P2", "Zavedení nové zastávky", [
+          - lokalizace GPS souřadnic zastávky
+          - vydání nové verze
+        ],
+        "P3", "Výměnna ikonky vozidel", [
+          - informování správce o změně
+          - obstarání kompatibilní ikonky
+          - vydání nové verze
+        ],
+      ),
+      caption: [Identifikace hlavních procesů],
+    )
+  ],
+  [@onlineDpmp],
+)
 
 
-== Administrativní rozhraní
+#config.sourcedFigure(
+  [
+    #figure(
+      image("../images/jdf_change_bpmn_90deg.png", height: 70%),
+      caption: [BPMN diagram změny jízdních řádu],
+    )
+  ],
+  [vlastní zpracování],
+)
+
+== Definování funkčních a nefunkčních požadavků
+
+Krok 3 funkční analýzy IS.
+Dojde k definování požadavků na nový IS.
+Požadavky budou vycházet z očekávání uživatelů, nebo jako důsledek analýz předchozích kroků.
+@SommervilleSawyer1997
+Výsledkem bude tabulka požadavků.
+@Sommerville2015
 
 ===== Formulář pro nahrání nových dat
 
 Důležitým funkčním požadavkem pro nový IS bude možnost nové data o jízdních řádech poskytnout i pomocí administrativního rozhraní.
 Tato nutnost vznikla z důvodu existence nestandartních událostí, které z provozních a jiných důvodů nevyžadují reportovat změnu v jízdních řádech na CIS JŘ.
+
+===== Tabulka požadavků
+
+#config.sourcedFigure(
+  [
+    #figure(
+      table(
+        columns: (auto, auto, auto),
+        align: left,
+        table.header([ID],[Proces], [Typ]),
+        "P01", "Zobrazování poloh vozidel v aplikaci", "F",
+        "P02", "Detail spoje vozidla", "F",
+        "P03", "Formulář pro výměnu jízdního řádů", "F",
+        "P03", "Formulář pro úpravu ikonky vozidla", "F",
+      ),
+      caption: [Tabulka požadavků],
+    )
+  ],
+  [Vlastní zpracování],
+)
+
 
 

@@ -2,9 +2,18 @@
 
 = Návrh implementace IS
 
-todo, @modernIT
+Cílem této kapitoly je vytvořit návrh implementace IS.
+Bude proveden krok 4 funkční analýzy IS, *návrh budoucího stavu*.
+Následně krok 4 procesní analýzy IS, *návrh optimalizace procesů*.
 
-== Uživatelská aplikace
+== Návrh budoucího stavu
+
+Krok 4 funkční analýzy IS.
+Dle definovaných požadavků budou zfinalizovány cíle nového IS.
+Návrh budoucího stavu obsahuje funkce, datové toky i uložiště nového IS.
+@isManagement
+
+===== Uživatelská aplikace
 
 #config.sourcedFigure(
   [
@@ -17,9 +26,7 @@ todo, @modernIT
   [@MhdOnlinePardubice],
 )
 
-== Administrativní rozhraní
-
-todo, @isManagement
+===== Administrativní rozhraní
 
 #config.sourcedFigure(
   [
@@ -43,10 +50,10 @@ todo, @isManagement
   [@MhdOnlineAdmin],
 )
 
-== Aplikační rozhraní - API
 
-todo, @springBoot
+== Návrh optimalizace procesů
 
-== Databázová struktura
-
-todo, @databases
+Krok 4 procesní analýzy IS.
+Na základě vyhodnocených nedostatků bude vytvořen návrh nových zoptimalizovaných procesů.
+Nové procesy budou využívat nových funkcí IS, s cílem automatizace ručních kroků.
+@FreundRucker2014

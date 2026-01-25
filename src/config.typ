@@ -109,6 +109,7 @@
 }
 
 #let sourcedFigure(body, source) = {
+  set par(leading: 0.65em)
   show figure.caption: set align(right)
   figure(
     [

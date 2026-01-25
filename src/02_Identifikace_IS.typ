@@ -3,19 +3,22 @@
 = Identifikace klíčových částí aktuálního IS
 
 Cílem této kapitoly je provést identifikaci klíčových částí aktuálního IS.
-Budou provedeny kroky procesní analýzy IS 1, *identifikace a vymezení podniku*.
+Bude proveden krok 1 procesní analýzy IS, *identifikace a vymezení podniku*.
 Následně krok 1 funkční analýzy IS, *analýza a sběr požadavků*.
-Kroky 2 funkční analýzy IS, *modelování stávajícího stavu (As-­Is)*, a procesní analýzy IS, *mapování stávajícího stavu (As-­Is)*, budou sjednoceny do jedné podkapitoly.
+Druhé kroky funkční analýzy IS, *modelování stávajícího stavu (As-­Is)*, a procesní analýzy IS, *mapování stávajícího stavu (As-­Is)*, budou sjednoceny do jedné podkapitoly.
+@Sommerville2015
 
 Cílem této kapitoly je vymezit hranice IS, identifikovat jeho hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
 Vhodnou analýzou budou odhaleny slabá místa, redundance a chybějící funkcionality systému.
 Kombinací metodických přístupů k analýze IS bude vytvořen podklad pro návrh cílového řešení.
+@Dumas2018
 
 == Identifikace a vymezení podniku
 
 První krok procesní analýzy IS.
 Dojde k obeznámení s podnikem, jeho hlavními činnostmi, strategickými cíli a podnikovým záměrem.
-Bude vymezen rozsah podniku, na jeho části podnikové procesy relevantní pro IS.
+Bude vymezen rozsah podniku, na jeho části podnikové procesy relevantní pro IS. 
+@Weske2012
 
 ===== Podnik
 
@@ -40,6 +43,7 @@ a stát se aktivně využívaným místem pro zobrazování aktuálních situac�
 První krok funkční analýzy IS.
 Hlavním cílem bude pochopení problému, který IS řeší.
 V tomto kroce dojde k poznání funkcionalit IS, jejich vlastností a způsoby využívání IS jednotlivými skupinami uživatelů.
+@Sommerville2015
 
 ===== Základní charakteristika aplikace
 
@@ -52,7 +56,11 @@ Z tohoto předpokladu vychází požadavky na aplikaci aby byla rychlá, ovladat
 
 ===== Skupiny uživatelů
 
-Aplikaci využívají následující skupiny uživatelů:
+Uživatelské skupiny lze rozdělit na primární a sekundární.
+@Sommerville2015
+Dle tohoto dělení je skupina cestujících oddělena od ostatních interních rolí.
+Na základě doporučení pro návrh provozně kritických systémů, je vhodné interní skupinu rozdělit dle role na provozní a administrátorskou. @DennisWixomTegarden2015
+Jako součást návrhu manažerských a podpurůch IS je vhodné zahrnout i manažerskou skupinu uživatelů. @isManagement
 
 *Cestující* jsou primárním uživatlem IS, požadují informace o aktuálním zpoždění a provozních upozorněních.
 *Dispečeři* jsou privilegovaným uživatelem IS, zajišťují přesnost zobrazovaných dat, publikují provozní upozornění.
@@ -60,10 +68,9 @@ Aplikaci využívají následující skupiny uživatelů:
 *Vedení* vyžadují znát metriky o návštěvnosti a návratnosti uživatelů, popř.
 jiné statistiky využívání aplikace.
 
-===== Klíčové funkce aplikace
+=== Klíčové funkce aplikace
 
-Provedením funkční analýzy IS budou identifikovány hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
-Funkční analýza bude sloužit jako podklad pro návrh cílového řešení.
+Analýzou IS dle funkční analýzy budou identifikovány hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
 K jednotlivým funkcionalitám budou popsány jejich vlastností a způsoby, jak s nimi jednotlivé skupiny uživatelů zacházejí.
 
 ===== Zobrazování aktuálních poloh na mapě
@@ -91,7 +98,7 @@ Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho ro
     #figure(
       image("../images/current_detail.png", width: 80%),
       caption: [Detail spoje],
-    ) <currentDetail>
+    )
   ],
   [@onlineDpmp],
 )
@@ -110,7 +117,7 @@ Vyhledávání zastávky je dalším prvkem postranní lišty.
     #figure(
       image("../images/current_sidebar.png", width: 80%),
       caption: [Postranní lišta aplikace],
-    ) <currentSidebar>
+    )
   ],
   [@onlineDpmp],
 )
@@ -125,7 +132,7 @@ Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
     #figure(
       image("../images/current_station_detail.png", width: 80%),
       caption: [Detail zastávky],
-    ) <currentSidebar>
+    )
   ],
   [@onlineDpmp],
 )
@@ -136,17 +143,17 @@ Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
   [
     #figure(
       table(
-        columns: (auto, auto),
+        columns: (auto, auto, auto),
         align: left,
-        table.header([Funkční oblast], [Vazba na funkci]),
-        "F1 - Zobrazování aktuálních poloh na mapě", "-",
-        "F2 - Detail spoje jedoucího vozidla", "F1",
-        "F3 - Filtrování linky uživatelem", "F1",
-        "F4 - Vyhledání zastávky", "F1",
-        "F5 - Přehled odjezdů ze zastávky", "F4",
+        table.header([ID],[Funkční oblast], [Vazba na funkci]),
+        "F1", "Zobrazování aktuálních poloh na mapě", "-",
+        "F2", "Detail spoje jedoucího vozidla", "F1",
+        "F3", "Filtrování linky uživatelem", "F1",
+        "F4", "Vyhledání zastávky", "F1",
+        "F5", "Přehled odjezdů ze zastávky", "F4",
       ),
       caption: [Identifikace hlavních funkcí systému],
-    ) <currentSidebar>
+    )
   ],
   [@onlineDpmp],
 )
@@ -154,30 +161,30 @@ Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
 == Mapování stávajícího stavu
 
 Spojené druhé kroky funkční a procesní analýzy IS.
-
-===== Klíčové procesy aplikace
-
-Nyní bude provedena procesní analýza IS pro porozumění skutečnému průběhu činností souvisejících s IS, které v organizaci probíhají.
-Procesní analýza umožní identifikovat oblasti ke zlepšení v návrhu nového řešení.
+Dojde k identifikaci hlavních procesů, toků dat a vazeb mezi jednotlivými částmi systému.
+Výsledek bude přehledně vyzobrazen pomocí Data Flow diagramu.
+@Sommerville2015
+Dle východisek procesní analýzy IS je třeba analyzovat skutečný průběh činností souvisejících s IS, tak jak doopravdy probíhají.
+Zmapování aktuálního stavu umožní identifikovat oblasti ke zlepšení v návrhu nového řešení.
+@Dumas2018
 
 ===== Aktualizace dat jízdních řádů
 
-Pravidelný proces, který navazuje na podnikové procesy dopravců.
-Interval mezi výměnnou dat je nepravidelný, vždy v závislosti na změnu jízdních řádů dopravce.
-Vždy však ke změně jízdního řádu dochází alespoň jednou ročně.
+Aktualizace jízdních řádů představuje pravidelný provozní proces IS, který úzde navazuje na podnikové procesy dopravce.
+Proces je iniciován změnami jízdních řádů na straně dopravce v nepravidelné frekvenci.
+K výměně jízdního řádu dochází vždy minimálně jednou ročně.
+@onlineDpmp
 
-- *Vstup*: Soubor zdrojových dat jízdního řádu
-- *Výstup*: Transformovaná data, čitelná pro IS
-- *Hlavní kroky*:
-  - Informování správce systému o změně jízdních řádů
-  - Transformace zdrojových dat za pomocí skriptu
-  - Nahrání transformovaných dat a nasazeni nové verze
-- *Kde vstupuje IS*:
-  - IS zajišťuje transformaci dat, včetně validace vstupu
-- *Kde jsou ruční zásahy*:
-  - Informování správce je nutné provést ručně
-  - Transformace vstupu a výstupu vyžaduje ruční kontrolu
-  - Nahrání dat a vydání nové verze je nutné provést ručně
+*Vstupem* tohoto procesu je soubor zdrojových dat jízdního řádu, který je poskytován dopravcem ve stanoveném formátu.
+*Výstupem* procesu jsou transformovaná data, strukturována pro strojové čtení informačním systémem.
+*Hlavní kroky* procesu jsou v pořadí nejprve informování správce systému o změně jízdních řádů.
+Následně probíhá transformace zdrojových dat pomocí specializovaného skriptu.
+Po úspěšné transformaci jsou data nahrána do systému a je nasazena nová verze aplikace.
+*Vstupy IS* jsou v moment transformace dat.
+IS zajišťuje automatické zpracování vstupních souborů, včetně validace pro ověření konzistence dat.
+*Ruční zásahy* procesu jsou v moment informování správce o změně.
+Transformace dat a kontrola výstupních souborů vyžaduje ruční dohled, pro případ chyb.
+Nahrání transformovaných dat do produkčního prostředí a vydání nové verze rovněž vyžaduje ruční zásah správce systému.
 
 ===== Zavedení nové zastávky
 
@@ -196,26 +203,3 @@ Samotné zastávky mají vazbu do dat jízdních řádů a proto je za potřebí
   - Informování správce je nutné provést ručně
   - Transformace vstupu a výstupu vyžaduje ruční kontrolu
   - Nahrání dat a vydání nové verze je nutné provést ručně
-
-===== Modelování procesů
-
-#config.sourcedFigure(
-  [
-    #figure(
-      image("../images/schedule_change_bpmn.png", width: 80%),
-      caption: [Vývojový diagram změny jízdních řádu],
-    ) <scheduleChangeFlowChart>
-  ],
-  [vlastní zpracování],
-)
-
-#config.sourcedFigure(
-  [
-    #figure(
-      image("../images/client_data_request_bpmn.png", height: 50%),
-      caption: [Sekvenční diagram toku dat polohy vozidel],
-    ) <clientDataRequestSequence>
-  ],
-  [vlastní zpracování],
-)
-
