@@ -77,7 +77,30 @@ GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
   #config.sourcedFigure(
     [
       #figure(
-        image("../images/jdf_change_bpmn.png", width: 100%),
+        image("../images/Pr1 Aktualizace dat jízdních řádů.png", width: 100%),
+        caption: [BPMN diagram Pr1 Aktualizace dat jízdních řádů],
+      )
+    ],
+    [vlastní zpracování],
+  )
+
+  #v(1fr)
+]
+
+#pagebreak()
+
+#[
+  #set page(
+    paper: "a3",
+    margin: auto,
+    flipped: true
+  )
+  #v(1fr)
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        image("../images/diagram.svg", width: 100%),
         caption: [BPMN diagram Pr1 Aktualizace dat jízdních řádů],
       )
     ],
