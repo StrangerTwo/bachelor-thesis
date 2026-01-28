@@ -45,7 +45,7 @@ Hlavním cílem bude pochopení problému, který IS řeší.
 V tomto kroce dojde k poznání funkcionalit IS, jejich vlastností a způsoby využívání IS jednotlivými skupinami uživatelů.
 @Sommerville2015
 
-===== Základní charakteristika aplikace
+=== Základní charakteristika aplikace
 
 Informační systém pro zobrazování poloh vozidel MHD má
 za úkol zpřístupnit veřejnosti informace o aktuálních polohách spojů,

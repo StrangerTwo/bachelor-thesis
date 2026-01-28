@@ -44,15 +44,15 @@ GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
         columns: (auto, auto, auto),
         align: left,
         table.header([ID],[Proces], [Ruční zásahy]),
-        "P1", "Aktualizace dat jízdních řádů", [
+        "Pr1", "Aktualizace dat jízdních řádů", [
           - informování správce o změně
           - vydání nové verze
         ],
-        "P2", "Zavedení nové zastávky", [
+        "Pr2", "Zavedení nové zastávky", [
           - lokalizace GPS souřadnic zastávky
           - vydání nové verze
         ],
-        "P3", "Výměnna ikonky vozidel", [
+        "Pr3", "Výměnna ikonky vozidel", [
           - informování správce o změně
           - obstarání kompatibilní ikonky
           - vydání nové verze
@@ -64,16 +64,30 @@ GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
   [@onlineDpmp],
 )
 
+#pagebreak()
 
-#config.sourcedFigure(
-  [
-    #figure(
-      image("../images/jdf_change_bpmn_90deg.png", height: 70%),
-      caption: [BPMN diagram změny jízdních řádu],
-    )
-  ],
-  [vlastní zpracování],
-)
+#[
+  #set page(
+    paper: "a3",
+    margin: auto,
+    flipped: true
+  )
+  #v(1fr)
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        image("../images/jdf_change_bpmn.png", width: 100%),
+        caption: [BPMN diagram Pr1 Aktualizace dat jízdních řádů],
+      )
+    ],
+    [vlastní zpracování],
+  )
+
+  #v(1fr)
+]
+
+#pagebreak()
 
 == Definování funkčních a nefunkčních požadavků
 
@@ -91,23 +105,40 @@ Tato nutnost vznikla z důvodu existence nestandartních událostí, které z pr
 
 ===== Tabulka požadavků
 
-#config.sourcedFigure(
-  [
-    #figure(
-      table(
-        columns: (auto, auto, auto),
-        align: left,
-        table.header([ID],[Proces], [Typ]),
-        "P01", "Zobrazování poloh vozidel v aplikaci", "F",
-        "P02", "Detail spoje vozidla", "F",
-        "P03", "Formulář pro výměnu jízdního řádů", "F",
-        "P03", "Formulář pro úpravu ikonky vozidla", "F",
-      ),
-      caption: [Tabulka požadavků],
-    )
-  ],
-  [Vlastní zpracování],
-)
+
+
+#pagebreak()
+
+#[
+  #set page(
+    paper: "a3",
+    margin: auto,
+    flipped: true
+  )
+  #v(1fr)
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        table(
+          columns: (auto, auto, auto, auto, auto, auto),
+          align: left,
+          table.header([ID],[Proces], [Popis], [Způsob ověření], [Typ], [Zdroj]),
+          "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
+          "Po02", "Detail spoje vozidla", "Pro zobrazovaná vozidla v klientské aplikaci je možné rozkliknutím zobrazit detail spojení jedoucího vozidla. V novém okně se zobrazí přehled spoje a nadcházející zastávky s aktuálním zpožděním.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
+          "Po03", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dopravci nahrát data nového jizdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+          "Po03", "Formulář pro úpravu ikonky vozidla", "Formulář v administraci umožní dopravci nahrát novou ikonku do aplikace. Dostupné ikonky ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+        ),
+        caption: [Tabulka požadavků],
+      )
+    ],
+    [Vlastní zpracování],
+  )
+
+  #v(1fr)
+]
+
+#pagebreak()
 
 
 

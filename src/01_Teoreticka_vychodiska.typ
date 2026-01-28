@@ -139,8 +139,8 @@ K jakým interakcím uživatele se systémem dochází.
 @freund2012reallifebpmn
 
 BPMN poskytuje soubor grafických elementů, pro přehledné modelování procesů.
-Hromadně se jedná o *komponenty a notace BPMN*:
-@omg2013bpmn202
+Hromadně se jedná o *komponenty a notace BPMN* @omg2013bpmn202:
+
 
 Mezi základní komponenty patří *Události (Events)*, které označují začátek, konec nebo mezistavy procesu.
 Dále *Aktivity (Activities)*, tedy činnosti vykonávané aktéry nebo systémem.
@@ -161,7 +161,8 @@ Jsou vhodné pro vymezení hranic systému a zobrazení komunikačních toků.
 Tyto diagramy jsou důležité při modelování interakcí napříč různými systémy, nebo moduly IS.
 @freund2012reallifebpmn
 
-Modelování BPMN má *využití při návrhu IS*: @freund2012reallifebpmn @Dumas2018
+Modelování BPMN má *využití při návrhu IS* @freund2012reallifebpmn @Dumas2018:
+
 
 Ke *zmapování stávajících procesů (As-Is)*, pro identifikaci částí procesů s podporou IS.
 Při *návrhu budoucího stavu (To-Be)*, díky možnosti vyzualizovat procesy po implementaci nového IS.
