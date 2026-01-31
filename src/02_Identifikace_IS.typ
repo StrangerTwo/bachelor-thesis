@@ -146,7 +146,7 @@ Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
         columns: (auto, auto, auto),
         align: left,
         table.header([ID],[Funkční oblast], [Vazba na funkci]),
-        "F1", "Zobrazování aktuálních poloh na mapě", "-",
+        "F1", "Zobrazování aktuálních poloh vozidel na mapě", "-",
         "F2", "Detail spoje jedoucího vozidla", "F1",
         "F3", "Filtrování linky uživatelem", "F1",
         "F4", "Vyhledání zastávky", "F1",
@@ -160,7 +160,7 @@ Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
 
 == Mapování stávajícího stavu
 
-Spojené druhé kroky funkční a procesní analýzy IS.
+Tato kapitola se zabývá spojeník druhých kroků funkční a procesní analýzy IS.
 Dojde k identifikaci hlavních procesů, toků dat a vazeb mezi jednotlivými částmi systému.
 Výsledek bude přehledně vyzobrazen pomocí Data Flow diagramu.
 @Sommerville2015
@@ -191,15 +191,22 @@ Nahrání transformovaných dat do produkčního prostředí a vydání nové ve
 Pro zavedení nové zastávky do systému je za potřebí provést kroky navíc.
 Samotné zastávky mají vazbu do dat jízdních řádů a proto je za potřebí zaručit validaci na správnou identifikaci zastávky.
 
-- *Vstup*: Informace o nové zastávce
-- *Výstup*: Identifikována zastávka s GPS souřadnicí
-- *Hlavní kroky*:
-  - Informování správce systému o nové zastávce
-  - Doplnění informací o zastávce a její GPS souřadnicích
-  - Vydání nové verze s jízdním řádem, který zastávku využívá
-- *Kde vstupuje IS*:
-  - IS zajišťuje validaci dat
-- *Kde jsou ruční zásahy*:
-  - Informování správce je nutné provést ručně
-  - Transformace vstupu a výstupu vyžaduje ruční kontrolu
-  - Nahrání dat a vydání nové verze je nutné provést ručně
+*Vstupem* procesu jsou informace o nové zastávce.
+*Výstupem* jsou zpracovaná data o zastávce s její GPS souřadnicí.
+*Hlavními kroky* je informování správce systému o nové zastávce.
+Následně dochází k doplnění informací o zastávce a její GPS souřadnicích.
+Po tomto kroku dojde k vydání nové verze s jízdním řádem, který zastávku využívá.
+*IS do procesu vstupuje* zajišťěním validace dat.
+*Ruční zásahy* jsou v procesu v moment informování správce systému, při transformaci vstupu a i při vydání nové verze aplikace.
+
+===== Data Flow diagram
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        image("../images/DFD stavacící stav.svg", width: 80%),
+        caption: [DFD stávající stav IS],
+      )
+    ],
+    [vlastní zpracování],
+  )
