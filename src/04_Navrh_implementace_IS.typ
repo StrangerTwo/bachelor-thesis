@@ -67,9 +67,14 @@ Součástí administrativního rozhraní budou formuláře pro požadavky *Po03*
 == Návrh optimalizace procesů
 
 Krok 4 procesní analýzy IS.
-Na základě vyhodnocených nedostatků bude vytvořen návrh nových zoptimalizovaných procesů.
+Na základě vyhodnocených požadavků bude vytvořen návrh nových zoptimalizovaných procesů.
 Nové procesy budou využívat nových funkcí IS, s cílem automatizace ručních kroků.
 @FreundRucker2014
+
+Rozdělením IS dle architektury *klient-server* dochází k nutnosti upravení aktuálních podnikových procesů, aby se lépe schodovali s IS.
+Hlavními procesy, kterých se transformace týká, jsou *Pr1*, *Pr2* a *Pr3*.
+Existence administrativního rozhraní a formulářových prvků dojde k automatizaci určitých kroků těchto procesů.
+Zároveň bude pro většinový případ odebrána závislost procesů na dostupnosti administrátora, čímž bude zajištěn plynulejší chod podnikových cílů.
 
 #pagebreak()
 
