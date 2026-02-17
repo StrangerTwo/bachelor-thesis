@@ -49,7 +49,7 @@ Díky funkční analýze lze jednoduše určit hranice systému a jeho hlavních
 
 Funkční analýza se skládá z celkem pěti navazujících kroků.
 
-Prvním krokem je *analýza a sběr požadavků*, jehož hlavním cílem je pochopení problému, který IS řeší.
+Prvním krokem je *sběr požadavků*, jehož hlavním cílem je pochopení problému, který IS řeší.
 Tento krok slouží ke kompletnímu poznání aktuální IS, jeho funkcionalit, vlastností a způsobu využití jednotlivými skupinami uživatelů.
 Jsou identifikovány potřeby uživatelských skupin a základní očekávání kladená na systém.
 @WiegersBeatty2013
@@ -109,7 +109,7 @@ Cílem je zachytit skutečný průběh procesů tak, jak probíhají v praxi, ni
 Výsledkem je vytvoření procesních map, obsahující vstupy a výstupy, procesní kroky a role, podílející se na realizaci.
 @Dumas2018
 
-Třetím krokem je *analýza a identifikace nedostatků*.
+Třetím krokem je *identifikace nedostatků*.
 Procesy jsou vyhodnoceny z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
 Je kladen důraz na hledání defektů, úzkých míst a činností, které nepřinášejí přidanou hodnotu.
 Identifikací nedostatků lze pojmenovat konkrétní problémy v procesech a formulovat důvody, proč dané procesy změnit, nebo podpořit novým IS.

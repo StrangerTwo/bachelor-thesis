@@ -4,7 +4,7 @@
 
 Cílem této kapitoly je provést identifikaci klíčových částí aktuálního IS.
 Bude proveden krok 1 procesní analýzy IS, *identifikace a vymezení podniku*.
-Následně krok 1 funkční analýzy IS, *analýza a sběr požadavků*.
+Následně krok 1 funkční analýzy IS, *sběr požadavků*.
 Druhé kroky funkční analýzy IS, *modelování stávajícího stavu (As-­Is)*, a procesní analýzy IS, *mapování stávajícího stavu (As-­Is)*, budou sjednoceny do jedné podkapitoly.
 @Sommerville2015
 
@@ -44,7 +44,7 @@ Svým charakterem IS podporuje podnikové procesy komunikace s cestujícími.
 Může zastávat roli informativní a propagační.
 Systém je pozicován přímo u koncových zákazníků podniku a proto je možné jej využít jako komunikační kanál dopravců se svými zákazníky.
 
-== Analýza a sběr požadavků
+== Sběr požadavků
 
 První krok funkční analýzy IS.
 Hlavním cílem bude pochopení problému, který IS řeší.

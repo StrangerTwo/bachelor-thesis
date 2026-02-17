@@ -6,7 +6,7 @@ Cílem této kapitoly je vytvořit návrh implementace IS.
 Bude proveden krok 4 funkční analýzy IS, *návrh budoucího stavu*.
 Následně krok 4 procesní analýzy IS, *návrh optimalizace procesů*.
 
-== Návrh budoucího stavu
+===== Návrh budoucího stavu
 
 Krok 4 funkční analýzy IS.
 Dle definovaných požadavků budou zfinalizovány cíle nového IS.
@@ -64,7 +64,7 @@ Součástí administrativního rozhraní budou formuláře pro požadavky *Po03*
 )
 
 
-== Návrh optimalizace procesů
+===== Návrh optimalizace procesů
 
 Krok 4 procesní analýzy IS.
 Na základě vyhodnocených požadavků bude vytvořen návrh nových zoptimalizovaných procesů.

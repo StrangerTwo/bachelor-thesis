@@ -3,43 +3,14 @@
 = Specifikace požadavků na funkce IS
 
 Cílem této kapitoly je provést specifikace požadavků na funkce IS.
-Bude proveden krok 3 procesní analýzy IS, *analýza a identifikace nedostatků*.
+Bude proveden krok 3 procesní analýzy IS, *identifikace nedostatků*.
 Následně krok 3 funkční analýzy IS, *definování funkčních a nefunkčních požadavků*.
 
-== Analýza a identifikace nedostatků
+== Identifikace nedostatků
 
 Krok 3 procesní analýzy IS.
 V tomto kroce dojde k vyhodnocení procesů z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
 @HammerChampy2006
-
-=== Datové formáty
-
-Funkční požadavky na IS jsou kladeny i v podobě existujících datových formátů, který musí nový IS podporovat.
-Jedná se o přesně specifikovaný datový formát otevřených dat ČR pro jízdní řády.
-
-===== Otevřená data ČR
-
-Pro účel zvěřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ).
-Tento informační systém vznikl na základě vyhlášky Ministerstva dopravy ČR z roku 2014 @vyhlaskaCISJR a zprostředkovává veřejně dostupná data ve strojově čitelném formátu.
-@cisjr
-
-Data na FTP uložišti obsahují vícero druhů informací.
-
-+ Jízdní řády *vlakových spojení* ve formátu *.XML*
-+ Jízdní řády *autobusové dopravy* ve formátu *.JDF*
-
-Pro potřeby požadovaného IS budou využívány jízdní řády autobusové dopravy ve formátu JDF.
-
-===== Datový formát JDF
-
-Datový formát JDF je popsán dokumentací vydanou součástí metodického pokynu ministerstva dopravy.
-@jdfSpec
-
-Tento datový formát disponuje informacemi o názvech, časováním a kilometráží autobusových spojů s dodatečnou možností označit spoj, či zastávku kódovou značkou.
-
-Značnou nevýhodou tohoto datového formátu je absence geografických dat.
-GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
-V současném systému jsou GPS souřadnice předávány vlastní komunikací dispečera s administrátorem, bez přesně určeného datového formátu.
 
 === Hodnocení procesů
 
@@ -112,6 +83,35 @@ Dispečer tedy není schopen dodat vlastní ikonky personalizaci klientské apli
 ]
 
 #pagebreak()
+
+=== Hodnocení datových formátů
+
+Funkční požadavky na IS jsou kladeny i v podobě existujících datových formátů, který musí nový IS podporovat.
+Jedná se o přesně specifikovaný datový formát otevřených dat ČR pro jízdní řády.
+
+===== Otevřená data ČR
+
+Pro účel zvěřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ).
+Tento informační systém vznikl na základě vyhlášky Ministerstva dopravy ČR z roku 2014 @vyhlaskaCISJR a zprostředkovává veřejně dostupná data ve strojově čitelném formátu.
+@cisjr
+
+Data na FTP uložišti obsahují vícero druhů informací.
+
++ Jízdní řády *vlakových spojení* ve formátu *.XML*
++ Jízdní řády *autobusové dopravy* ve formátu *.JDF*
+
+Pro potřeby požadovaného IS budou využívány jízdní řády autobusové dopravy ve formátu JDF.
+
+===== Datový formát JDF
+
+Datový formát JDF je popsán dokumentací vydanou součástí metodického pokynu ministerstva dopravy.
+@jdfSpec
+
+Tento datový formát disponuje informacemi o názvech, časováním a kilometráží autobusových spojů s dodatečnou možností označit spoj, či zastávku kódovou značkou.
+
+Značnou nevýhodou tohoto datového formátu je absence geografických dat.
+GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
+V současném systému jsou GPS souřadnice předávány vlastní komunikací dispečera s administrátorem, bez přesně určeného datového formátu.
 
 == Definování funkčních a nefunkčních požadavků
 
