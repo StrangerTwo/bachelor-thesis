@@ -29,7 +29,7 @@ Systém je vybavený pro práci s daty jízdních řádů, v zákonem požadovan
 
 ===== Mise
 
-Klientská aplikace má za úkol zobrazit informace o spojení vozidel MHD rychle a jednoduchým způsobem.
+Klientská aplikace má za úkol zobrazit data o spojení vozidel MHD rychle a jednoduchým způsobem.
 Aplikace by měla sloužit jako dodatečný komunikační kanál dopravce, aby sdělil důležitá upozornění cestujícím.
 
 ===== Vize
@@ -53,9 +53,7 @@ V tomto kroce dojde k poznání funkcionalit IS, jejich vlastností a způsoby v
 
 === Základní charakteristika aplikace
 
-Informační systém pro zobrazování poloh vozidel MHD má
-za úkol zpřístupnit veřejnosti informace o aktuálních polohách spojů,
-jejich zpožděních, nebo jiných provozních událostech, které se týkají cestujících.
+Informační systém pro zobrazování poloh vozidel MHD má za úkol zpřístupnit veřejnosti data o aktuálních polohách spojů, jejich zpožděních, nebo jiných provozních událostech, které se týkají cestujících.
 
 Z povahy aplikace je tedy využívána v moment, kdy je již cestující rozhodnutý cestovat veřejnou hromadnou dopravou a potřebuje zjistit aktuální stav dění.
 Z tohoto předpokladu vychází požadavky na aplikaci aby byla rychlá, ovladatelná a dostupná v podmínkách se špatným přístupem k internetu.
@@ -97,6 +95,7 @@ Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na apli
 
 ===== Detail spoje jedoucího vozidla
 
+@currentDetail zobrazuje funkci současného IS.
 Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho rozkliknutí je k dispozici zobrazení detail tohoto spoje.
 
 #config.sourcedFigure(
@@ -104,7 +103,7 @@ Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho ro
     #figure(
       image("../images/current_detail.png", width: 80%),
       caption: [Detail spoje],
-    )
+    ) <currentDetail>
   ],
   [@onlineDpmp],
 )
@@ -117,13 +116,15 @@ Jedním z nich je možnost filtrovat spoje zobrazené v aplikaci.
 ===== Vyhledání zastávky
 
 Vyhledávání zastávky je dalším prvkem postranní lišty.
+Součástí postranní lišty jsou dodatečné možnosti pro ovládání aplikace.
+@currentSidebar zobrazuje příklad aktuálního IS.
 
 #config.sourcedFigure(
   [
     #figure(
       image("../images/current_sidebar.png", width: 80%),
       caption: [Postranní lišta aplikace],
-    )
+    ) <currentSidebar>
   ],
   [@onlineDpmp],
 )
@@ -131,19 +132,21 @@ Vyhledávání zastávky je dalším prvkem postranní lišty.
 ===== Přehled odjezdů ze zastávky
 
 Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobrazit její detail.
-Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
+@currentStopDetail zobrazuje tento detail. Je zde zobrazena obdoba odjezdové tabule s příštími odjezdy.
 
 #config.sourcedFigure(
   [
     #figure(
       image("../images/current_station_detail.png", width: 80%),
       caption: [Detail zastávky],
-    )
+    ) <currentStopDetail>
   ],
   [@onlineDpmp],
 )
 
 ===== Přehled klíčových funkcí
+
+@currentFunctions obsahuje seznam funkcí aktuálního IS, včetně vzájemných vazeb na ostatní funkce aplikace.
 
 #config.sourcedFigure(
   [
@@ -159,17 +162,15 @@ Na tomto detailu je zobrazena obdoba odjezdové tabule s příštími odjezdy.
         "F5", "Přehled odjezdů ze zastávky", "F4",
       ),
       caption: [Identifikace hlavních funkcí systému],
-    )
+    ) <currentFunctions>
   ],
   [@onlineDpmp],
 )
 
 == Mapování stávajícího stavu
 
-Tato kapitola se zabývá spojeník druhých kroků funkční a procesní analýzy IS.
-Dojde k identifikaci hlavních procesů, toků dat a vazeb mezi jednotlivými částmi systému.
-Výsledek bude přehledně vyzobrazen pomocí Data Flow diagramu.
-@Sommerville2015
+Tato kapitola se zabývá spojením druhých kroků funkční a procesní analýzy IS.
+Dojde k identifikaci hlavních procesů a toků dat mezi jednotlivými částmi systému.
 Dle východisek procesní analýzy IS je třeba analyzovat skutečný průběh činností souvisejících s IS, tak jak doopravdy probíhají.
 Zmapování aktuálního stavu umožní identifikovat oblasti ke zlepšení v návrhu nového řešení.
 @Dumas2018
@@ -183,36 +184,69 @@ K výměně jízdního řádu dochází vždy minimálně jednou ročně.
 
 *Vstupem* tohoto procesu je soubor zdrojových dat jízdního řádu, který je poskytován dopravcem ve stanoveném formátu.
 *Výstupem* procesu jsou transformovaná data, strukturována pro strojové čtení informačním systémem.
-*Hlavní kroky* procesu jsou v pořadí nejprve informování správce systému o změně jízdních řádů.
+*Hlavní kroky* procesu jsou v pořadí nejprve notifikování správce systému o změně jízdních řádů.
 Následně probíhá transformace zdrojových dat pomocí specializovaného skriptu.
 Po úspěšné transformaci jsou data nahrána do systému a je nasazena nová verze aplikace.
 *Vstupy IS* jsou v moment transformace dat.
 IS zajišťuje automatické zpracování vstupních souborů, včetně validace pro ověření konzistence dat.
-*Ruční zásahy* procesu jsou v moment informování správce o změně.
+*Ruční zásahy* procesu jsou v moment notifikování správce o změně.
 Transformace dat a kontrola výstupních souborů vyžaduje ruční dohled, pro případ chyb.
 Nahrání transformovaných dat do produkčního prostředí a vydání nové verze rovněž vyžaduje ruční zásah správce systému.
 
 ===== Zavedení nové zastávky
 
 Pro zavedení nové zastávky do systému je za potřebí provést kroky navíc.
-Samotné zastávky mají vazbu do dat jízdních řádů a proto je za potřebí zaručit validaci na správnou identifikaci zastávky.
+Samotné zastávky mají vazbu na data jízdních řádů a proto je za potřebí zaručit validaci na správnou identifikaci zastávky.
 
-*Vstupem* procesu jsou informace o nové zastávce.
+*Vstupem* procesu jsou data o nové zastávce.
 *Výstupem* jsou zpracovaná data o zastávce s její GPS souřadnicí.
-*Hlavními kroky* je informování správce systému o nové zastávce.
+*Hlavními kroky* je notifikování správce systému o nové zastávce.
 Následně dochází k doplnění informací o zastávce a její GPS souřadnicích.
 Po tomto kroku dojde k vydání nové verze s jízdním řádem, který zastávku využívá.
 *IS do procesu vstupuje* zajišťěním validace dat.
-*Ruční zásahy* jsou v procesu v moment informování správce systému, při transformaci vstupu a i při vydání nové verze aplikace.
+*Ruční zásahy* jsou v procesu v moment notifikování správce systému, při transformaci vstupu a i při vydání nové verze aplikace.
 
-===== Data Flow diagram
+===== Výměna ikonky vozidel
+
+Výměnit ikonky vozidel v aplikaci je nyní možné skrze vydání nové verze IS.
+
+*Vstupem* procesu je požadavek dopravce na výměnu ikonky, obsahující přílohu obrázku, který si dopravce přeje využít.
+*Výstupem* je nově nasazená verze aplikace, již zobrazující nové ikonky vozidel.
+*Hlavními kroky* je notifikování správce systému o požadavku na změnu.
+Následně správce systému provede manuální úpravu přílohy.
+Ikonka je upravena do správného formátu, aby byla podporována systémem.
+Po tomto kroku dojde k vydání nové verze IS.
+*Ruční zásahy* jsou v procesu v moment notifikování správce systému, při úpravě vstupu a i při vydání nové verze aplikace.
+
+===== Tabulka hlavních procesů
+
+@currentProcesses obsahuje seznam procesů, týkajících se aktuálního IS.
+Zvlášť jsou poznamenány kroky, které v aktuálním IS mohou znamenat možné nedostatky.
+Může jít o ruční zásah a ve kterých IS nenabýzí dostatečnou podporu.
 
 #config.sourcedFigure(
   [
     #figure(
-      image("../images/DFD stavacící stav.svg", width: 80%),
-      caption: [DFD stávající stav IS],
-    )
+      table(
+        columns: (auto, auto, auto),
+        align: left,
+        table.header([ID],[Proces], [Možné nedostatky]),
+        "Pr1", "Aktualizace dat jízdních řádů", [
+          - notifikování správce o změně
+          - vydání nové verze
+        ],
+        "Pr2", "Zavedení nové zastávky", [
+          - lokalizace GPS souřadnic zastávky
+          - vydání nové verze
+        ],
+        "Pr3", "Výměna ikonky vozidel", [
+          - notifikování správce o změně
+          - obstarání kompatibilní ikonky
+          - vydání nové verze
+        ],
+      ),
+      caption: [Přehled procesů aktuálního IS],
+    ) <currentProcesses>
   ],
-  [vlastní zpracování],
+  [@onlineDpmp],
 )

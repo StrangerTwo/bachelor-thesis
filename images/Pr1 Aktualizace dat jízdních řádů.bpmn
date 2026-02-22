@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.10.1">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.12.0">
   <message id="Message_Online_Order_Fulfillment" name="Online Order Fulfillment" />
   <collaboration id="Collaboration_Online_Order_Fulfillment">
     <participant id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" name="Proces aktualizace dat jízdních řádů" processRef="Process_Proces_aktualizace_dat_j_zdn_ch___d_" />
+    <group id="Group_09gkye8" categoryValueRef="CategoryValue_01v8ddx" />
+    <group id="Group_027lh7i" categoryValueRef="CategoryValue_12t6h6b" />
   </collaboration>
   <process id="Process_Proces_aktualizace_dat_j_zdn_ch___d_" isExecutable="true">
     <laneSet id="LaneSet_Proces_aktualizace_dat_j_zdn_ch___d_">
@@ -10,12 +12,6 @@
         <flowNodeRef>Zm_na_j_zdn_ho___du</flowNodeRef>
         <flowNodeRef>Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_</flowNodeRef>
         <flowNodeRef>Odpov___na_dotaz</flowNodeRef>
-      </lane>
-      <lane id="Lane_Informa_n__syst_m" name="Informační systém">
-        <flowNodeRef>Transformace_zdrojov_ch_dat_j_zdn_ho___du</flowNodeRef>
-        <flowNodeRef>Validace_transformovan_ch_dat</flowNodeRef>
-        <flowNodeRef>Jsou_data_validn__</flowNodeRef>
-        <flowNodeRef>Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS</flowNodeRef>
       </lane>
       <lane id="Lane_Spr_vce_syst_mu" name="Správce systému">
         <flowNodeRef>P_evzet__informace_o_zm_n__j_zdn_ho___du</flowNodeRef>
@@ -25,6 +21,12 @@
         <flowNodeRef>Ru_n__kontrola_v_stupn_ch_dat</flowNodeRef>
         <flowNodeRef>Nahr_n__dat_do_syst_mu</flowNodeRef>
         <flowNodeRef>Nasazen__nov__verze_aplikace</flowNodeRef>
+      </lane>
+      <lane id="Lane_Informa_n__syst_m" name="Informační systém">
+        <flowNodeRef>Transformace_zdrojov_ch_dat_j_zdn_ho___du</flowNodeRef>
+        <flowNodeRef>Validace_transformovan_ch_dat</flowNodeRef>
+        <flowNodeRef>Jsou_data_validn__</flowNodeRef>
+        <flowNodeRef>Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS</flowNodeRef>
       </lane>
     </laneSet>
     <intermediateCatchEvent id="Zm_na_j_zdn_ho___du" name="Změna jízdního řádu" />
@@ -43,9 +45,9 @@
     <sequenceFlow id="Flow_rel-Byli_p_ed_ny_v_echny_informace_-Dopt_n__se_na_informace-forward-Ne" name="Ne" sourceRef="Byli_p_ed_ny_v_echny_informace_" targetRef="Dopt_n__se_na_informace" />
     <sequenceFlow id="Flow_rel-Dopt_n__se_na_informace-Odpov___na_dotaz-forward" sourceRef="Dopt_n__se_na_informace" targetRef="Odpov___na_dotaz" />
     <sequenceFlow id="Flow_rel-Odpov___na_dotaz-_e_en__chyby_v_datech-forward" sourceRef="Odpov___na_dotaz" targetRef="ID__e_en__chyby_v_datech" />
-    <task id="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" name="Informování správce systému o změně jízdních řádů" />
-    <task id="P_evzet__informace_o_zm_n__j_zdn_ho___du" name="Převzetí informace o změně jízdního řádu" />
+    <task id="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" name="Notifikování správce systému o změně jízdních řádů" />
     <task id="Odpov___na_dotaz" name="Odpověď na dotaz" />
+    <task id="P_evzet__informace_o_zm_n__j_zdn_ho___du" name="Převzetí dat o změně jízdního řádu" />
     <task id="ID__e_en__chyby_v_datech" name="Řešení chyby v datech" />
     <task id="Dopt_n__se_na_informace" name="Doptání se na informace" />
     <exclusiveGateway id="Byli_p_ed_ny_v_echny_informace_" name="Byli předány všechny informace?" />
@@ -57,11 +59,20 @@
     <exclusiveGateway id="Jsou_data_validn__" name="Jsou data validní?" />
     <intermediateCatchEvent id="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" name="Aktualizovaná data jízdních řádů dostupná v IS" />
   </process>
+  <category id="Category_0t58j7w">
+    <categoryValue id="CategoryValue_01v8ddx" value="Možné nedostatky" />
+  </category>
+  <category id="Category_0my1r33">
+    <categoryValue id="CategoryValue_12t6h6b" value="Možné nedostatky" />
+  </category>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_Online_Order_Fulfillment">
       <bpmndi:BPMNShape id="Participant_Proces_aktualizace_dat_j_zdn_ch___d__di" bpmnElement="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" isHorizontal="true">
         <dc:Bounds x="130" y="60" width="2154" height="675" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneShape_Spr_vce_syst_mu" bpmnElement="Lane_Spr_vce_syst_mu" isHorizontal="true" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="160" y="295" width="2124" height="245" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="LaneShape_Dopravce" bpmnElement="Lane_Dopravce" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
         <dc:Bounds x="160" y="60" width="2124" height="235" />
@@ -70,41 +81,40 @@
       <bpmndi:BPMNShape id="LaneShape_Informa_n__syst_m" bpmnElement="Lane_Informa_n__syst_m" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
         <dc:Bounds x="160" y="540" width="2124" height="195" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="LaneShape_Spr_vce_syst_mu" bpmnElement="Lane_Spr_vce_syst_mu" isHorizontal="true" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
-        <dc:Bounds x="160" y="295" width="2124" height="245" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Zm_na_j_zdn_ho___du" bpmnElement="Zm_na_j_zdn_ho___du">
         <dc:Bounds x="275" y="120" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" bpmnElement="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_">
         <dc:Bounds x="408" y="105" width="153" height="149" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Shape_P_evzet__informace_o_zm_n__j_zdn_ho___du" bpmnElement="P_evzet__informace_o_zm_n__j_zdn_ho___du">
-        <dc:Bounds x="587" y="372" width="154" height="119" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Odpov___na_dotaz" bpmnElement="Odpov___na_dotaz">
         <dc:Bounds x="1138" y="143" width="138" height="72" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_P_evzet__informace_o_zm_n__j_zdn_ho___du" bpmnElement="P_evzet__informace_o_zm_n__j_zdn_ho___du">
+        <dc:Bounds x="587" y="362" width="154" height="119" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_ID__e_en__chyby_v_datech" bpmnElement="ID__e_en__chyby_v_datech">
-        <dc:Bounds x="928" y="435" width="154" height="72" />
+        <dc:Bounds x="928" y="425" width="154" height="72" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Dopt_n__se_na_informace" bpmnElement="Dopt_n__se_na_informace">
-        <dc:Bounds x="1143" y="329" width="142" height="72" />
+        <dc:Bounds x="1143" y="319" width="142" height="72" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Byli_p_ed_ny_v_echny_informace_" bpmnElement="Byli_p_ed_ny_v_echny_informace_" isMarkerVisible="true">
-        <dc:Bounds x="1333" y="446" width="50" height="50" />
+        <dc:Bounds x="1333" y="436" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1326" y="496" width="64" height="40" />
+          <dc:Bounds x="1326" y="486" width="64" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Ru_n__kontrola_v_stupn_ch_dat" bpmnElement="Ru_n__kontrola_v_stupn_ch_dat">
-        <dc:Bounds x="1593" y="392" width="146" height="72" />
+        <dc:Bounds x="1593" y="382" width="146" height="72" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Nahr_n__dat_do_syst_mu" bpmnElement="Nahr_n__dat_do_syst_mu">
-        <dc:Bounds x="1808" y="392" width="150" height="72" />
+        <dc:Bounds x="1808" y="382" width="150" height="72" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Nasazen__nov__verze_aplikace" bpmnElement="Nasazen__nov__verze_aplikace">
-        <dc:Bounds x="2019" y="391" width="150" height="72" />
+        <dc:Bounds x="2019" y="381" width="150" height="72" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Transformace_zdrojov_ch_dat_j_zdn_ho___du" bpmnElement="Transformace_zdrojov_ch_dat_j_zdn_ho___du">
         <dc:Bounds x="764" y="595" width="145" height="89" />
@@ -130,11 +140,11 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-P_evzet__informace_o_zm_n__j_zdn_ho___du-forward" bpmnElement="Flow_rel-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-P_evzet__informace_o_zm_n__j_zdn_ho___du-forward">
         <di:waypoint x="482" y="254" />
-        <di:waypoint x="482" y="431" />
-        <di:waypoint x="587" y="431" />
+        <di:waypoint x="482" y="421" />
+        <di:waypoint x="587" y="421" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-P_evzet__informace_o_zm_n__j_zdn_ho___du-Transformace_zdrojov_ch_dat_j_zdn_ho___du-forward" bpmnElement="Flow_rel-P_evzet__informace_o_zm_n__j_zdn_ho___du-Transformace_zdrojov_ch_dat_j_zdn_ho___du-forward">
-        <di:waypoint x="661" y="491" />
+        <di:waypoint x="661" y="481" />
         <di:waypoint x="661" y="631" />
         <di:waypoint x="764" y="631" />
       </bpmndi:BPMNEdge>
@@ -149,62 +159,74 @@
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Jsou_data_validn__-Ru_n__kontrola_v_stupn_ch_dat-forward-Ano" bpmnElement="Flow_rel-Jsou_data_validn__-Ru_n__kontrola_v_stupn_ch_dat-forward-Ano">
         <di:waypoint x="1478" y="627" />
         <di:waypoint x="1530" y="627" />
-        <di:waypoint x="1530" y="428" />
-        <di:waypoint x="1593" y="428" />
+        <di:waypoint x="1530" y="418" />
+        <di:waypoint x="1593" y="418" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1535" y="523" width="20" height="14" />
+          <dc:Bounds x="1535" y="518" width="20" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Ru_n__kontrola_v_stupn_ch_dat-Nahr_n__dat_do_syst_mu-forward" bpmnElement="Flow_rel-Ru_n__kontrola_v_stupn_ch_dat-Nahr_n__dat_do_syst_mu-forward">
-        <di:waypoint x="1739" y="428" />
-        <di:waypoint x="1808" y="428" />
+        <di:waypoint x="1739" y="418" />
+        <di:waypoint x="1808" y="418" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Nahr_n__dat_do_syst_mu-Nasazen__nov__verze_aplikace-forward" bpmnElement="Flow_rel-Nahr_n__dat_do_syst_mu-Nasazen__nov__verze_aplikace-forward">
-        <di:waypoint x="1958" y="428" />
-        <di:waypoint x="2019" y="428" />
+        <di:waypoint x="1958" y="418" />
+        <di:waypoint x="2019" y="418" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Nasazen__nov__verze_aplikace-Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS-forward" bpmnElement="Flow_rel-Nasazen__nov__verze_aplikace-Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS-forward">
-        <di:waypoint x="2091" y="463" />
+        <di:waypoint x="2091" y="453" />
         <di:waypoint x="2091" y="637" />
         <di:waypoint x="2169" y="637" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Jsou_data_validn__-Byli_p_ed_ny_v_echny_informace_-forward-Ne" bpmnElement="Flow_rel-Jsou_data_validn__-Byli_p_ed_ny_v_echny_informace_-forward-Ne">
         <di:waypoint x="1453" y="602" />
-        <di:waypoint x="1453" y="471" />
-        <di:waypoint x="1383" y="471" />
+        <di:waypoint x="1453" y="461" />
+        <di:waypoint x="1383" y="461" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1461" y="523" width="15" height="14" />
+          <dc:Bounds x="1461" y="517" width="15" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-_e_en__chyby_v_datech-Transformace_zdrojov_ch_dat_j_zdn_ho___du-forward" bpmnElement="Flow_rel-_e_en__chyby_v_datech-Transformace_zdrojov_ch_dat_j_zdn_ho___du-forward">
-        <di:waypoint x="928" y="471" />
-        <di:waypoint x="834" y="471" />
+        <di:waypoint x="928" y="461" />
+        <di:waypoint x="834" y="461" />
         <di:waypoint x="834" y="595" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Byli_p_ed_ny_v_echny_informace_-_e_en__chyby_v_datech-forward-Ano" bpmnElement="Flow_rel-Byli_p_ed_ny_v_echny_informace_-_e_en__chyby_v_datech-forward-Ano">
-        <di:waypoint x="1333" y="471" />
-        <di:waypoint x="1082" y="471" />
+        <di:waypoint x="1333" y="461" />
+        <di:waypoint x="1082" y="461" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1237" y="453" width="20" height="14" />
+          <dc:Bounds x="1237" y="443" width="20" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Byli_p_ed_ny_v_echny_informace_-Dopt_n__se_na_informace-forward-Ne" bpmnElement="Flow_rel-Byli_p_ed_ny_v_echny_informace_-Dopt_n__se_na_informace-forward-Ne">
-        <di:waypoint x="1358" y="446" />
-        <di:waypoint x="1358" y="365" />
-        <di:waypoint x="1285" y="365" />
+        <di:waypoint x="1358" y="436" />
+        <di:waypoint x="1358" y="355" />
+        <di:waypoint x="1285" y="355" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1366" y="396" width="15" height="14" />
+          <dc:Bounds x="1366" y="386" width="15" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Dopt_n__se_na_informace-Odpov___na_dotaz-forward" bpmnElement="Flow_rel-Dopt_n__se_na_informace-Odpov___na_dotaz-forward">
-        <di:waypoint x="1211" y="329" />
+        <di:waypoint x="1211" y="319" />
         <di:waypoint x="1211" y="215" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Edge_Flow_rel-Odpov___na_dotaz-_e_en__chyby_v_datech-forward" bpmnElement="Flow_rel-Odpov___na_dotaz-_e_en__chyby_v_datech-forward">
         <di:waypoint x="1138" y="179" />
         <di:waypoint x="1005" y="179" />
-        <di:waypoint x="1005" y="435" />
+        <di:waypoint x="1005" y="425" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_1sd10rg" bpmnElement="Group_027lh7i" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="380" y="70" width="380" height="450" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="525" y="77" width="90" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Group_09gkye8_di" bpmnElement="Group_09gkye8" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="1560" y="350" width="630" height="130" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1830" y="357" width="90" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </definitions>

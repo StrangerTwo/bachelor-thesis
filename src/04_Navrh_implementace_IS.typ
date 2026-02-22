@@ -23,10 +23,10 @@ Tento přístup zvyšuje modularitu systému, podporuje jeho škálovatelnost a 
 
 Uživatelská aplikace bude veřejně dostupná pro cestující a nahradí zobrazovací vrstvu původního IS.
 Požadavky *Po01*, *Po02* budou součástí uživatelské aplikace.
+Návrh této aplikace je zobrazen na @appShowcase[Obrázku].
 
 #config.sourcedFigure(
   [
-
     #figure(
       image("../images/app_showcase.png", width: 80%),
       caption: [Ilustrační obrázek uživatelské aplikace],
@@ -40,18 +40,20 @@ Požadavky *Po01*, *Po02* budou součástí uživatelské aplikace.
 Administrativní rozhraní bude nová klientská aplikace.
 Přístup do této aplikace je omezen pouze pro administrátora, dispečery a vedení dopravce.
 Administrativní rozhraní je prostor pro minitorování aplikace a správu dat zobrazovaných v uživatelské aplikaci.
+Návrh této administrativního rozhraní je zobrazen na @adminIndex[Obrázku].
 
 #config.sourcedFigure(
   [
     #figure(
       image("../images/admin_index.png", width: 80%),
-      caption: [Ilustrační obrázek administrační rozhraní],
+      caption: [Ilustrační obrázek administrativního rozhraní],
     ) <adminIndex>
   ],
   [@MhdOnlineAdmin],
 )
 
 Součástí administrativního rozhraní budou formuláře pro požadavky *Po03*, *Po04* a *Po05*.
+Na @adminJdfUpload[Obrázku] je zobrazena ilustrace, jak by mohl *Po03 Formulář pro výměnu jízdního řádu* vypadat.
 
 #config.sourcedFigure(
   [
@@ -76,6 +78,8 @@ Hlavními procesy, kterých se transformace týká, jsou *Pr1*, *Pr2* a *Pr3*.
 Existence administrativního rozhraní a formulářových prvků dojde k automatizaci určitých kroků těchto procesů.
 Zároveň bude pro většinový případ odebrána závislost procesů na dostupnosti administrátora, čímž bude zajištěn plynulejší chod podnikových cílů.
 
+Optimalizovaný proces *Pr1* byl zpracován v podobě BPMN diagramu na @bpmnUpdate[Obrázku].
+
 #pagebreak()
 
 #[
@@ -91,7 +95,7 @@ Zároveň bude pro většinový případ odebrána závislost procesů na dostup
       #figure(
         image("../images/Pr1_v2 Aktualizace dat jízdních řádů.svg", width: 100%),
         caption: [BPMN diagram optimalizovaného Pr1 Aktualizace dat jízdních řádů],
-      )
+      ) <bpmnUpdate>
     ],
     [vlastní zpracování],
   )

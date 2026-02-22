@@ -17,8 +17,7 @@ Např. servery zpracovávají větší množství dat a připravují je pro stov
 Klientská zařízení následně dotazují serverové komponenty pro data personalizované pro jejich situaci (např. dle GPS polohy).
 
 ===== Software
-aplikace a programy, které využívají hardware pro sbírají data, zpracovávají informace a např.
-je zobrazují cestujícím.
+aplikace a programy, které využívají hardware pro sbírají data, zpracovávají informace a např. je zobrazují cestujícím.
 Hlavnímy druhy software jsou databázové systémy, informační systémy pro správu dat.
 Je to díky těmto software aplikacích, které umožňují efektivní zpracovávání a distribuci informací.
 

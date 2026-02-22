@@ -14,35 +14,6 @@ V tomto kroce dojde k vyhodnocení procesů z hlediska efektivity, časové nár
 
 === Hodnocení procesů
 
-===== Tabulka hlavních procesů
-
-#config.sourcedFigure(
-  [
-    #figure(
-      table(
-        columns: (auto, auto, auto),
-        align: left,
-        table.header([ID],[Proces], [Ruční zásahy]),
-        "Pr1", "Aktualizace dat jízdních řádů", [
-          - informování správce o změně
-          - vydání nové verze
-        ],
-        "Pr2", "Zavedení nové zastávky", [
-          - lokalizace GPS souřadnic zastávky
-          - vydání nové verze
-        ],
-        "Pr3", "Výměnna ikonky vozidel", [
-          - informování správce o změně
-          - obstarání kompatibilní ikonky
-          - vydání nové verze
-        ],
-      ),
-      caption: [Procesy aktuálního IS],
-    )
-  ],
-  [@onlineDpmp],
-)
-
 ===== Nedostatky procesů
 
 Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na kroky s ručnímy zásahy, vyšší chybovostí, nebo největší délkou.
@@ -51,13 +22,15 @@ Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se z
 Procesy *Pr1*, *Pr2* i *Pr3* sdílí společný krok nutnosti vydání nové verze aplikace.
 Tento ruční krok administrátorem zamezuje možnosti rychlé reakce IS na nové změny a je závislý na dostupnosti administrátora.
 
-Proces *Pr2* vyžaduje vstupů ze 2 různých datových zdrojů, těmi jsou informace o zastávce a její GPS souřadnice.
-Informace o zastávce jsou obsažena v datovém souboru JDF, GPS souřadnice nikoliv.
+Proces *Pr2* vyžaduje jako vstup, 2 datové zdroje.
+Jsou to data o zastávce a data o její GPS souřadnicích.
+Data o zastávce jsou obsažena v datovém souboru JDF, GPS souřadnice nikoliv.
 V praxi může nastat situace, kdy je předán pouze 1 datový soubor.
 
-Ikonky, vyžadované procesem *Pr3*, nejsou dostatečně dokumentované.
-Informace o požadovaném rozlišení ikonky existují pouze u administrátora.
-Dispečer tedy není schopen dodat vlastní ikonky personalizaci klientské aplikace.
+Specifikace ikonek, vyžadované procesem *Pr3*, nejsou dostatečně zdokumentované.
+Dispečer není schopen dodat vlastní ikonky pro personalizaci klientské aplikace.
+
+Proces *Pr1* je zpracován v podobě BPMN diagramu na @bpmnCurrent[Obrázku].
 
 #pagebreak()
 
@@ -74,7 +47,7 @@ Dispečer tedy není schopen dodat vlastní ikonky personalizaci klientské apli
       #figure(
         image("../images/Pr1 Aktualizace dat jízdních řádů.svg", width: 100%),
         caption: [BPMN diagram Pr1 Aktualizace dat jízdních řádů],
-      )
+      ) <bpmnCurrent>
     ],
     [vlastní zpracování],
   )
@@ -107,7 +80,9 @@ Pro potřeby požadovaného IS budou využívány jízdní řády autobusové do
 Datový formát JDF je popsán dokumentací vydanou součástí metodického pokynu ministerstva dopravy.
 @jdfSpec
 
-Tento datový formát disponuje informacemi o názvech, časováním a kilometráží autobusových spojů s dodatečnou možností označit spoj, či zastávku kódovou značkou.
+Tento datový formát disponuje názvy zastávek, časovou informací o příjezdech a odjezdech, kilometráží autobusových spojů.
+Spoje, nebo zastávky mohou být dodatečně označeny kódovou značkou.
+Význam kódových značek je součástí definice formátu JDF.
 
 Značnou nevýhodou tohoto datového formátu je absence geografických dat.
 GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
@@ -127,15 +102,17 @@ Výsledkem bude tabulka požadavků.
 Důležitým funkčním požadavkem pro nový IS bude možnost nahrát nová data pomocí administrativního rozhraní.
 Aktuální nedostatek procesů *Pr1*, *Pr2* a *Pr3* - nutnost vydání nové verze IS administrátorem, bude za pomocí formulářů odebrán.
 Po nahrání dat skrze administrativní rozhraní dojde k automatickému nasazení nové verze klientské aplikace, bez nutnosti ručního zásahu administrátorem.
-Takto vznikají požadavky pro *Po03 Formulář pro výměnu jízdního řádu*, *Po04 Formulář pro úpravu ikonky vozidla*, *Po05 Formulář pro úpravu zastávky*.
+Proto vznikají funkční požadavky pro *Po03 Formulář pro výměnu jízdního řádu*, *Po04 Formulář pro úpravu ikonky vozidla*, *Po05 Formulář pro úpravu zastávky*.
 
-Nedostatek rozdílných datových zdrojů pro vstup procesu *Pr2* bude vyřešen součástí požadavku *Po05*.
+Nedostatek rozdílných datových zdrojů pro vstup procesu *Pr2* bude vyřešen součástí funkčního požadavku *Po05*.
 Formulář pro úpravu zastávky sjednotí datové soubory a zvaliduje je.
 IS data zastávky převezme vždy v uceleném stavu.
 
-Nedostatek dokumentace a přehlednosti požadavků na ikonky klientské aplikace pro vstup procesu *Pr3* bude vyřešen součástí požadavku *Po04*.
+Nedostatek dokumentace a přehlednosti požadavků na ikonky klientské aplikace pro vstup procesu *Pr3* bude vyřešen součástí funkčního požadavku *Po04*.
 Formulář bude obsahovat interaktivní validace pro ikonku s informačním dialogem.
 Zadávání nové ikonky bude probíhat přes interaktivní formulář, tak aby IS dokázal příjmout libovolnou ikonku a případné nesrovnalosti s rozlišením ikonky byl schopen vyřešit dispečer z formuláře (např. oříznutím).
+
+Požadavky byli souhrně sepsány v @requirementsTable[Tabulce].
 
 #pagebreak()
 
@@ -159,10 +136,10 @@ Zadávání nové ikonky bude probíhat přes interaktivní formulář, tak aby 
           "Po02", "Detail spoje vozidla", "Pro zobrazovaná vozidla v klientské aplikaci je možné rozkliknutím zobrazit detail spojení jedoucího vozidla. V novém okně se zobrazí přehled spoje a nadcházející zastávky s aktuálním zpožděním.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
           "Po03", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dispečerovi nahrát data nového jizdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po04", "Formulář pro úpravu ikonky vozidla", "Formulář v administraci umožní dispečerovi nahrát novou ikonku do aplikace. Dostupné ikonky ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
-          "Po05", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit informace a GPS souřadnice zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+          "Po05", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit vlastnosti zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
         ),
         caption: [Tabulka požadavků],
-      )
+      ) <requirementsTable>
     ],
     [Vlastní zpracování],
   )
