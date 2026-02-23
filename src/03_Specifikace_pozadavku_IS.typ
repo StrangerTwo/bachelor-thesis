@@ -112,7 +112,7 @@ Nedostatek dokumentace a přehlednosti požadavků na ikonky klientské aplikace
 Formulář bude obsahovat interaktivní validace pro ikonku s informačním dialogem.
 Zadávání nové ikonky bude probíhat přes interaktivní formulář, tak aby IS dokázal příjmout libovolnou ikonku a případné nesrovnalosti s rozlišením ikonky byl schopen vyřešit dispečer z formuláře (např. oříznutím).
 
-Požadavky byli souhrně sepsány v @requirementsTable[Tabulce].
+Požadavky byly souhrně sepsány v @requirementsTable[Tabulce].
 
 #pagebreak()
 
@@ -131,7 +131,7 @@ Požadavky byli souhrně sepsány v @requirementsTable[Tabulce].
         table(
           columns: (auto, auto, auto, auto, auto, auto),
           align: left,
-          table.header([ID],[Proces], [Popis], [Způsob ověření], [Typ], [Zdroj]),
+          table.header([ID], [Požadavek], [Popis], [Způsob ověření], [Typ], [Zdroj]),
           "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
           "Po02", "Detail spoje vozidla", "Pro zobrazovaná vozidla v klientské aplikaci je možné rozkliknutím zobrazit detail spojení jedoucího vozidla. V novém okně se zobrazí přehled spoje a nadcházející zastávky s aktuálním zpožděním.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
           "Po03", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dispečerovi nahrát data nového jizdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
