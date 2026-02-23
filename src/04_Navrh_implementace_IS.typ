@@ -23,7 +23,7 @@ Tento přístup zvyšuje modularitu systému, podporuje jeho škálovatelnost a 
 
 Uživatelská aplikace bude veřejně dostupná pro cestující a nahradí zobrazovací vrstvu původního IS.
 Požadavky *Po01*, *Po02* budou součástí uživatelské aplikace.
-Návrh této aplikace je zobrazen na @appShowcase[Obrázku].
+Návrh rozhraní úživatelské aplikace je zobrazen na @appShowcase[Obrázku].
 
 #config.sourcedFigure(
   [

@@ -76,9 +76,12 @@
         pagebreak()
       }
     }
-    it
+    pad(left: 0.5cm)[#it]
   }
-  show heading.where(depth: 3): set text(size: 13pt)
+  show heading.where(depth: 3): it => {
+    set text(size: 13pt)
+    pad(left: 1cm)[#it]
+  }
   doc
 }
 
@@ -113,6 +116,8 @@
   show figure.caption: set align(right)
   figure(
     [
+      #show figure.where(kind: table): set figure.caption(position: top)
+
       #show figure.caption: set align(left)
       #body
     ],

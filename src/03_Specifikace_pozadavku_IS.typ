@@ -16,7 +16,7 @@ V tomto kroce dojde k vyhodnocení procesů z hlediska efektivity, časové nár
 
 ===== Nedostatky procesů
 
-Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na kroky s ručnímy zásahy, vyšší chybovostí, nebo největší délkou.
+Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na kroky s ručnímy zásahy, vyšší chybovostí, nebo největší časovou náročností.
 @HammerChampy2006
 
 Procesy *Pr1*, *Pr2* i *Pr3* sdílí společný krok nutnosti vydání nové verze aplikace.
