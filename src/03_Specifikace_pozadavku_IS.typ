@@ -19,18 +19,13 @@ V tomto kroce dojde k vyhodnocení procesů z hlediska efektivity, časové nár
 Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na kroky s ručnímy zásahy, vyšší chybovostí, nebo největší časovou náročností.
 @HammerChampy2006
 
-Procesy *Pr1*, *Pr2* i *Pr3* sdílí společný krok nutnosti vydání nové verze aplikace.
-Tento ruční krok administrátorem zamezuje možnosti rychlé reakce IS na nové změny a je závislý na dostupnosti administrátora.
+Všechny vybrané procesy *Pr1*, *Pr2* i *Pr3* jsou níže zobrazeny ve formátu BPMN diagramu.
+Na tomto diagramu budou zobrazeny kroky, které se mezi těmito procesy shodují.
+Zobrazeny budou i kroky, které v aktuálním IS vykazují známky možných nedostatků (Bude podrobněji dovysvětleno v @requirementsSpecification[kapitole]).
 
-Proces *Pr2* vyžaduje jako vstup, 2 datové zdroje.
-Jsou to data o zastávce a data o její GPS souřadnicích.
-Data o zastávce jsou obsažena v datovém souboru JDF, GPS souřadnice nikoliv.
-V praxi může nastat situace, kdy je předán pouze 1 datový soubor.
-
-Specifikace ikonek, vyžadované procesem *Pr3*, nejsou dostatečně zdokumentované.
-Dispečer není schopen dodat vlastní ikonky pro personalizaci klientské aplikace.
-
-Proces *Pr1* je zpracován v podobě BPMN diagramu na @bpmnCurrent[Obrázku].
+Proces *Pr1* je zpracován v podobě BPMN diagramu na @bpmnPr1[Obrázku].
+Proces *Pr2* je zpracován v podobě BPMN diagramu na @bpmnPr2[Obrázku].
+Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
 
 #pagebreak()
 
@@ -47,7 +42,7 @@ Proces *Pr1* je zpracován v podobě BPMN diagramu na @bpmnCurrent[Obrázku].
       #figure(
         image("../images/Pr1 Aktualizace dat jízdních řádů.svg", width: 100%),
         caption: [BPMN diagram Pr1 Aktualizace dat jízdních řádů],
-      ) <bpmnCurrent>
+      ) <bpmnPr1>
     ],
     [vlastní zpracování],
   )
@@ -56,6 +51,94 @@ Proces *Pr1* je zpracován v podobě BPMN diagramu na @bpmnCurrent[Obrázku].
 ]
 
 #pagebreak()
+
+#[
+  #set page(
+    paper: "a3",
+    margin: auto,
+    flipped: true
+  )
+  #v(1fr)
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        image("../images/Pr2 Zavedení nové zastávky.svg", width: 100%),
+        caption: [BPMN diagram Pr2 Zavedení nové zastávky],
+      ) <bpmnPr2>
+    ],
+    [vlastní zpracování],
+  )
+
+  #v(1fr)
+]
+
+#pagebreak()
+
+#[
+  #set page(
+    paper: "a3",
+    margin: auto,
+    flipped: true
+  )
+  #v(1fr)
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        image("../images/Pr3 Výměna ikonky vozidel.svg", width: 100%),
+        caption: [BPMN diagram Pr3 Výměna ikonky vozidel],
+      ) <bpmnPr3>
+    ],
+    [vlastní zpracování],
+  )
+
+  #v(1fr)
+]
+
+#pagebreak()
+
+===== Podrobnosti kroků procesů
+
+Kroky jednotlivých procesů byly zapsány v @processStepsTable[Tabulce].
+
+#config.sourcedFigure(
+  [
+    #figure(
+      table(
+        columns: (auto, auto, auto, auto, auto, auto),
+        align: left,
+        table.header([ID], [Krok], [Role], [Chybovost], [Časová náročnost], [Procesy]),
+        "K01", "Notifikování správce o změně", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
+        "K02", "Převzetí dat o změně", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
+        "K03", "Transformace zdrojových dat do datového balíku", "Systém", "Možnost chyby", "Rychlá", "Pr1, Pr2",
+        "K04", "Validace datového balíku", "Systém", "Možnost chyby", "Rychlá", "Pr1, Pr2",
+        "K05", "Řešení chyby v datech", "Správce", "Možnost chyby", "Náročná", "Pr1, Pr2",
+        "K06", "Doptání se na potřebné podklady", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2",
+        "K07", "Odpověď na dotaz", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2",
+        "K08", "Nahrání dat do systému", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
+        "K09", "Nasazení nové verze aplikace", "Správce", "Bezchybná", "Náročná", "Pr1, Pr2, Pr3",
+        "K10", "Úprava ikonky do požadovaného formátu", "Správce", "Bezchybná", "Náročná", "Pr3",
+      ),
+      caption: [Tabulka kroků všech procesů],
+    ) <processStepsTable>
+  ],
+  [Vlastní zpracování],
+)
+
+#config.todo[
+  Jedním tímto krokem je nutnosti vydání nové verze aplikace.
+  Tento ruční krok administrátorem zamezuje možnosti rychlé reakce IS na nové změny a je závislý na dostupnosti administrátora.
+
+  Proces *Pr2* vyžaduje jako vstup, 2 datové zdroje.
+  Jsou to data o zastávce a data o její GPS souřadnicích.
+  Data o zastávce jsou obsažena v datovém souboru JDF, GPS souřadnice nikoliv.
+  V praxi může nastat situace, kdy je předán pouze 1 datový soubor.
+
+  Specifikace ikonek, vyžadované procesem *Pr3*, nejsou dostatečně zdokumentované.
+  Dispečer není schopen dodat vlastní ikonky pro personalizaci klientské aplikace.
+]
+
 
 === Hodnocení datových formátů
 
@@ -88,7 +171,7 @@ Značnou nevýhodou tohoto datového formátu je absence geografických dat.
 GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
 V současném systému jsou GPS souřadnice předávány vlastní komunikací dispečera s administrátorem, bez přesně určeného datového formátu.
 
-== Definování funkčních a nefunkčních požadavků
+== Definování funkčních a nefunkčních požadavků <requirementsSpecification>
 
 Krok 3 funkční analýzy IS.
 Dojde k definování požadavků na nový IS.
@@ -125,6 +208,7 @@ Požadavky byly souhrně sepsány v @requirementsTable[Tabulce].
   #v(1fr)
 
   ===== Tabulka požadavků
+
   #config.sourcedFigure(
     [
       #figure(

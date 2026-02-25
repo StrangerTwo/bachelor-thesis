@@ -185,7 +185,7 @@ K výměně jízdního řádu dochází vždy minimálně jednou ročně.
 *Vstupem* tohoto procesu je soubor zdrojových dat jízdního řádu, který je poskytován dopravcem ve stanoveném formátu.
 *Výstupem* procesu jsou transformovaná data, strukturována pro strojové čtení informačním systémem.
 *Hlavní kroky* procesu jsou v pořadí nejprve notifikování správce systému o změně jízdních řádů.
-Následně probíhá transformace zdrojových dat pomocí specializovaného skriptu.
+Následně probíhá transformace zdrojových dat pomocí specializovaného skriptu na datový balík využívaný IS.
 Po úspěšné transformaci jsou data nahrána do systému a je nasazena nová verze aplikace.
 *Vstupy IS* jsou v moment transformace dat.
 IS zajišťuje automatické zpracování vstupních souborů, včetně validace pro ověření konzistence dat.
@@ -197,11 +197,13 @@ Nahrání transformovaných dat do produkčního prostředí a vydání nové ve
 
 Pro zavedení nové zastávky do systému je za potřebí provést kroky navíc.
 Samotné zastávky mají vazbu na data jízdních řádů a proto je za potřebí zaručit validaci na správnou identifikaci zastávky.
+Interní datový formát IS ukládá data jízdních řádů a zastávek společně, do jednoho datového balíku.
+Z tohoto důvodu dochází v tomto procesu o překryv některých kroků mezi oběma procesy.
 
 *Vstupem* procesu jsou data o nové zastávce.
 *Výstupem* jsou zpracovaná data o zastávce s její GPS souřadnicí.
-*Hlavními kroky* je notifikování správce systému o nové zastávce.
-Následně dochází k doplnění informací o zastávce a její GPS souřadnicích.
+*Hlavními kroky* je notifikování správce systému o nové zastávce včetně její GPS souřadnice.
+Následně probíhá transformace zdrojových dat pomocí skriptu a přepsání datového balíků novými daty.
 Po tomto kroku dojde k vydání nové verze s jízdním řádem, který zastávku využívá.
 *IS do procesu vstupuje* zajišťěním validace dat.
 *Ruční zásahy* jsou v procesu v moment notifikování správce systému, při transformaci vstupu a i při vydání nové verze aplikace.

@@ -2,7 +2,7 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.12.0">
   <message id="Message_Online_Order_Fulfillment" name="Online Order Fulfillment" />
   <collaboration id="Collaboration_Online_Order_Fulfillment">
-    <participant id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" name="Proces aktualizace dat jízdních řádů" processRef="Process_Proces_aktualizace_dat_j_zdn_ch___d_" />
+    <participant id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" name="Proces zavedení nové zastávky" processRef="Process_Proces_aktualizace_dat_j_zdn_ch___d_" />
     <group id="Group_09gkye8" categoryValueRef="CategoryValue_01v8ddx" />
     <group id="Group_027lh7i" categoryValueRef="CategoryValue_12t6h6b" />
   </collaboration>
@@ -28,7 +28,7 @@
         <flowNodeRef>Validace_transformovan_ch_dat</flowNodeRef>
       </lane>
     </laneSet>
-    <intermediateCatchEvent id="Zm_na_j_zdn_ho___du" name="Změna jízdního řádu" />
+    <intermediateCatchEvent id="Zm_na_j_zdn_ho___du" name="Zavedení nové zastávky" />
     <sequenceFlow id="Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward" sourceRef="Zm_na_j_zdn_ho___du" targetRef="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" />
     <sequenceFlow id="Flow_rel-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-P_evzet__informace_o_zm_n__j_zdn_ho___du-forward" sourceRef="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" targetRef="P_evzet__informace_o_zm_n__j_zdn_ho___du" />
     <sequenceFlow id="Flow_rel-P_evzet__informace_o_zm_n__j_zdn_ho___du-Transformace_zdrojov_ch_dat_j_zdn_ho___du-forward" sourceRef="P_evzet__informace_o_zm_n__j_zdn_ho___du" targetRef="Transformace_zdrojov_ch_dat_j_zdn_ho___du" />
@@ -43,8 +43,8 @@
     <sequenceFlow id="Flow_rel-Byli_p_ed_ny_v_echny_informace_-Dopt_n__se_na_informace-forward-Ne" name="Ne" sourceRef="Byli_p_ed_ny_v_echny_informace_" targetRef="Dopt_n__se_na_informace" />
     <sequenceFlow id="Flow_rel-Dopt_n__se_na_informace-Odpov___na_dotaz-forward" sourceRef="Dopt_n__se_na_informace" targetRef="Odpov___na_dotaz" />
     <sequenceFlow id="Flow_rel-Odpov___na_dotaz-_e_en__chyby_v_datech-forward" sourceRef="Odpov___na_dotaz" targetRef="ID__e_en__chyby_v_datech" />
-    <task id="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" name="Notifikování správce systému o změně jízdního řádu" />
-    <task id="P_evzet__informace_o_zm_n__j_zdn_ho___du" name="Převzetí dat o změně jízdního řádu" />
+    <task id="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" name="Notifikování správce systému o nové zastávce a její GPS souřadnici" />
+    <task id="P_evzet__informace_o_zm_n__j_zdn_ho___du" name="Převzetí dat o nové zastávce" />
     <task id="Transformace_zdrojov_ch_dat_j_zdn_ho___du" name="Transformace zdrojových dat do datového balíku" />
     <task id="ID__e_en__chyby_v_datech" name="Řešení chyby v datech" />
     <task id="Odpov___na_dotaz" name="Odpověď na dotaz" />
@@ -83,7 +83,7 @@
       <bpmndi:BPMNShape id="Shape_Zm_na_j_zdn_ho___du" bpmnElement="Zm_na_j_zdn_ho___du">
         <dc:Bounds x="275" y="120" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="262" y="170" width="79" height="27" />
+          <dc:Bounds x="263" y="170" width="76" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" bpmnElement="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_">
