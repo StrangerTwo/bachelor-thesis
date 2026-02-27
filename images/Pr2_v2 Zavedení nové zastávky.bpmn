@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.12.0">
+  <message id="Message_Online_Order_Fulfillment" name="Online Order Fulfillment" />
+  <collaboration id="Collaboration_Online_Order_Fulfillment">
+    <participant id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" name="Proces zavedení nové zastávky" processRef="Process_Proces_aktualizace_dat_j_zdn_ch___d_" />
+    <group id="Group_0jtovuw" categoryValueRef="CategoryValue_1cv60jl" />
+  </collaboration>
+  <process id="Process_Proces_aktualizace_dat_j_zdn_ch___d_" isExecutable="true">
+    <laneSet id="LaneSet_Proces_aktualizace_dat_j_zdn_ch___d_">
+      <lane id="Lane_Dopravce" name="Dispečer">
+        <flowNodeRef>Zm_na_j_zdn_ho___du</flowNodeRef>
+        <flowNodeRef>Activity_0sp6pku</flowNodeRef>
+      </lane>
+      <lane id="Lane_Spr_vce_syst_mu" name="Správce systému" />
+      <lane id="Lane_Informa_n__syst_m" name="Informační systém">
+        <flowNodeRef>Activity_18qa613</flowNodeRef>
+        <flowNodeRef>Activity_0edxqx6</flowNodeRef>
+        <flowNodeRef>Activity_0b75zoj</flowNodeRef>
+        <flowNodeRef>Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS</flowNodeRef>
+      </lane>
+    </laneSet>
+    <sequenceFlow id="Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward" sourceRef="Zm_na_j_zdn_ho___du" targetRef="Activity_0sp6pku" />
+    <sequenceFlow id="Flow_1i2h7os" sourceRef="Activity_0sp6pku" targetRef="Activity_18qa613" />
+    <sequenceFlow id="Flow_00dzndh" sourceRef="Activity_18qa613" targetRef="Activity_0edxqx6" />
+    <sequenceFlow id="Flow_1frxcbu" sourceRef="Activity_0edxqx6" targetRef="Activity_0b75zoj" />
+    <sequenceFlow id="Flow_06jfo1a" sourceRef="Activity_0b75zoj" targetRef="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" />
+    <intermediateCatchEvent id="Zm_na_j_zdn_ho___du" name="Zavedení nové zastávky" />
+    <task id="Activity_0sp6pku" name="Vyplnění formuláře pro úpravu zastávky">
+      <incoming>Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward</incoming>
+      <outgoing>Flow_1i2h7os</outgoing>
+    </task>
+    <task id="Activity_18qa613" name="Příjmutí dat zastávky fomulářem">
+      <incoming>Flow_1i2h7os</incoming>
+      <outgoing>Flow_00dzndh</outgoing>
+    </task>
+    <task id="Activity_0edxqx6" name="Aktualizace dat zastávky">
+      <incoming>Flow_00dzndh</incoming>
+      <outgoing>Flow_1frxcbu</outgoing>
+    </task>
+    <task id="Activity_0b75zoj" name="Aplikování změn v aplikaci">
+      <incoming>Flow_1frxcbu</incoming>
+      <outgoing>Flow_06jfo1a</outgoing>
+    </task>
+    <intermediateCatchEvent id="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" name="Aktualizovaná data zastávky v IS">
+      <incoming>Flow_06jfo1a</incoming>
+    </intermediateCatchEvent>
+  </process>
+  <category id="Category_18ch8gy">
+    <categoryValue id="CategoryValue_1cv60jl" value="Změny v optimalizaci procesu" />
+  </category>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_Online_Order_Fulfillment">
+      <bpmndi:BPMNShape id="Participant_Proces_aktualizace_dat_j_zdn_ch___d__di" bpmnElement="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" isHorizontal="true">
+        <dc:Bounds x="130" y="60" width="1024" height="415" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneShape_Dopravce" bpmnElement="Lane_Dopravce" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="160" y="60" width="994" height="135" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneShape_Spr_vce_syst_mu" bpmnElement="Lane_Spr_vce_syst_mu" isHorizontal="true" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
+        <dc:Bounds x="160" y="195" width="994" height="145" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneShape_Informa_n__syst_m" bpmnElement="Lane_Informa_n__syst_m" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
+        <dc:Bounds x="160" y="340" width="994" height="135" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Zm_na_j_zdn_ho___du" bpmnElement="Zm_na_j_zdn_ho___du">
+        <dc:Bounds x="245" y="105" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="233" y="155" width="76" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0sp6pku_di" bpmnElement="Activity_0sp6pku">
+        <dc:Bounds x="370" y="90" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_18qa613_di" bpmnElement="Activity_18qa613">
+        <dc:Bounds x="540" y="370" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0edxqx6_di" bpmnElement="Activity_0edxqx6">
+        <dc:Bounds x="710" y="370" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0b75zoj_di" bpmnElement="Activity_0b75zoj">
+        <dc:Bounds x="880" y="370" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" bpmnElement="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS">
+        <dc:Bounds x="1065" y="385" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1045" y="435" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward" bpmnElement="Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward">
+        <di:waypoint x="295" y="130" />
+        <di:waypoint x="370" y="130" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1i2h7os_di" bpmnElement="Flow_1i2h7os">
+        <di:waypoint x="470" y="130" />
+        <di:waypoint x="505" y="130" />
+        <di:waypoint x="505" y="410" />
+        <di:waypoint x="540" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00dzndh_di" bpmnElement="Flow_00dzndh">
+        <di:waypoint x="640" y="410" />
+        <di:waypoint x="710" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1frxcbu_di" bpmnElement="Flow_1frxcbu">
+        <di:waypoint x="810" y="410" />
+        <di:waypoint x="880" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06jfo1a_di" bpmnElement="Flow_06jfo1a">
+        <di:waypoint x="980" y="410" />
+        <di:waypoint x="1065" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Group_0jtovuw_di" bpmnElement="Group_0jtovuw" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="330" y="70" width="680" height="390" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="922" y="73" width="61" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

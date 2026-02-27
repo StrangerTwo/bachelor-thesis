@@ -22,7 +22,7 @@ Tento přístup zvyšuje modularitu systému, podporuje jeho škálovatelnost a 
 ===== Uživatelská aplikace
 
 Uživatelská aplikace bude veřejně dostupná pro cestující a nahradí zobrazovací vrstvu původního IS.
-Požadavky *Po01*, *Po02* budou součástí uživatelské aplikace.
+Požadavky *Po01*, *Po02* a *Po03* budou součástí uživatelské aplikace.
 Návrh rozhraní úživatelské aplikace je zobrazen na @appShowcase[Obrázku].
 
 #config.sourcedFigure(
@@ -52,8 +52,8 @@ Návrh této administrativního rozhraní je zobrazen na @adminIndex[Obrázku].
   [@MhdOnlineAdmin],
 )
 
-Součástí administrativního rozhraní budou formuláře pro požadavky *Po03*, *Po04* a *Po05*.
-Na @adminJdfUpload[Obrázku] je zobrazena ilustrace, jak by mohl *Po03 Formulář pro výměnu jízdního řádu* vypadat.
+Součástí administrativního rozhraní budou formuláře pro požadavky *Po04*, *Po05* a *Po06*.
+Na @adminJdfUpload[Obrázku] je zobrazena ilustrace, jak by mohl *Po04 Formulář pro výměnu jízdního řádu* vypadat.
 
 #config.sourcedFigure(
   [
@@ -78,7 +78,9 @@ Hlavními procesy, kterých se transformace týká, jsou *Pr1*, *Pr2* a *Pr3*.
 Existence administrativního rozhraní a formulářových prvků dojde k automatizaci určitých kroků těchto procesů.
 Zároveň bude pro většinový případ odebrána závislost procesů na dostupnosti administrátora, čímž bude zajištěn plynulejší chod podnikových cílů.
 
-Optimalizovaný proces *Pr1* byl zpracován v podobě BPMN diagramu na @bpmnUpdate[Obrázku].
+Optimalizovaný proces *Pr1* byl zpracován v podobě BPMN diagramu na @bpmnPr1New[Obrázku].
+Optimalizovaný proces *Pr2* byl zpracován v podobě BPMN diagramu na @bpmnPr2New[Obrázku].
+Optimalizovaný proces *Pr3* byl zpracován v podobě BPMN diagramu na @bpmnPr3New[Obrázku].
 
 #pagebreak()
 
@@ -95,7 +97,53 @@ Optimalizovaný proces *Pr1* byl zpracován v podobě BPMN diagramu na @bpmnUpda
       #figure(
         image("../images/Pr1_v2 Aktualizace dat jízdních řádů.svg", width: 100%),
         caption: [BPMN diagram optimalizovaného Pr1 Aktualizace dat jízdních řádů],
-      ) <bpmnUpdate>
+      ) <bpmnPr1New>
+    ],
+    [vlastní zpracování],
+  )
+
+  #v(1fr)
+]
+
+#pagebreak()
+
+#[
+  #set page(
+    paper: "a3",
+    margin: auto,
+    flipped: true
+  )
+  #v(1fr)
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        image("../images/Pr2_v2 Zavedení nové zastávky.svg", width: 100%),
+        caption: [BPMN diagram optimalizovaného Pr2 Zavedení nové zastávky],
+      ) <bpmnPr2New>
+    ],
+    [vlastní zpracování],
+  )
+
+  #v(1fr)
+]
+
+#pagebreak()
+
+#[
+  #set page(
+    paper: "a3",
+    margin: auto,
+    flipped: true
+  )
+  #v(1fr)
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        image("../images/Pr3_v2 Výměna ikonky vozidel.svg", width: 100%),
+        caption: [BPMN diagram optimalizovaného Pr3 Výměna ikonky vozidel],
+      ) <bpmnPr3New>
     ],
     [vlastní zpracování],
   )

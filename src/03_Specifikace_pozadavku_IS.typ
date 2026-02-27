@@ -112,8 +112,8 @@ Kroky jednotlivých procesů byly zapsány v @processStepsTable[Tabulce].
         "K01", "Notifikování správce o změně", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
         "K02", "Převzetí dat o změně", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
         "K03", "Transformace zdrojových dat do datového balíku", "Systém", "Možnost chyby", "Rychlá", "Pr1, Pr2",
-        "K04", "Validace datového balíku", "Systém", "Možnost chyby", "Rychlá", "Pr1, Pr2",
-        "K05", "Řešení chyby v datech", "Správce", "Možnost chyby", "Náročná", "Pr1, Pr2",
+        "K04", "Validace datového balíku", "Systém", "Bezchybná", "Rychlá", "Pr1, Pr2",
+        "K05", "Řešení chyby v datech", "Správce", "Bezchybná", "Náročná", "Pr1, Pr2",
         "K06", "Doptání se na potřebné podklady", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2",
         "K07", "Odpověď na dotaz", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2",
         "K08", "Nahrání dat do systému", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
@@ -126,19 +126,31 @@ Kroky jednotlivých procesů byly zapsány v @processStepsTable[Tabulce].
   [Vlastní zpracování],
 )
 
-#config.todo[
-  Jedním tímto krokem je nutnosti vydání nové verze aplikace.
-  Tento ruční krok administrátorem zamezuje možnosti rychlé reakce IS na nové změny a je závislý na dostupnosti administrátora.
+Na základě hodnot v @processStepsTable[Tabulce] lze jednoduše vyhledat kroky, na kterých se projevují procesní nedostatky aktuálního IS.
+Tyto kroky lze identifikovat na základě chybovosti, časové náročnosti.
+Prioritu těmto nedostatkům byla určena, dle počtu procesů, ve kterých se krok projevuje.
 
-  Proces *Pr2* vyžaduje jako vstup, 2 datové zdroje.
-  Jsou to data o zastávce a data o její GPS souřadnicích.
-  Data o zastávce jsou obsažena v datovém souboru JDF, GPS souřadnice nikoliv.
-  V praxi může nastat situace, kdy je předán pouze 1 datový soubor.
+Kroky, které jsou bezchybné s nízkou časovou náročností nejsou považovány za procesní nedostatky.
+Seřazené a vybrané kroky jsou: *K05, K09, K10, K03*.
 
-  Specifikace ikonek, vyžadované procesem *Pr3*, nejsou dostatečně zdokumentované.
-  Dispečer není schopen dodat vlastní ikonky pro personalizaci klientské aplikace.
-]
+Krok *K05 Řešení chyby v datech* je navazujícím krokem na událost chyby.
+Běžným zdrojem této chyby je krok K04 Validace datového balíku.
+V tomto kroku je třeba investigovat, z jakého důvodu k chybě došlo.
+Po prověření situace dojde k opravě správcem systému.
+Chyba může mít různý charakter, zejména charakter chyby ve zdrojových datech, nebo chyby IS.
 
+Krok *K09 Nasazení nové verze aplikace* má vliv na všechny procesy IS.
+Jedná se o časově náročný krok, který kvůli častému výskytu limituje informačnímu systému svižně reagovat na příchozí požadavky, bez delších prodlev.
+V době nasazování nové verze je IS nedostupný a tím omezuje plynulé užívání IS.
+
+*K10 Úprava ikonky do požadovaného formátu* je krok prováděn správcem systému pro sjednocení formátu ikonky.
+Kvůli vysoké časové náročnosti se jedná o krok vhodný pro automatizaci.
+
+Krok *K03 Transformace zdrojových dat do datového balíku* obsahuje riziko chyby.
+Jedná se o místo slučování dat jízdních řádů s podkladem geografických dat IS.
+V případě změn procesů dopravce mohou nově změny vyvolat chybu v transaformaci.
+Následujícím krokem validace tedy dojde k chybě.
+Chyba je pak následně prověřena a oprava ve zdrojových datech, nebo opravou IS.
 
 === Hodnocení datových formátů
 
@@ -180,20 +192,35 @@ Požadavky budou vycházet z očekávání uživatelů, nebo jako důsledek anal
 Výsledkem bude tabulka požadavků.
 @Sommerville2015
 
+===== Funkcionality stávajícího IS
+
+Inovace IS má za úkol dosáhnout zlepšení provozních procesů jejich optimalizací.
+IS by po své inovaci měl zachovat všechny své existující funkcionality.
+
+Funkční požadavky pro zachování původních funkcionalit jsou *Po01 Zobrazování poloh vozidel v aplikaci*, *Po02 Detail spoje vozidla*, *Po03 Odjezdová tabule zastávky*.
+Jedná se o klíčové funkcionality IS, na které se cestující spolehají.
+
 ===== Formuláře pro nahrání nových dat do IS
 
 Důležitým funkčním požadavkem pro nový IS bude možnost nahrát nová data pomocí administrativního rozhraní.
 Aktuální nedostatek procesů *Pr1*, *Pr2* a *Pr3* - nutnost vydání nové verze IS administrátorem, bude za pomocí formulářů odebrán.
 Po nahrání dat skrze administrativní rozhraní dojde k automatickému nasazení nové verze klientské aplikace, bez nutnosti ručního zásahu administrátorem.
-Proto vznikají funkční požadavky pro *Po03 Formulář pro výměnu jízdního řádu*, *Po04 Formulář pro úpravu ikonky vozidla*, *Po05 Formulář pro úpravu zastávky*.
+Proto vznikají funkční požadavky pro *Po04 Formulář pro výměnu jízdního řádu*, *Po05 Formulář pro úpravu ikonky vozidla*, *Po06 Formulář pro úpravu zastávky*.
 
-Nedostatek rozdílných datových zdrojů pro vstup procesu *Pr2* bude vyřešen součástí funkčního požadavku *Po05*.
+Nedostatek rozdílných datových zdrojů pro vstup procesu *Pr2* bude vyřešen v rámci funkčního požadavku *Po06*.
 Formulář pro úpravu zastávky sjednotí datové soubory a zvaliduje je.
 IS data zastávky převezme vždy v uceleném stavu.
 
-Nedostatek dokumentace a přehlednosti požadavků na ikonky klientské aplikace pro vstup procesu *Pr3* bude vyřešen součástí funkčního požadavku *Po04*.
+Nedostatek dokumentace a přehlednosti požadavků na ikonky klientské aplikace pro vstup procesu *Pr3* bude vyřešen v rámci funkčního požadavku *Po05*.
 Formulář bude obsahovat interaktivní validace pro ikonku s informačním dialogem.
 Zadávání nové ikonky bude probíhat přes interaktivní formulář, tak aby IS dokázal příjmout libovolnou ikonku a případné nesrovnalosti s rozlišením ikonky byl schopen vyřešit dispečer z formuláře (např. oříznutím).
+
+Dalším funkčním požadavkem je zachování podpory IS pro datový formát JDF.
+Funkční požadavek *Po07 Podpora datových formátů* je klíčový pro načtení dat jízdních řádů, bez dodatečných nároků na dopravce využívající IS.
+
+Klientská aplikace je vysoce exponovaná část IS.
+Proto je nutné definovat pro ni požadavky na výkonnost a spolehlivost.
+Nefunkční požadavky *Po08 Výkonnost a rychlost odezvy* a *Po09 Dostupnost a spolehlivost aplikace* popisují minimální akceptovatelné metriky pro nový IS.
 
 Požadavky byly souhrně sepsány v @requirementsTable[Tabulce].
 
@@ -213,14 +240,18 @@ Požadavky byly souhrně sepsány v @requirementsTable[Tabulce].
     [
       #figure(
         table(
-          columns: (auto, auto, auto, auto, auto, auto),
+          columns: (auto, auto, 2fr, 1fr, auto, auto),
           align: left,
           table.header([ID], [Požadavek], [Popis], [Způsob ověření], [Typ], [Zdroj]),
-          "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
+          "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce. Filtrování zobrazovných spojů bude k dispozici skrze postranní menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
           "Po02", "Detail spoje vozidla", "Pro zobrazovaná vozidla v klientské aplikaci je možné rozkliknutím zobrazit detail spojení jedoucího vozidla. V novém okně se zobrazí přehled spoje a nadcházející zastávky s aktuálním zpožděním.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
-          "Po03", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dispečerovi nahrát data nového jizdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
-          "Po04", "Formulář pro úpravu ikonky vozidla", "Formulář v administraci umožní dispečerovi nahrát novou ikonku do aplikace. Dostupné ikonky ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
-          "Po05", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit vlastnosti zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+          "Po03", "Odjezdová tabule zastávky", "V klientské aplikaci musí být zachována možnost vyhledat zastávku a zobrazit seznam nadcházejích odjezdů ze zastávky. Zároveň je požadováno zachovat relevantní funkcionality postranního menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
+          "Po04", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dispečerovi nahrát data nového jizdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+          "Po05", "Formulář pro úpravu ikonky vozidla", "Formulář v administraci umožní dispečerovi nahrát novou ikonku do aplikace. Dostupné ikonky ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+          "Po06", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit vlastnosti zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+          "Po07", "Podpora datových formátů", "IS musí podporovat datové formáty JDF pro načtení dat jízdního řádu. Formáty dodatečných datových zdrojů, které by IS případně vyžadoval, uvede dodavatel v prozní dokumentaci.", "Ověření aktualizací dat jízdního řádu původním datovým souborem", "Funkční", "Návrh optimalizace procesů",
+          "Po08", "Výkonnost a rychlost odezvy", "Doba odezvy systému nesmí překročit 2 sekundy. Delší odpovědi systému jsou mimo vyhrazené časové okna, pro např. nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.", "Pravidelné monitorování času odezvy na požadavek", "Nefunkční", "Akceptační kritérium",
+          "Po09", "Dostupnost a spolehlivost aplikace", "Systém musí být dostupný 99,9% času.", "Monitorování dostupnosti", "Nefunkční", "Akceptační kritérium",
         ),
         caption: [Tabulka požadavků],
       ) <requirementsTable>
