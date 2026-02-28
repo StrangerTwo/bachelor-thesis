@@ -1,0 +1,116 @@
+direction: right
+
+# ##################################
+# USERS
+# ##################################
+
+Vedení: Vedení {
+  shape: rectangle
+  icon: https://icons.terrastruct.com/azure%2FGeneral%20Service%20Icons%2FUser%20Icon.svg
+  style: {
+    font-size: 22
+  }
+  width: 180
+  height: 100
+}
+
+Administrátoři: Administrátoři {
+  shape: rectangle
+  icon: https://icons.terrastruct.com/azure%2FGeneral%20Service%20Icons%2FUser%20Resource.svg
+  style: {
+    font-size: 22
+  }
+  width: 180
+  height: 100
+}
+
+Dispečeři: Dispečeři {
+  shape: rectangle
+  icon: https://icons.terrastruct.com/azure%2FGeneral%20Service%20Icons%2FUser%20Privacy.svg
+  style: {
+    font-size: 22
+  }
+  width: 180
+  height: 100
+}
+
+Cestující: Cestující {
+  shape: rectangle
+  icon: https://icons.terrastruct.com/essentials%2F359-users.svg
+  style: {
+    font-size: 22
+  }
+  width: 180
+  height: 100
+}
+
+# ##################################
+# CLOUD ENVIRONMENT
+# ##################################
+
+server: Server {
+  style: {
+    stroke: blue
+    font-color: purple
+    stroke-dash: 3
+    fill: white
+  }
+
+  admin: Administrativní rozhraní {
+    icon: https://vite.dev/logo-without-border.svg
+    shape: rectangle
+    style.fill: "#e0f2fe"
+  }
+
+  app: Uživatelská aplikace {
+    icon: https://administrace.mhdonline.cz/vite.svg
+    shape: rectangle
+    style.fill: "#e0f2fe"
+  }
+
+  api: Aplikační služba {
+    icon: https://www.svgrepo.com/show/353659/docker-icon.svg
+    shape: parallelogram
+    style.fill: "#dbeafe"
+  }
+}
+
+# ##################################
+# CONNECTIONS
+# ##################################
+
+Vedení -> server.admin: Využívá {
+  style: {
+    animated: true
+  }
+}
+
+Administrátoři -> server.admin: Využívá {
+  style: {
+    animated: true
+  }
+}
+
+Dispečeři -> server.admin: Využívá {
+  style: {
+    animated: true
+  }
+}
+
+Cestující -> server.app: Využívá {
+  style: {
+    animated: true
+  }
+}
+
+server.admin -> server.api: REST API {
+  style: {
+    animated: true
+  }
+}
+
+server.app -> server.api: REST API {
+  style: {
+    animated: true
+  }
+}

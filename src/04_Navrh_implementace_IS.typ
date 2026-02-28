@@ -19,6 +19,33 @@ Klientská aplikace komunikuje se serverovou částí systému prostřednictvím
 Tento přístup zvyšuje modularitu systému, podporuje jeho škálovatelnost a umožňuje snadnější údržbu a další rozšiřování funkcionality.
 @BassClementsKazman2021
 
+===== Topologie IS
+
+Využitím architektury klient-server dojde k rozdělení IS na 3 hlavní komponenty.
+Topologie nového IS je zobrazena na @topology[Obrázku].
+
+#config.sourcedFigure(
+  [
+    #figure(
+      image("../images/topology.png", width: 80%),
+      caption: [Topologie optimalizované IS],
+    ) <topology>
+  ],
+  [@MhdOnlinePardubice],
+)
+
+*Aplikační služba* plní serverovou roli architektury.
+Má za úkol obsluhovat všechny příchozí požadavky, uchovává data a je zodpovědná za spolehlivost a bezpečnost IS.
+
+*Uživatelská aplikace* je spouštěna na klientských zařízeních.
+Obstarává uživatelské rozhraní, včetně umožňování využití různých zobrazovacích funkcí pro cestujícího.
+Komunikuje s aplikační službou pro získávání aktuálních dat.
+
+*Administrativní rozhraní* je spouštěna na klientských zařízeních.
+Přístup do této klientské aplikace je zabezpečen authentizací přihlášeného uživatele.
+Obsahuje administrativní prvky, ovlivňující uživatelskou aplikaci.
+Požadavky administrativní aplikace je nutné autorizovat a validovat i na straně aplikační služby.
+
 ===== Uživatelská aplikace
 
 Uživatelská aplikace bude veřejně dostupná pro cestující a nahradí zobrazovací vrstvu původního IS.
