@@ -20,8 +20,8 @@ Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se z
 @HammerChampy2006
 
 Všechny vybrané procesy *Pr1*, *Pr2* i *Pr3* jsou níže zobrazeny ve formátu BPMN diagramu.
-Na tomto diagramu budou zobrazeny kroky, které se mezi těmito procesy shodují.
-Zobrazeny budou i kroky, které v aktuálním IS vykazují známky možných nedostatků (Bude podrobněji dovysvětleno v @requirementsSpecification[kapitole]).
+Určité kroky procesů jsou mezi procesy sdílené.
+Pro analýzu bude využita @processStepsTable, s detailním přehledem kroků všech procesů.
 
 Proces *Pr1* je zpracován v podobě BPMN diagramu na @bpmnPr1[Obrázku].
 Proces *Pr2* je zpracován v podobě BPMN diagramu na @bpmnPr2[Obrázku].
@@ -183,7 +183,7 @@ Značnou nevýhodou tohoto datového formátu je absence geografických dat.
 GPS souřadnice zastávek je tedy nutno získat jiným způsobem.
 V současném systému jsou GPS souřadnice předávány vlastní komunikací dispečera s administrátorem, bez přesně určeného datového formátu.
 
-== Definování funkčních a nefunkčních požadavků <requirementsSpecification>
+== Definování funkčních a nefunkčních požadavků
 
 Krok 3 funkční analýzy IS.
 Dojde k definování požadavků na nový IS.

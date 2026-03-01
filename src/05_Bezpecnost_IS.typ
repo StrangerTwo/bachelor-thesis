@@ -37,16 +37,67 @@ Na @cpuUsage[Obrázku] je zobrazena ilustrace monitorovacího systému pro měř
   [@MhdOnlineAdmin],
 )
 
-#config.todo[
-  TODO, @onlineSecurity
-]
+===== Autentizace uživatelů
 
-V oblasti webové bezpečnosti je vhodné zaměřit se na 10 nejkritičtějších bezpečnostních hrozeb webových aplikací.
+Autentizace představuje proces ověření identity uživatele před zpřístupněním funkcí IS.
+Jejím cílem je zajistit, aby systém komunikoval skutečně s osobou, která tvrdí, že je oprávněným uživatelem.
+
+Po úspěšném ověření identity je uživateli vydán identitní token.
+Identitní token je datová struktura obsahující informace o ověřeném uživateli a o době platnosti jeho přihlášení.
+Tento token slouží jako důkaz o tom, že uživatel byl řádně autentizován.
+Token je následně přenášen při dalších požadavcích na aplikační rozhraní systému.
+Identitní token umožňuje opakované ověřování identity bez nutnosti opětovného zadávání přihlašovacích údajů.
+
+Tento mechanismus je označován jako tokenová autentizace.
+Jeho výhodou je oddělení samotného procesu ověřování identity od aplikační logiky systému a omezení manipulace s citlivými přihlašovacími údaji.
+@Fielding2000
+
+===== Autorizace přístupu
+
+Autorizace je pojem úzce spojený s Autentizací.
+V procesu ověření oprávnění autentizace představuje identifikaci uživatele.
+Po identifikaci uživatele je autorizací ověřeno, že uživatel je oprávněn požadovanou akci provést.
+
+Správně nastavená autorizace přístupu obsahuje vhodně definovaný seznam oprávnění, které mohou být uživateli přiřazena.
+Po přijetí identitního tokenu dochází k jeho ověření na straně aplikační služby.
+Systém kontroluje pravost tokenu, jeho časovou platnost, integritu dat a zda je uživatel oprávněný tento druh požadavku provést.
+Po úspěšném ověření je uživateli umožněn přístup k příslušným zdrojům, nebo funkcím.
+
+Oddělení autentizace a autorizace je základním principem bezpečného návrhu informačních systémů.
+Umožňuje jednoznačné řízení přístupových práv a minimalizuje riziko neoprávněného přístupu k datům.
+@BassClementsKazman2021
+
+===== Integrita a ochrana přenášených identitních údajů
+
+Identitní tokeny jsou opatřeny kryptografickým podpisem.
+kryptografický podpis je využit v mechanismu, pro ověření, že pochází od důvěryhodného zdroje a že data nebyla během přenosu podvžena.
+Podpis je kontrolován při každém požadavku aplikační službou.
+
+Tento postup významně snižuje riziko podvržení identity nebo neoprávněné manipulace s přístupovými údaji.
+Ověřování integrity a původu dat je zároveň v souladu s doporučeními pro bezpečný návrh webových aplikací uvedenými v rámci OWASP Top 10.
 @OWASPTop10
 
-===== Authentikace
+===== Využití externí služby pro správu identit
 
-===== Autorizace
+V současné praxi vývoje webových informačních systémů je běžné oddělovat samotnou aplikační logiku od mechanismu ověřování identity uživatelů.
+Ověřování identity je bezpečnostně velmi citlivá oblast.
+Zahrnuje práci s přihlašovacími údaji, jejich bezpečné uchovávání, ochranu proti kyber-útokům, řízení obnovy hesel i dodržování aktuálních kryptografických standardů.
+Implementace těchto mechanismů vlastními prostředky představuje vysoké nároky na odborné znalosti i průběžnou údržbu.
+@OWASPTop10
 
-===== Debug stránka v ADMIN
+Z tohoto důvodu je v moderní architektuře často využíván specializovaný poskytovatel správy identit.
+Taková služba přebírá odpovědnost za bezpečné zpracování přihlašovacích údajů a za samotné ověření identity uživatele.
+Aplikační část systému pak nepracuje s hesly ani jinými citlivými údaji, ale pouze s výsledkem ověření identity.
+Tento přístup odpovídá principu minimalizace odpovědnosti a principu oddělení zodpovědností, které jsou považovány za základní principy bezpečných systémů.
+@BassClementsKazman2021
 
+===== Role aplikační části systému při autentizaci a autorizaci
+
+Využití externí služby pouze upravuje proces ověření uživatele aplikační službou.
+Proces ověření probíhá tak, že externí služba prověde ověření identity uživatele.
+Po úspěšném ověření identity externí služba vystaví uživateli elektornický dokad o jeho identitě.
+Tento doklad je kryptograficky podepsán.
+Uživatel se při požadavcích na aplikační službu identifikuje pomocí vystaveného dokladu.
+
+IS díky tomuto rozdělení nikdy nemanipuluje s hesly uživatelů a bezpečnostní riziko je významně sníženo.
+@onlineSecurity

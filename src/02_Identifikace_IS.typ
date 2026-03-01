@@ -170,7 +170,7 @@ Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobraz
 == Mapování stávajícího stavu
 
 Tato kapitola se zabývá spojením druhých kroků funkční a procesní analýzy IS.
-Dojde k identifikaci hlavních procesů a toků dat mezi jednotlivými částmi systému.
+Dojde k identifikaci hlavních procesů v systému.
 Dle východisek procesní analýzy IS je třeba analyzovat skutečný průběh činností souvisejících s IS, tak jak doopravdy probíhají.
 Zmapování aktuálního stavu umožní identifikovat oblasti ke zlepšení v návrhu nového řešení.
 @Dumas2018
