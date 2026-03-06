@@ -9,14 +9,14 @@ Následně krok 3 funkční analýzy IS, *definování funkčních a nefunkční
 == Identifikace nedostatků
 
 Krok 3 procesní analýzy IS.
-V tomto kroce dojde k vyhodnocení procesů z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
+V tomto kroku dojde k vyhodnocení procesů z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
 @HammerChampy2006
 
 === Hodnocení procesů
 
 ===== Nedostatky procesů
 
-Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na kroky s ručnímy zásahy, vyšší chybovostí, nebo největší časovou náročností.
+Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na kroky s ručními zásahy, vyšší chybovostí, nebo největší časovou náročností.
 @HammerChampy2006
 
 Všechny vybrané procesy *Pr1*, *Pr2* i *Pr3* jsou níže zobrazeny ve formátu BPMN diagramu.
@@ -135,7 +135,7 @@ Seřazené a vybrané kroky jsou: *K05, K09, K10, K03*.
 
 Krok *K05 Řešení chyby v datech* je navazujícím krokem na událost chyby.
 Běžným zdrojem této chyby je krok K04 Validace datového balíku.
-V tomto kroku je třeba investigovat, z jakého důvodu k chybě došlo.
+V tomto kroku je třeba provést investigaci, z jakého důvodu k chybě došlo.
 Po prověření situace dojde k opravě správcem systému.
 Chyba může mít různý charakter, zejména charakter chyby ve zdrojových datech, nebo chyby IS.
 
@@ -148,7 +148,7 @@ Kvůli vysoké časové náročnosti se jedná o krok vhodný pro automatizaci.
 
 Krok *K03 Transformace zdrojových dat do datového balíku* obsahuje riziko chyby.
 Jedná se o místo slučování dat jízdních řádů s podkladem geografických dat IS.
-V případě změn procesů dopravce mohou nově změny vyvolat chybu v transaformaci.
+V případě změn procesů dopravce mohou nové změny vyprodukovat chybu při transformaci dat.
 Následujícím krokem validace tedy dojde k chybě.
 Chyba je pak následně prověřena a oprava ve zdrojových datech, nebo opravou IS.
 
@@ -159,11 +159,11 @@ Jedná se o přesně specifikovaný datový formát otevřených dat ČR pro jí
 
 ===== Otevřená data ČR
 
-Pro účel zvěřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ).
+Pro účel zveřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ).
 Tento informační systém vznikl na základě vyhlášky Ministerstva dopravy ČR z roku 2014 @vyhlaskaCISJR a zprostředkovává veřejně dostupná data ve strojově čitelném formátu.
 @cisjr
 
-Data na FTP uložišti obsahují vícero druhů informací.
+Data na FTP úložišti obsahují vícero druhů informací.
 
 + Jízdní řády *vlakových spojení* ve formátu *.XML*
 + Jízdní řády *autobusové dopravy* ve formátu *.JDF*
@@ -198,7 +198,7 @@ Inovace IS má za úkol dosáhnout zlepšení provozních procesů jejich optima
 IS by po své inovaci měl zachovat všechny své existující funkcionality.
 
 Funkční požadavky pro zachování původních funkcionalit jsou *Po01 Zobrazování poloh vozidel v aplikaci*, *Po02 Detail spoje vozidla*, *Po03 Odjezdová tabule zastávky*.
-Jedná se o klíčové funkcionality IS, na které se cestující spolehají.
+Jedná se o klíčové funkcionality IS, na které se cestující spoléhají.
 
 ===== Formuláře pro nahrání nových dat do IS
 
@@ -208,12 +208,12 @@ Po nahrání dat skrze administrativní rozhraní dojde k automatickému nasazen
 Proto vznikají funkční požadavky pro *Po04 Formulář pro výměnu jízdního řádu*, *Po05 Formulář pro úpravu ikonky vozidla*, *Po06 Formulář pro úpravu zastávky*.
 
 Nedostatek rozdílných datových zdrojů pro vstup procesu *Pr2* bude vyřešen v rámci funkčního požadavku *Po06*.
-Formulář pro úpravu zastávky sjednotí datové soubory a zvaliduje je.
+Formulář pro úpravu zastávky sjednotí datové soubory a provede validaci je.
 IS data zastávky převezme vždy v uceleném stavu.
 
 Nedostatek dokumentace a přehlednosti požadavků na ikonky klientské aplikace pro vstup procesu *Pr3* bude vyřešen v rámci funkčního požadavku *Po05*.
 Formulář bude obsahovat interaktivní validace pro ikonku s informačním dialogem.
-Zadávání nové ikonky bude probíhat přes interaktivní formulář, tak aby IS dokázal příjmout libovolnou ikonku a případné nesrovnalosti s rozlišením ikonky byl schopen vyřešit dispečer z formuláře (např. oříznutím).
+Zadávání nové ikonky bude probíhat přes interaktivní formulář, tak aby IS dokázal přijmout libovolnou ikonku a případné nesrovnalosti s rozlišením ikonky byl schopen vyřešit dispečer z formuláře (např. oříznutím).
 
 Dalším funkčním požadavkem je zachování podpory IS pro datový formát JDF.
 Funkční požadavek *Po07 Podpora datových formátů* je klíčový pro načtení dat jízdních řádů, bez dodatečných nároků na dopravce využívající IS.
@@ -222,7 +222,7 @@ Klientská aplikace je vysoce exponovaná část IS.
 Proto je nutné definovat pro ni požadavky na výkonnost a spolehlivost.
 Nefunkční požadavky *Po08 Výkonnost a rychlost odezvy* a *Po09 Dostupnost a spolehlivost aplikace* popisují minimální akceptovatelné metriky pro nový IS.
 
-Požadavky byly souhrně sepsány v @requirementsTable[Tabulce].
+Požadavky byly souhrnně sepsány v @requirementsTable[Tabulce].
 
 #pagebreak()
 
@@ -243,10 +243,10 @@ Požadavky byly souhrně sepsány v @requirementsTable[Tabulce].
           columns: (auto, auto, 2fr, 1fr, auto, auto),
           align: left,
           table.header([ID], [Požadavek], [Popis], [Způsob ověření], [Typ], [Zdroj]),
-          "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce. Filtrování zobrazovných spojů bude k dispozici skrze postranní menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
+          "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce. Filtrování zobrazovaných spojů bude k dispozici skrze postranní menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
           "Po02", "Detail spoje vozidla", "Pro zobrazovaná vozidla v klientské aplikaci je možné rozkliknutím zobrazit detail spojení jedoucího vozidla. V novém okně se zobrazí přehled spoje a nadcházející zastávky s aktuálním zpožděním.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
-          "Po03", "Odjezdová tabule zastávky", "V klientské aplikaci musí být zachována možnost vyhledat zastávku a zobrazit seznam nadcházejích odjezdů ze zastávky. Zároveň je požadováno zachovat relevantní funkcionality postranního menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
-          "Po04", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dispečerovi nahrát data nového jizdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
+          "Po03", "Odjezdová tabule zastávky", "V klientské aplikaci musí být zachována možnost vyhledat zastávku a zobrazit seznam nadcházejících odjezdů ze zastávky. Zároveň je požadováno zachovat relevantní funkcionality postranního menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
+          "Po04", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dispečerovi nahrát data nového jízdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po05", "Formulář pro úpravu ikonky vozidla", "Formulář v administraci umožní dispečerovi nahrát novou ikonku do aplikace. Dostupné ikonky ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po06", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit vlastnosti zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po07", "Podpora datových formátů", "IS musí podporovat datové formáty JDF pro načtení dat jízdního řádu. Formáty dodatečných datových zdrojů, které by IS případně vyžadoval, uvede dodavatel v prozní dokumentaci.", "Ověření aktualizací dat jízdního řádu původním datovým souborem", "Funkční", "Návrh optimalizace procesů",

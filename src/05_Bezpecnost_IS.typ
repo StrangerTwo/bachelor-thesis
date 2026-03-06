@@ -11,17 +11,17 @@ Kapitola odpovídá poslednímu kroku procesní analýzy IS, *implementace a mon
 Klíčovou fází koloběhu IS je monitorování jeho stavu i po uvedením do provozu.
 Požadavky *Po08* a *Po09* vyžadují neustálou kontrolu pro zajištění bezchybnosti IS.
 
-Pro monitorování výkonu IS je vhodným řešením sledování využítí zdrojů stroje.
+Pro monitorování výkonu IS je vhodným řešením sledování využití zdrojů stroje.
 Vytížení stroje v čase kolísá, je tedy proto vhodné zaznamenávat a porovnávat statistiku v různých časových oknech.
-Porovnávat je dobré stav zatížení "vklidu" oproti zatížení za zvýšeného provozu.
+Porovnávat je dobré stav zatížení "v klidu" oproti zatížení za zvýšeného provozu.
 
-"Vklidu" je možné pozorovat vytížení systému v moment, kdy není IS aktivně využíván.
+"V klidu" je možné pozorovat vytížení systému v moment, kdy není IS aktivně využíván.
 Jde např. o víkend, nebo noční hodiny.
 V tento moment je možné zaznamenat minimální požadavky pro provoz IS.
 Zhodnocení zatížení v tomto stavu může sloužit k výpočtu očekávaných nákladů na provoz IS.
 
 Za zvýšeného provozu dochází k maximálnímu vytížení IS.
-Zvýšený provoz lze porozovat tradičně v poledních hodinách ve všední den.
+Zvýšený provoz lze pozorovat tradičně v poledních hodinách ve všední den.
 Výkon IS v momentech zvýšeného provozu je pociťován největším množstvím zákazníků, plynulost provozu je tedy v těchto chvílích nejkritičtější.
 Případné výkonnostní nedostatky jsou následně řešeny možnou optimalizací IS, nebo škálováním procesních instancí IS.
 
@@ -70,7 +70,7 @@ Umožňuje jednoznačné řízení přístupových práv a minimalizuje riziko n
 ===== Integrita a ochrana přenášených identitních údajů
 
 Identitní tokeny jsou opatřeny kryptografickým podpisem.
-kryptografický podpis je využit v mechanismu, pro ověření, že pochází od důvěryhodného zdroje a že data nebyla během přenosu podvžena.
+kryptografický podpis je využit v mechanismu, pro ověření, že pochází od důvěryhodného zdroje a že data nebyla během přenosu podvržena.
 Podpis je kontrolován při každém požadavku aplikační službou.
 
 Tento postup významně snižuje riziko podvržení identity nebo neoprávněné manipulace s přístupovými údaji.
@@ -94,8 +94,8 @@ Tento přístup odpovídá principu minimalizace odpovědnosti a principu odděl
 ===== Role aplikační části systému při autentizaci a autorizaci
 
 Využití externí služby pouze upravuje proces ověření uživatele aplikační službou.
-Proces ověření probíhá tak, že externí služba prověde ověření identity uživatele.
-Po úspěšném ověření identity externí služba vystaví uživateli elektornický dokad o jeho identitě.
+Proces ověření probíhá tak, že externí služba provede ověření identity uživatele.
+Po úspěšném ověření identity externí služba vystaví uživateli elektronický doklad o jeho identitě.
 Tento doklad je kryptograficky podepsán.
 Uživatel se při požadavcích na aplikační službu identifikuje pomocí vystaveného dokladu.
 

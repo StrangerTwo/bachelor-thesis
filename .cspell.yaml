@@ -1,0 +1,3 @@
+ignoreRegExpList:
+  - /@\w+/g
+  - /#\w+/g

@@ -16,15 +16,15 @@ informační systém, návrh,
 
 = Title
 
-Innovation of the application for dislaying the positions of public transport vehicles
+Innovation of the application for displaying the positions of public transport vehicles
 
 = Annotation
 
-The goal of this bachelor's thesis is to assess the current state and create an improvement plan for the application for dislaying the positions of public transport vehicles.
+The goal of this bachelor's thesis is to assess the current state and create an improvement plan for the application for displaying the positions of public transport vehicles.
 This thesis will focus on the specification of requirements, design and security of the new information system.
 The key functional processes the of the existing information system were identified.
-Based onthe needs of the company, the requirements for the new information system were specified.
-A design for the new information system was created with additional consideration of the necessary secutiry and options for supervising the operation of the application.
+Based on the needs of the company, the requirements for the new information system were specified.
+A design for the new information system was created with additional consideration of the necessary security and options for supervising the operation of the application.
 
 = Keywords
 
@@ -63,7 +63,7 @@ information system, design,
   "IS": "Informační systém",
   "BPMN": "Business Process Model and Notation",
   "UI": "Uživatelské rozhraní",
-  "UX": "Uživatelský žážitek (zkušenost)",
+  "UX": "Uživatelský zážitek (zkušenost)",
   "DFD": "Data Flow Diagram",
 )
 
