@@ -109,6 +109,10 @@ Optimalizovaný proces *Pr1* byl zpracován v podobě BPMN diagramu na @bpmnPr1N
 Optimalizovaný proces *Pr2* byl zpracován v podobě BPMN diagramu na @bpmnPr2New[Obrázku].
 Optimalizovaný proces *Pr3* byl zpracován v podobě BPMN diagramu na @bpmnPr3New[Obrázku].
 
+#config.todo[
+  Popsat proč došlo ke kterým změnám.
+]
+
 #pagebreak()
 
 #[

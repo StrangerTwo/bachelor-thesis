@@ -222,6 +222,33 @@ Klientská aplikace je vysoce exponovaná část IS.
 Proto je nutné definovat pro ni požadavky na výkonnost a spolehlivost.
 Nefunkční požadavky *Po08 Výkonnost a rychlost odezvy* a *Po09 Dostupnost a spolehlivost aplikace* popisují minimální akceptovatelné metriky pro nový IS.
 
+Výkonnost a rychlost odezvy patří mezi klíčové nefunkční požadavky IS, protože přímo ovlivňují uživatelskou zkušenost a použitelnost aplikace.
+Dle výzkumu použitelnosti systémů je reakční doba přibližně do dvou sekund považována za hranici, při které uživatel stále vnímá interakci se systémem jako plynulou a nepřerušovanou.
+Delší odezva může vést ke ztrátě pozornosti uživatele a ke zhoršení celkové použitelnosti systému.
+@Nielsen1994
+Z tohoto důvodu je v navrženém systému stanoven nefunkční požadavek, aby doba odezvy běžných požadavků nepřekračovala jednu sekundu, s výjimkou plánovaných servisních intervalů nebo údržby systému.
+
+#config.sourcedFigure(
+  [
+    #figure(
+      table(
+        columns: (auto, auto),
+        align: left,
+        table.header([Limit pro čas odezvy], [Vnímání uživatelem]),
+        "0.1 s", "okamžitá reakce",
+        "1 s", "plynulá interakce",
+        "~2-10 s", "uživatel ztrácí pozornost",
+      ),
+      caption: [Vnímání odezvy systému uživatelem],
+    ) <nngResponseTimes>
+  ],
+  [@nng_response_times],
+)
+
+V @nngResponseTimes[Tabulce] byly sepsány modelové reakce uživatelů na různou dobu odezvy systému.
+Ztráta pozornosti uživatele nastává v časovém okně 2-10 sekund.
+Za účelem zlepšení uživatelského zážitku (UX) využívání aplikace bude limitní odezva systému pro běžné požadavky nastavena na jednu sekundu.
+
 Požadavky byly souhrnně sepsány v @requirementsTable[Tabulce].
 
 #pagebreak()
@@ -250,7 +277,7 @@ Požadavky byly souhrnně sepsány v @requirementsTable[Tabulce].
           "Po05", "Formulář pro úpravu ikonky vozidla", "Formulář v administraci umožní dispečerovi nahrát novou ikonku do aplikace. Dostupné ikonky ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po06", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit vlastnosti zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po07", "Podpora datových formátů", "IS musí podporovat datové formáty JDF pro načtení dat jízdního řádu. Formáty dodatečných datových zdrojů, které by IS případně vyžadoval, uvede dodavatel v prozní dokumentaci.", "Ověření aktualizací dat jízdního řádu původním datovým souborem", "Funkční", "Návrh optimalizace procesů",
-          "Po08", "Výkonnost a rychlost odezvy", "Doba odezvy systému nesmí překročit 2 sekundy. Delší odpovědi systému jsou mimo vyhrazené časové okna, pro např. nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.", "Pravidelné monitorování času odezvy na požadavek", "Nefunkční", "Akceptační kritérium",
+          "Po08", "Výkonnost a rychlost odezvy", "Doba odezvy běžných požadavků nesmí překročit 1 sekundu. Delší odpovědi systému jsou mimo vyhrazené časové okna, pro např. nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.", "Pravidelné monitorování času odezvy na požadavek", "Nefunkční", "Akceptační kritérium",
           "Po09", "Dostupnost a spolehlivost aplikace", "Systém musí být dostupný 99,9% času.", "Monitorování dostupnosti", "Nefunkční", "Akceptační kritérium",
         ),
         caption: [Tabulka požadavků],
