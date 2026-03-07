@@ -8,7 +8,7 @@ Následně krok 3 funkční analýzy IS, *definování funkčních a nefunkční
 
 == Identifikace nedostatků
 
-Krok 3 procesní analýzy IS.
+Nyní bude proveden krok 3 procesní analýzy IS.
 V tomto kroku dojde k vyhodnocení procesů z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
 @HammerChampy2006
 
@@ -44,7 +44,7 @@ Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
         caption: [BPMN diagram Pr1 Aktualizace dat jízdních řádů],
       ) <bpmnPr1>
     ],
-    [vlastní zpracování],
+    [Vlastní zpracování],
   )
 
   #v(1fr)
@@ -67,7 +67,7 @@ Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
         caption: [BPMN diagram Pr2 Zavedení nové zastávky],
       ) <bpmnPr2>
     ],
-    [vlastní zpracování],
+    [Vlastní zpracování],
   )
 
   #v(1fr)
@@ -90,7 +90,7 @@ Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
         caption: [BPMN diagram Pr3 Výměna ikonky vozidel],
       ) <bpmnPr3>
     ],
-    [vlastní zpracování],
+    [Vlastní zpracování],
   )
 
   #v(1fr)
@@ -159,7 +159,7 @@ Jedná se o přesně specifikovaný datový formát otevřených dat ČR pro jí
 
 ===== Otevřená data ČR
 
-Pro účel zveřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ).
+Za účelem zveřejňování dat o jízdních řádech v České republice existuje *Celostátní informační systém o jízdních řádech* (CIS JŘ).
 Tento informační systém vznikl na základě vyhlášky Ministerstva dopravy ČR z roku 2014 @vyhlaskaCISJR a zprostředkovává veřejně dostupná data ve strojově čitelném formátu.
 @cisjr
 

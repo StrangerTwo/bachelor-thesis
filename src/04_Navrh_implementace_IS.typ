@@ -31,7 +31,7 @@ Topologie nového IS je zobrazena na @topology[Obrázku].
       caption: [Topologie optimalizované IS],
     ) <topology>
   ],
-  [@MhdOnlinePardubice],
+  [Vlastní zpracování],
 )
 
 *Aplikační služba* plní serverovou roli architektury.
@@ -126,7 +126,7 @@ Optimalizovaný proces *Pr3* byl zpracován v podobě BPMN diagramu na @bpmnPr3N
         caption: [BPMN diagram optimalizovaného Pr1 Aktualizace dat jízdních řádů],
       ) <bpmnPr1New>
     ],
-    [vlastní zpracování],
+    [Vlastní zpracování],
   )
 
   #v(1fr)
@@ -149,7 +149,7 @@ Optimalizovaný proces *Pr3* byl zpracován v podobě BPMN diagramu na @bpmnPr3N
         caption: [BPMN diagram optimalizovaného Pr2 Zavedení nové zastávky],
       ) <bpmnPr2New>
     ],
-    [vlastní zpracování],
+    [Vlastní zpracování],
   )
 
   #v(1fr)
@@ -172,7 +172,7 @@ Optimalizovaný proces *Pr3* byl zpracován v podobě BPMN diagramu na @bpmnPr3N
         caption: [BPMN diagram optimalizovaného Pr3 Výměna ikonky vozidel],
       ) <bpmnPr3New>
     ],
-    [vlastní zpracování],
+    [Vlastní zpracování],
   )
 
   #v(1fr)

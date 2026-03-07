@@ -11,30 +11,33 @@ IS pomáhají při rozhodování, správě, analýze a vizualizaci procesů podn
 IS se skládají z následujících prvků @Bruckner_2012 @Danel2013:
 
 ===== Hardware
-fyzická zařízení, jako třeba servery, počítače, mobilní telefony, které sbírají a zpracovávají data.
+jsou fyzická zařízení, jako třeba servery, počítače, mobilní telefony, které sbírají a zpracovávají data.
 V kontextu IS lze rozdělit na zařízení klientské a serverové.
 Např. servery zpracovávají větší množství dat a připravují je pro stovky klientských zařízení.
-Klientská zařízení následně dotazují serverové komponenty pro data personalizované pro jejich situaci (např. dle GPS polohy).
+Klientská zařízení následně dotazují serverové komponenty za účelem získání dat.
+Ty mohou být personalizované pro jejich situaci (např. dle GPS polohy).
 
 ===== Software
-aplikace a programy, které využívají hardware pro sbírají data, zpracovávají informace a např. je zobrazují cestujícím.
-Hlavními druhy software jsou databázové systémy, informační systémy pro správu dat.
-Je to díky těmto software aplikacích, které umožňují efektivní zpracovávání a distribuci informací.
+jsou aplikace a programy, které využívají hardware.
+Jejich činností může být sběr dat, zpracovávání informací, nebo např. zobrazování dat cestujícím.
+Mezi druhy software patří databázové systémy, informační systémy pro správu dat, nebo různé uživatelské aplikace.
+Efektivní zpracovávání a distribuce informací je na software maximálně závislé.
 
 ===== Data
 jsou v informačním systému shromažďovány a zpracovávány.
-Mohou zahrnovat data o jízdních řádech, geografické informace o polohách vozidel, nebo se může jednat o tok aktuálních informací o zpoždění.
+Mohou zahrnovat data jízdních řádů, geografické informace o polohách vozidel, nebo tok aktuálních informací o zpoždění.
 Data jsou základem pro rozhodování a plánování.
-Díky historickým datům je možné zpracovávat statistiku a vytvořit optimalizovaný jízdní řád na příští období.
+Díky historickým datům je možné zpracovávat statistiky a tvořit optimalizované jízdní řády na příští období.
 
 ===== Lidé
-uživatelé a správci systému.
-Buďto k systému přistupují za účelem získání informací, nebo chtějí využít nashromážděná data pro provedení analýz, nebo ověření hypotéz pro jejich další rozhodování.
+jsou uživatelé a správci systému.
+K systému přistupují za účelem získání informací, nebo za účelem využít nashromážděná data k provedení analýz, sloužících pro další rozhodování.
 Lidé musí být pro práci s informačním systémem proškoleni, aby mohli svoji práci provádět efektivně a nedocházelo při jejich práci k chybám.
 
 == Metodický přístup k identifikaci klíčových částí IS
 
 Identifikaci klíčových částí IS lze provádět pomocí mnoha metod.
+V práci budou využity následující metodické postupy.
 
 ===== Funkční analýza IS
 
