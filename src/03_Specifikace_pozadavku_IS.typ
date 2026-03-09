@@ -9,8 +9,10 @@ Následně krok 3 funkční analýzy IS, *definování funkčních a nefunkční
 == Identifikace nedostatků
 
 Nyní bude proveden krok 3 procesní analýzy IS.
-V tomto kroku dojde k vyhodnocení procesů z hlediska efektivity, časové náročnosti, chybovosti a míry podpory informačním systémem.
+V tomto kroku dojde k vyhodnocení procesů zejména z hlediska časové náročnosti, míry manuální práce a chybovosti.
 @HammerChampy2006
+Hodnocena bude míra podpory informačním systémem a možnosti automatizace procesů.
+Tyto nedostatky následně slouží jako vstup pro návrh funkčních a nefunkčních požadavků pro nový IS.
 
 === Hodnocení procesů
 
