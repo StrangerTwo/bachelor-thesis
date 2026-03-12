@@ -108,7 +108,7 @@ Vymezením rozsahu je zajištěna přehlednost a zaměření na klíčové proce
 Druhým krokem je *mapování stávajícího stavu (As-Is)*.
 Na základě pozorování, dotazování a měření činností jednotlivých aktérů dojde k identifikaci procesů.
 Cílem je zachytit skutečný průběh procesů tak, jak probíhají v praxi, nikoliv tak, jak by měly ideálně probíhat.
-Výsledkem je vytvoření procesních map, obsahující vstupy a výstupy, procesní kroky a role, podílející se na realizaci.
+Výsledkem je vytvoření procesních map, obsahující vstupy a výstupy, jednotlivé kroky a role, podílející se na realizaci.
 @Dumas2018
 
 Třetím krokem je *identifikace nedostatků*.

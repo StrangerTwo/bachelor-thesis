@@ -2,6 +2,10 @@
 
 #pagebreak()
 
+= Závěr
+
+#pagebreak()
+
 #bibliography(
   "sources.bib",
   title: "Použitá literatura",

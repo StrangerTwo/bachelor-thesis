@@ -23,7 +23,7 @@ Zhodnocení zatížení v tomto stavu může sloužit k výpočtu očekávaných
 Za zvýšeného provozu dochází k maximálnímu vytížení IS.
 Zvýšený provoz lze pozorovat tradičně v poledních hodinách ve všední den.
 Výkon IS v momentech zvýšeného provozu je pociťován největším množstvím zákazníků, plynulost provozu je tedy v těchto chvílích nejkritičtější.
-Případné výkonnostní nedostatky jsou následně řešeny možnou optimalizací IS, nebo škálováním procesních instancí IS.
+Případné výkonnostní nedostatky jsou následně řešeny možnou optimalizací IS, nebo škálováním provozních instancí IS.
 
 Na @cpuUsage[Obrázku] je zobrazena ilustrace monitorovacího systému pro měření zatížení stroje informačním systémem.
 

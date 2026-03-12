@@ -18,12 +18,12 @@ Tyto nedostatky následně slouží jako vstup pro návrh funkčních a nefunkč
 
 ===== Nedostatky procesů
 
-Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na kroky s ručními zásahy, vyšší chybovostí, nebo největší časovou náročností.
+Hodnocení nedostatků procesů proběhne kontrolou existujících procesů se zaměřením na činnosti s ručními zásahy, vyšší chybovostí, nebo největší časovou náročností.
 @HammerChampy2006
 
 Všechny vybrané procesy *Pr1*, *Pr2* i *Pr3* jsou níže zobrazeny ve formátu BPMN diagramu.
-Určité kroky procesů jsou mezi procesy sdílené.
-Pro analýzu bude využita @processStepsTable, s detailním přehledem kroků všech procesů.
+Některé činnosti jsou mezi procesy sdílené.
+Pro analýzu bude využita @processStepsTable, s detailním přehledem činností všech procesů.
 
 Proces *Pr1* je zpracován v podobě BPMN diagramu na @bpmnPr1[Obrázku].
 Proces *Pr2* je zpracován v podobě BPMN diagramu na @bpmnPr2[Obrázku].
@@ -100,9 +100,9 @@ Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
 
 #pagebreak()
 
-===== Podrobnosti kroků procesů
+===== Podrobnosti činností procesů
 
-Kroky jednotlivých procesů byly zapsány v @processStepsTable[Tabulce].
+Činnosti jednotlivých procesů byly zapsány v @processStepsTable[Tabulce].
 
 #config.sourcedFigure(
   [
@@ -110,48 +110,48 @@ Kroky jednotlivých procesů byly zapsány v @processStepsTable[Tabulce].
       table(
         columns: (auto, auto, auto, auto, auto, auto),
         align: left,
-        table.header([ID], [Krok], [Role], [Chybovost], [Časová náročnost], [Procesy]),
-        "K01", "Notifikování správce o změně", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
-        "K02", "Převzetí dat o změně", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
-        "K03", "Transformace zdrojových dat do datového balíku", "Systém", "Možnost chyby", "Rychlá", "Pr1, Pr2",
-        "K04", "Validace datového balíku", "Systém", "Bezchybná", "Rychlá", "Pr1, Pr2",
-        "K05", "Řešení chyby v datech", "Správce", "Bezchybná", "Náročná", "Pr1, Pr2",
-        "K06", "Doptání se na potřebné podklady", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2",
-        "K07", "Odpověď na dotaz", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2",
-        "K08", "Nahrání dat do systému", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
-        "K09", "Nasazení nové verze aplikace", "Správce", "Bezchybná", "Náročná", "Pr1, Pr2, Pr3",
-        "K10", "Úprava ikonky do požadovaného formátu", "Správce", "Bezchybná", "Náročná", "Pr3",
+        table.header([ID], [Činnost], [Role], [Chybovost], [Časová náročnost], [Procesy]),
+        "T01", "Notifikování správce o změně", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
+        "T02", "Převzetí dat o změně", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
+        "T03", "Transformace zdrojových dat do datového balíku", "Systém", "Možnost chyby", "Rychlá", "Pr1, Pr2",
+        "T04", "Validace datového balíku", "Systém", "Bezchybná", "Rychlá", "Pr1, Pr2",
+        "T05", "Řešení chyby v datech", "Správce", "Bezchybná", "Náročná", "Pr1, Pr2",
+        "T06", "Doptání se na potřebné podklady", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2",
+        "T07", "Odpověď na dotaz", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2",
+        "T08", "Nahrání dat do systému", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
+        "T09", "Nasazení nové verze aplikace", "Správce", "Bezchybná", "Náročná", "Pr1, Pr2, Pr3",
+        "T10", "Úprava ikonky do požadovaného formátu", "Správce", "Bezchybná", "Náročná", "Pr3",
       ),
-      caption: [Tabulka kroků všech procesů],
+      caption: [Tabulka činností všech procesů],
     ) <processStepsTable>
   ],
   [Vlastní zpracování],
 )
 
-Na základě hodnot v @processStepsTable[Tabulce] lze jednoduše vyhledat kroky, na kterých se projevují procesní nedostatky aktuálního IS.
-Tyto kroky lze identifikovat na základě chybovosti, časové náročnosti.
-Prioritu těmto nedostatkům byla určena, dle počtu procesů, ve kterých se krok projevuje.
+Na základě hodnot v @processStepsTable[Tabulce] lze jednoduše vyhledat činnosti, na kterých se projevují nedostatky aktuálního IS.
+Tyto činnosti lze identifikovat na základě chybovosti, časové náročnosti.
+Prioritu těmto nedostatkům byla určena, dle počtu procesů, ve kterých je činnost prováděna.
 
-Kroky, které jsou bezchybné s nízkou časovou náročností nejsou považovány za procesní nedostatky.
-Seřazené a vybrané kroky jsou: *K05, K09, K10, K03*.
+Činnosti, které jsou bezchybné s nízkou časovou náročností nejsou považovány za nedostatky.
+Seřazené a vybrané činnosti jsou: *T05, T09, T10, T03*.
 
-Krok *K05 Řešení chyby v datech* je navazujícím krokem na událost chyby.
-Běžným zdrojem této chyby je krok K04 Validace datového balíku.
-V tomto kroku je třeba provést investigaci, z jakého důvodu k chybě došlo.
+Činnost *T05 Řešení chyby v datech* je navazující činností na událost chyby.
+Běžným zdrojem této chyby je činnost T04 Validace datového balíku.
+V této činnosti je třeba provést investigaci, z jakého důvodu k chybě došlo.
 Po prověření situace dojde k opravě správcem systému.
 Chyba může mít různý charakter, zejména charakter chyby ve zdrojových datech, nebo chyby IS.
 
-Krok *K09 Nasazení nové verze aplikace* má vliv na všechny procesy IS.
-Jedná se o časově náročný krok, který kvůli častému výskytu limituje informačnímu systému svižně reagovat na příchozí požadavky, bez delších prodlev.
+Činnost *T09 Nasazení nové verze aplikace* má vliv na všechny procesy IS.
+Jedná se o časově náročnou činnost, který kvůli častému výskytu limituje informačnímu systému svižně reagovat na příchozí požadavky, bez delších prodlev.
 V době nasazování nové verze je IS nedostupný a tím omezuje plynulé užívání IS.
 
-*K10 Úprava ikonky do požadovaného formátu* je krok prováděn správcem systému pro sjednocení formátu ikonky.
-Kvůli vysoké časové náročnosti se jedná o krok vhodný pro automatizaci.
+*T10 Úprava ikonky do požadovaného formátu* je činnost prováděna správcem systému pro sjednocení formátu ikonky.
+Kvůli vysoké časové náročnosti se jedná o činnost vhodnou pro automatizaci.
 
-Krok *K03 Transformace zdrojových dat do datového balíku* obsahuje riziko chyby.
+Činnost *T03 Transformace zdrojových dat do datového balíku* obsahuje riziko chyby.
 Jedná se o místo slučování dat jízdních řádů s podkladem geografických dat IS.
 V případě změn procesů dopravce mohou nové změny vyprodukovat chybu při transformaci dat.
-Následujícím krokem validace tedy dojde k chybě.
+Následující činností validace tedy dojde k chybě.
 Chyba je pak následně prověřena a oprava ve zdrojových datech, nebo opravou IS.
 
 === Hodnocení datových formátů
@@ -237,7 +237,7 @@ Z tohoto důvodu je v navrženém systému stanoven nefunkční požadavek, aby 
         columns: (auto, auto),
         align: left,
         table.header([Limit pro čas odezvy], [Vnímání uživatelem]),
-        "0.1 s", "okamžitá reakce",
+        "0,1 s", "okamžitá reakce",
         "1 s", "plynulá interakce",
         "~2-10 s", "uživatel ztrácí pozornost",
       ),

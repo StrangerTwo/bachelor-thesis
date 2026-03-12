@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.12.0">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.13.1">
   <message id="Message_Online_Order_Fulfillment" name="Online Order Fulfillment" />
   <collaboration id="Collaboration_Online_Order_Fulfillment">
     <participant id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" name="Proces výměna ikonky vozidel" processRef="Process_Proces_aktualizace_dat_j_zdn_ch___d_" />
@@ -26,20 +26,20 @@
     <sequenceFlow id="Flow_rel-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-P_evzet__informace_o_zm_n__j_zdn_ho___du-forward" sourceRef="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" targetRef="P_evzet__informace_o_zm_n__j_zdn_ho___du" />
     <sequenceFlow id="Flow_rel-Nahr_n__dat_do_syst_mu-Nasazen__nov__verze_aplikace-forward" sourceRef="Nahr_n__dat_do_syst_mu" targetRef="Nasazen__nov__verze_aplikace" />
     <sequenceFlow id="Flow_rel-Nasazen__nov__verze_aplikace-Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS-forward" sourceRef="Nasazen__nov__verze_aplikace" targetRef="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" />
-    <task id="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" name="Notifikování správce systému o požadavku na změnu ikonky" />
+    <task id="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" name="T01&#10;Notifikování správce systému o požadavku na změnu ikonky" />
     <sequenceFlow id="Flow_09c0a90" sourceRef="P_evzet__informace_o_zm_n__j_zdn_ho___du" targetRef="Activity_15q8j1l" />
     <sequenceFlow id="Flow_0a6wnwv" sourceRef="Activity_15q8j1l" targetRef="Nahr_n__dat_do_syst_mu" />
-    <task id="P_evzet__informace_o_zm_n__j_zdn_ho___du" name="Převzetí dat o nové ikonce">
+    <task id="P_evzet__informace_o_zm_n__j_zdn_ho___du" name="T02&#10;Převzetí dat o nové ikonce">
       <outgoing>Flow_09c0a90</outgoing>
     </task>
-    <task id="Activity_15q8j1l" name="Úprava ikonky do požadovaného formátu">
+    <task id="Activity_15q8j1l" name="T10&#10;Úprava ikonky do požadovaného formátu">
       <incoming>Flow_09c0a90</incoming>
       <outgoing>Flow_0a6wnwv</outgoing>
     </task>
-    <task id="Nahr_n__dat_do_syst_mu" name="Nahrání dat do systému">
+    <task id="Nahr_n__dat_do_syst_mu" name="T08&#10;Nahrání dat do systému">
       <incoming>Flow_0a6wnwv</incoming>
     </task>
-    <task id="Nasazen__nov__verze_aplikace" name="Nasazení nové verze aplikace" />
+    <task id="Nasazen__nov__verze_aplikace" name="T09&#10;Nasazení nové verze aplikace" />
     <intermediateCatchEvent id="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" name="Aktualizovaná ikonka dostupná v IS" />
     <intermediateCatchEvent id="Zm_na_j_zdn_ho___du" name="Požadavek na změnu ikonky vozidel" />
   </process>
@@ -55,15 +55,15 @@
         <dc:Bounds x="130" y="60" width="1424" height="595" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="LaneShape_Dopravce" bpmnElement="Lane_Dopravce" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
-        <dc:Bounds x="160" y="60" width="1394" height="225" />
-        <bpmndi:BPMNLabel />
+      <bpmndi:BPMNShape id="LaneShape_Informa_n__syst_m" bpmnElement="Lane_Informa_n__syst_m" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
+        <dc:Bounds x="160" y="500" width="1394" height="155" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="LaneShape_Spr_vce_syst_mu" bpmnElement="Lane_Spr_vce_syst_mu" isHorizontal="true" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
         <dc:Bounds x="160" y="285" width="1394" height="215" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="LaneShape_Informa_n__syst_m" bpmnElement="Lane_Informa_n__syst_m" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
-        <dc:Bounds x="160" y="500" width="1394" height="155" />
+      <bpmndi:BPMNShape id="LaneShape_Dopravce" bpmnElement="Lane_Dopravce" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="160" y="60" width="1394" height="225" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_" bpmnElement="Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_">
         <dc:Bounds x="408" y="105" width="153" height="149" />
@@ -79,9 +79,11 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Nahr_n__dat_do_syst_mu" bpmnElement="Nahr_n__dat_do_syst_mu">
         <dc:Bounds x="1078" y="362" width="150" height="72" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Nasazen__nov__verze_aplikace" bpmnElement="Nasazen__nov__verze_aplikace">
         <dc:Bounds x="1289" y="361" width="150" height="72" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" bpmnElement="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS">
         <dc:Bounds x="1439" y="542" width="50" height="50" />
@@ -121,16 +123,16 @@
         <di:waypoint x="987" y="402" />
         <di:waypoint x="1078" y="402" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="BPMNShape_1sd10rg" bpmnElement="Group_027lh7i" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
-        <dc:Bounds x="540" y="310" width="480" height="170" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="735" y="317" width="90" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Group_09gkye8_di" bpmnElement="Group_09gkye8" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
         <dc:Bounds x="1260" y="330" width="200" height="130" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1315" y="337" width="90" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1sd10rg" bpmnElement="Group_027lh7i" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
+        <dc:Bounds x="540" y="310" width="480" height="170" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="735" y="317" width="90" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>

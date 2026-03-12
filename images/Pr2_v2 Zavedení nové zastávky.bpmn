@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.12.0">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_Online_Order_Fulfillment" targetNamespace="http://example.com/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.13.1">
   <message id="Message_Online_Order_Fulfillment" name="Online Order Fulfillment" />
   <collaboration id="Collaboration_Online_Order_Fulfillment">
     <participant id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" name="Proces zavedení nové zastávky" processRef="Process_Proces_aktualizace_dat_j_zdn_ch___d_" />
@@ -25,19 +25,19 @@
     <sequenceFlow id="Flow_1frxcbu" sourceRef="Activity_0edxqx6" targetRef="Activity_0b75zoj" />
     <sequenceFlow id="Flow_06jfo1a" sourceRef="Activity_0b75zoj" targetRef="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" />
     <intermediateCatchEvent id="Zm_na_j_zdn_ho___du" name="Zavedení nové zastávky" />
-    <task id="Activity_0sp6pku" name="Vyplnění formuláře pro úpravu zastávky">
+    <task id="Activity_0sp6pku" name="T19&#10;Vyplnění formuláře pro úpravu zastávky">
       <incoming>Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward</incoming>
       <outgoing>Flow_1i2h7os</outgoing>
     </task>
-    <task id="Activity_18qa613" name="Příjmutí dat zastávky fomulářem">
+    <task id="Activity_18qa613" name="T12&#10;Příjmutí dat zastávky fomulářem">
       <incoming>Flow_1i2h7os</incoming>
       <outgoing>Flow_00dzndh</outgoing>
     </task>
-    <task id="Activity_0edxqx6" name="Aktualizace dat zastávky">
+    <task id="Activity_0edxqx6" name="T20&#10;Aktualizace dat zastávky">
       <incoming>Flow_00dzndh</incoming>
       <outgoing>Flow_1frxcbu</outgoing>
     </task>
-    <task id="Activity_0b75zoj" name="Aplikování změn v aplikaci">
+    <task id="Activity_0b75zoj" name="T13&#10;Aplikování změn v aplikaci">
       <incoming>Flow_1frxcbu</incoming>
       <outgoing>Flow_06jfo1a</outgoing>
     </task>
@@ -54,15 +54,15 @@
         <dc:Bounds x="130" y="60" width="1024" height="415" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="LaneShape_Dopravce" bpmnElement="Lane_Dopravce" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
-        <dc:Bounds x="160" y="60" width="994" height="135" />
-        <bpmndi:BPMNLabel />
+      <bpmndi:BPMNShape id="LaneShape_Informa_n__syst_m" bpmnElement="Lane_Informa_n__syst_m" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
+        <dc:Bounds x="160" y="340" width="994" height="135" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="LaneShape_Spr_vce_syst_mu" bpmnElement="Lane_Spr_vce_syst_mu" isHorizontal="true" bioc:stroke="#205022" bioc:fill="#c8e6c9" color:background-color="#c8e6c9" color:border-color="#205022">
         <dc:Bounds x="160" y="195" width="994" height="145" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="LaneShape_Informa_n__syst_m" bpmnElement="Lane_Informa_n__syst_m" isHorizontal="true" bioc:stroke="#0d4372" bioc:fill="#bbdefb" color:background-color="#bbdefb" color:border-color="#0d4372">
-        <dc:Bounds x="160" y="340" width="994" height="135" />
+      <bpmndi:BPMNShape id="LaneShape_Dopravce" bpmnElement="Lane_Dopravce" isHorizontal="true" bioc:stroke="#6b3c00" bioc:fill="#ffe0b2" color:background-color="#ffe0b2" color:border-color="#6b3c00">
+        <dc:Bounds x="160" y="60" width="994" height="135" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Shape_Zm_na_j_zdn_ho___du" bpmnElement="Zm_na_j_zdn_ho___du">
         <dc:Bounds x="245" y="105" width="50" height="50" />
