@@ -148,7 +148,7 @@ V době nasazování nové verze je IS nedostupný a tím omezuje plynulé uží
 *T10 Úprava ikonky do požadovaného formátu* je činnost prováděna správcem systému pro sjednocení formátu ikonky.
 Kvůli vysoké časové náročnosti se jedná o činnost vhodnou pro automatizaci.
 
-Činnost *T03 Transformace zdrojových dat do datového balíku* obsahuje riziko chyby.
+Činnost *T03 Transformace zdrojových dat do datového balíku* obsahuje možnost chyby.
 Jedná se o místo slučování dat jízdních řádů s podkladem geografických dat IS.
 V případě změn procesů dopravce mohou nové změny vyprodukovat chybu při transformaci dat.
 Následující činností validace tedy dojde k chybě.
@@ -247,11 +247,11 @@ Z tohoto důvodu je v navrženém systému stanoven nefunkční požadavek, aby 
   [@nng_response_times],
 )
 
-V @nngResponseTimes[Tabulce] byly sepsány modelové reakce uživatelů na různou dobu odezvy systému.
+V @nngResponseTimes[Tabulce] jsou zobrazeny modelové reakce uživatelů na různou dobu odezvy systému.
 Ztráta pozornosti uživatele nastává v časovém okně 2-10 sekund.
 Za účelem zlepšení uživatelského zážitku (UX) využívání aplikace bude limitní odezva systému pro běžné požadavky nastavena na jednu sekundu.
 
-Požadavky byly souhrnně sepsány v @requirementsTable[Tabulce].
+Požadavky jsou souhrnně sepsány v @requirementsTable[Tabulce].
 
 #pagebreak()
 
@@ -272,15 +272,15 @@ Požadavky byly souhrnně sepsány v @requirementsTable[Tabulce].
           columns: (auto, auto, 2fr, 1fr, auto, auto),
           align: left,
           table.header([ID], [Požadavek], [Popis], [Způsob ověření], [Typ], [Zdroj]),
-          "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce. Filtrování zobrazovaných spojů bude k dispozici skrze postranní menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
-          "Po02", "Detail spoje vozidla", "Pro zobrazovaná vozidla v klientské aplikaci je možné rozkliknutím zobrazit detail spojení jedoucího vozidla. V novém okně se zobrazí přehled spoje a nadcházející zastávky s aktuálním zpožděním.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
-          "Po03", "Odjezdová tabule zastávky", "V klientské aplikaci musí být zachována možnost vyhledat zastávku a zobrazit seznam nadcházejících odjezdů ze zastávky. Zároveň je požadováno zachovat relevantní funkcionality postranního menu aplikace.", "Součástí klientské aplikace", "Funkční", "Stávající systém",
+          "Po01", "Zobrazování poloh vozidel v aplikaci", "V klientské aplikaci jsou zobrazovány vozidla v interaktivní mapě na aktuálních GPS souřadnicích dle datového zdroje dopravce. Filtrování zobrazovaných spojů bude k dispozici skrze postranní menu aplikace.", "Ověření existence a kontrola funkčnosti v rámci klientské aplikace", "Funkční", "Stávající systém",
+          "Po02", "Detail spoje vozidla", "Pro zobrazovaná vozidla v klientské aplikaci je možné rozkliknutím zobrazit detail spojení jedoucího vozidla. V novém okně se zobrazí přehled spoje a nadcházející zastávky s aktuálním zpožděním.", "Ověření existence a kontrola funkčnosti v rámci klientské aplikace", "Funkční", "Stávající systém",
+          "Po03", "Odjezdová tabule zastávky", "V klientské aplikaci musí být zachována možnost vyhledat zastávku a zobrazit seznam nadcházejících odjezdů ze zastávky. Zároveň je požadováno zachovat relevantní funkcionality postranního menu aplikace.", "Ověření existence a kontrola funkčnosti v rámci klientské aplikace", "Funkční", "Stávající systém",
           "Po04", "Formulář pro výměnu jízdního řádů", "Formulář v administraci umožní dispečerovi nahrát data nového jízdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po05", "Formulář pro úpravu ikonky vozidla", "Formulář v administraci umožní dispečerovi nahrát novou ikonku do aplikace. Dostupné ikonky ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po06", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit vlastnosti zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po07", "Podpora datových formátů", "IS musí podporovat datové formáty JDF pro načtení dat jízdního řádu. Formáty dodatečných datových zdrojů, které by IS případně vyžadoval, uvede dodavatel v prozní dokumentaci.", "Ověření aktualizací dat jízdního řádu původním datovým souborem", "Funkční", "Návrh optimalizace procesů",
-          "Po08", "Výkonnost a rychlost odezvy", "Doba odezvy běžných požadavků nesmí překročit 1 sekundu. Delší odpovědi systému jsou mimo vyhrazené časové okna, pro např. nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.", "Pravidelné monitorování času odezvy na požadavek", "Nefunkční", "Akceptační kritérium",
-          "Po09", "Dostupnost a spolehlivost aplikace", "Systém musí být dostupný 99,9% času.", "Monitorování dostupnosti", "Nefunkční", "Akceptační kritérium",
+          "Po08", "Výkonnost a rychlost odezvy", "Doba odezvy běžných požadavků nesmí překročit 1 sekundu. Delší odpovědi systému jsou mimo vyhrazené časové okna, pro např. nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.", "Pravidelné monitorování času odezvy na požadavek", "Nefunkční", "Návrh inovovaného IS",
+          "Po09", "Dostupnost a spolehlivost aplikace", "Systém musí být dostupný 99,9% času.", "Monitorování dostupnosti", "Nefunkční", "Návrh inovovaného IS",
         ),
         caption: [Tabulka požadavků],
       ) <requirementsTable>
