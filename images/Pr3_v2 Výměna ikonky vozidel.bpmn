@@ -58,7 +58,7 @@
     </intermediateCatchEvent>
   </process>
   <category id="Category_18ch8gy">
-    <categoryValue id="CategoryValue_1cv60jl" value="Změny v optimalizaci procesu" />
+    <categoryValue id="CategoryValue_1cv60jl" value="Návrh změn v procesu" />
   </category>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_Online_Order_Fulfillment">
@@ -149,7 +149,7 @@
       <bpmndi:BPMNShape id="Group_0jtovuw_di" bpmnElement="Group_0jtovuw" bioc:stroke="#831311" bioc:fill="#ffcdd2" color:background-color="#ffcdd2" color:border-color="#831311">
         <dc:Bounds x="330" y="70" width="990" height="400" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1207" y="73" width="61" height="40" />
+          <dc:Bounds x="1241" y="78" width="71" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
