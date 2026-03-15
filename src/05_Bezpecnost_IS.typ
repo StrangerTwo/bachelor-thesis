@@ -12,18 +12,20 @@ Klíčovou fází koloběhu IS je monitorování jeho stavu i po uvedením do pr
 Požadavky *Po08* a *Po09* vyžadují neustálou kontrolu pro zajištění bezchybnosti IS.
 
 Pro monitorování výkonu IS je vhodným řešením sledování využití zdrojů stroje.
-Vytížení stroje v čase kolísá, je tedy proto vhodné zaznamenávat a porovnávat statistiku v různých časových oknech.
-Porovnávat je dobré stav zatížení "v klidu" oproti zatížení za zvýšeného provozu.
+Vytížení stroje v čase kolísá, proto je vhodné zaznamenávat a porovnávat statistiku v různých časových oknech.
 
-"V klidu" je možné pozorovat vytížení systému v moment, kdy není IS aktivně využíván.
-Jde např. o víkend, nebo noční hodiny.
-V tento moment je možné zaznamenat minimální požadavky pro provoz IS.
-Zhodnocení zatížení v tomto stavu může sloužit k výpočtu očekávaných nákladů na provoz IS.
+Pro účely analýzy výkonu je nejprve stanovena tzv. *výkonnostní základna*, která představuje referenční hodnoty metrik systému zaznamenané v běžných provozních podmínkách.
+Tyto hodnoty slouží jako srovnávací bod pro pozdější analýzu výkonu při zvýšeném zatížení systému.
 
-Za zvýšeného provozu dochází k maximálnímu vytížení IS.
-Zvýšený provoz lze pozorovat tradičně v poledních hodinách ve všední den.
-Výkon IS v momentech zvýšeného provozu je pociťován největším množstvím zákazníků, plynulost provozu je tedy v těchto chvílích nejkritičtější.
-Případné výkonnostní nedostatky jsou následně řešeny možnou optimalizací IS, nebo škálováním provozních instancí IS.
+Výkonnostní metriky systému je vhodné sledovat pravidelně a při různém zatížení systému.
+Obvykle se používají metriky při stavu minimálního zatížení (*idle load*), běžného provozního zatížení (*normal load*) a špičkového zatížení (*peak load*).
+Jejich srovnáním je možné odhadnout kapacitní rezervy systému a odhalit potenciální problémy za zvýšeného provozu.
+@Beyer2016SRE
+
+Stav minimálního zatížení lze pozorovat v nočních hodinách nebo během víkendů, kdy není aplikace intenzivně využívána.
+V tomto období je možné zaznamenat minimální nároky systému na výpočetní zdroje a odhadnout základní provozní náklady.
+Špičkové zatížení systému lze očekávat například během pracovních dnů v poledních hodinách.
+Stabilita a plynulost provozu za zvýšeného zatížení je klíčová, protože případné výkonnostní nedostatky mohou ovlivnit velké množství uživatelů.
 
 Na @cpuUsage[Obrázku] je zobrazena ilustrace monitorovacího systému pro měření zatížení stroje informačním systémem.
 

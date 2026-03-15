@@ -8,7 +8,7 @@ Kapitola odpovídá poslednímu kroku funkční analýzy IS, *dokumentace výsle
 
 Pokud by došlo k úspěšnému provedení inovace informačního systému existuje několik možných směrů pro další rozvoj.
 
-Jedním možným způsobem je rozšířit integraci se systémy dopravce.
+IS je možné dále rozvíjet navýšením integrací se systémy dopravce.
 Dopravci využívají různé systémy pro tarifní ohodnocení, nebo např. množstevní slevy jízdného.
 Integrací profilu cestujícího s IS bude uživatelům zjednodušena správa profilu.
 
