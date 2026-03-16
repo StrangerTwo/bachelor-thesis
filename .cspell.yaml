@@ -1,3 +1,5 @@
 ignoreRegExpList:
   - /@\w+/g
   - /#\w+/g
+words:
+  - Investigace

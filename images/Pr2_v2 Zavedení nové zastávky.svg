@@ -1,4 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- created with bpmn-js / http://bpmn.io -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1034" height="425" viewBox="125 55 1034 425" version="1.1"><defs><pattern id="djs-grid-pattern-361123" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="0.5" cy="0.5" r="0.5" style="fill: rgb(204, 204, 204);"/></pattern></defs><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_" transform="matrix(1, 0, 0, 1, 130, 60)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="1024" height="415" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;" d="M30,0L30,415"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" lineHeight="1.2" class="djs-label" transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 415)"><tspan x="123.16666412353516" y="18.6">Proces zavedení nové zastávky</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-no-move" x="0" y="0" width="1024" height="415"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-click-stroke" x="0" y="0" width="1024" height="415"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="30" height="415"/><rect x="-5" y="-5" rx="4" width="1034" height="425" style="fill: none;" class="djs-outline"/></g><g class="djs-children"><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Lane_Informa_n__syst_m" transform="matrix(1, 0, 0, 1, 160, 340)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="994" height="135" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(13, 67, 114); stroke-width: 1.5px; fill: rgb(187, 222, 251); fill-opacity: 0.25;"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(13, 67, 114);" lineHeight="1.2" class="djs-label" transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 135)"><tspan x="18.5" y="18.6">Informační systém</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-no-move" x="0" y="0" width="994" height="135"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-click-stroke" x="0" y="0" width="994" height="135"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="30" height="135"/><rect x="-5" y="-5" rx="4" width="1004" height="145" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Lane_Spr_vce_syst_mu" transform="matrix(1, 0, 0, 1, 160, 195)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="994" height="145" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(32, 80, 34); stroke-width: 1.5px; fill: rgb(200, 230, 201); fill-opacity: 0.25;"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(32, 80, 34);" lineHeight="1.2" class="djs-label" transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 145)"><tspan x="26.5" y="18.6">Správce systému</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-no-move" x="0" y="0" width="994" height="145"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-click-stroke" x="0" y="0" width="994" height="145"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="30" height="145"/><rect x="-5" y="-5" rx="4" width="1004" height="155" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Lane_Dopravce" transform="matrix(1, 0, 0, 1, 160, 60)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="994" height="135" rx="0" ry="0" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(107, 60, 0); stroke-width: 1.5px; fill: rgb(255, 224, 178); fill-opacity: 0.25;"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(107, 60, 0);" lineHeight="1.2" class="djs-label" transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 135)"><tspan x="43.83333396911621" y="18.6">Dispečer</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-no-move" x="0" y="0" width="994" height="135"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-click-stroke" x="0" y="0" width="994" height="135"/><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="30" height="135"/><rect x="-5" y="-5" rx="4" width="1004" height="145" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Zm_na_j_zdn_ho___du" transform="matrix(1, 0, 0, 1, 245, 105)" style="display: block;"><g class="djs-visual"><circle cx="25" cy="25" r="25" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><circle cx="25" cy="25" r="22" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: none;"/></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"/><circle cx="25" cy="25" r="30" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Zm_na_j_zdn_ho___du_label" transform="matrix(1, 0, 0, 1, 233, 155)" style="display: block;"><g class="djs-visual"><text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);" lineHeight="1.2" class="djs-label"><tspan x="0" y="9.899999999999999">Zavedení nové </tspan><tspan x="16.50833511352539" y="23.099999999999998">zastávky</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="76" height="27"/><rect x="-5" y="-5" rx="4" width="86" height="37" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0sp6pku" transform="matrix(1, 0, 0, 1, 370, 90)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" lineHeight="1.2" class="djs-label"><tspan x="39.666666984558105" y="14.799999999999999">T19</tspan><tspan x="25.21666717529297" y="29.199999999999996">Vyplnění </tspan><tspan x="12.666667938232422" y="43.599999999999994">formuláře pro </tspan><tspan x="30" y="57.99999999999999">úpravu </tspan><tspan x="26.66666603088379" y="72.39999999999999">zastávky</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"/><rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_18qa613" transform="matrix(1, 0, 0, 1, 540, 370)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" lineHeight="1.2" class="djs-label"><tspan x="39.666666984558105" y="22">T12</tspan><tspan x="17.666667938232422" y="36.4">Příjmutí dat </tspan><tspan x="25" y="50.8">zastávky </tspan><tspan x="21.66666603088379" y="65.19999999999999">fomulářem</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"/><rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0edxqx6" transform="matrix(1, 0, 0, 1, 710, 370)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" lineHeight="1.2" class="djs-label"><tspan x="39.666666984558105" y="29.200000000000003">T20</tspan><tspan x="9.333332061767578" y="43.6">Aktualizace dat</tspan><tspan x="26.66666603088379" y="58">zastávky</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"/><rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Activity_0b75zoj" transform="matrix(1, 0, 0, 1, 880, 370)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="100" height="80" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;"/><text style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);" lineHeight="1.2" class="djs-label"><tspan x="39.666666984558105" y="29.200000000000003">T13</tspan><tspan x="20.66666603088379" y="43.6">Aplikování </tspan><tspan x="9" y="58">změn v aplikaci</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80"/><rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS" transform="matrix(1, 0, 0, 1, 1065, 385)" style="display: block;"><g class="djs-visual"><circle cx="25" cy="25" r="25" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;"/><circle cx="25" cy="25" r="22" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: none;"/></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50"/><circle cx="25" cy="25" r="30" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS_label" transform="matrix(1, 0, 0, 1, 1045, 435)" style="display: block;"><g class="djs-visual"><text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);" lineHeight="1.2" class="djs-label"><tspan x="8.841667175292969" y="9.899999999999999">Aktualizovaná </tspan><tspan x="0" y="23.099999999999998">data zastávky v IS</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="90" height="27"/><rect x="-5" y="-5" rx="4" width="100" height="37" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward" style="display: block;"><g class="djs-visual"><defs><marker id="marker-2dly3bb8y2p3sw67zytm3xgip" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);"/></marker></defs><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-2dly3bb8y2p3sw67zytm3xgip');" data-corner-radius="5" d="M295,130L370,130"/></g><path d="M295,130L370,130" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"/><rect x="290" y="125" rx="4" width="85" height="10" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_1i2h7os" style="display: block;"><g class="djs-visual"><defs><marker id="marker-esl91d011wv0r9uezkr14953q" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);"/></marker></defs><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-esl91d011wv0r9uezkr14953q');" data-corner-radius="5" d="M470,130L500,130C502.5,130,505,132.5,505,135L505,405C505,407.5,507.5,410,510,410L540,410"/></g><path d="M470,130L505,130L505,410L540,410" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"/><rect x="465" y="125" rx="4" width="80" height="290" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_00dzndh" style="display: block;"><g class="djs-visual"><defs><marker id="marker-c14nb6t74wsnhxu29frpznb5a" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);"/></marker></defs><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-c14nb6t74wsnhxu29frpznb5a');" data-corner-radius="5" d="M640,410L710,410"/></g><path d="M640,410L710,410" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"/><rect x="635" y="405" rx="4" width="80" height="10" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_1frxcbu" style="display: block;"><g class="djs-visual"><defs><marker id="marker-bzp9ngn1zudegqwoym9kydmyq" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);"/></marker></defs><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-bzp9ngn1zudegqwoym9kydmyq');" data-corner-radius="5" d="M810,410L880,410"/></g><path d="M810,410L880,410" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"/><rect x="805" y="405" rx="4" width="80" height="10" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-connection" data-element-id="Flow_06jfo1a" style="display: block;"><g class="djs-visual"><defs><marker id="marker-dgdufmsvj9jkg46c16d88wak1" viewBox="0 0 20 20" refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto"><path d="M 1 5 L 11 10 L 1 15 Z" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);"/></marker></defs><path style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-dgdufmsvj9jkg46c16d88wak1');" data-corner-radius="5" d="M980,410L1065,410"/></g><path d="M980,410L1065,410" style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke"/><rect x="975" y="405" rx="4" width="95" height="10" style="fill: none;" class="djs-outline"/></g></g></g></g><g class="djs-group"><g class="djs-element djs-shape djs-frame" data-element-id="Group_0jtovuw" transform="matrix(1, 0, 0, 1, 330, 70)" style="display: block;"><g class="djs-visual"><rect x="0" y="0" width="680" height="390" rx="10" ry="10" style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(131, 19, 17); stroke-width: 1.5px; fill: none; stroke-dasharray: 10px, 6px, 0px, 6px; pointer-events: none;"/></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-stroke" x="0" y="0" width="680" height="390"/><rect x="-5" y="-5" rx="14" width="690" height="400" style="fill: none;" class="djs-outline"/></g></g><g class="djs-group"><g class="djs-element djs-shape" data-element-id="Group_0jtovuw_label" transform="matrix(1, 0, 0, 1, 917, 73)" style="display: block;"><g class="djs-visual"><text style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(131, 19, 17);" lineHeight="1.2" class="djs-label"><tspan x="0" y="9.899999999999999">Návrh změn v </tspan><tspan x="15.883333206176758" y="23.099999999999998">procesu</tspan></text></g><rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;" class="djs-hit djs-hit-all" x="0" y="0" width="71" height="27"/><rect x="-5" y="-5" rx="4" width="81" height="37" style="fill: none;" class="djs-outline"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1034"
+    height="425" viewBox="125 55 1034 425" version="1.1">
+    <defs>
+        <pattern id="djs-grid-pattern-361123" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="0.5" cy="0.5" r="0.5" style="fill: rgb(204, 204, 204);" />
+        </pattern>
+    </defs>
+    <g class="djs-group">
+        <g class="djs-element djs-shape"
+            data-element-id="Participant_Proces_aktualizace_dat_j_zdn_ch___d_"
+            transform="matrix(1, 0, 0, 1, 130, 60)" style="display: block;">
+            <g class="djs-visual">
+                <rect x="0" y="0" width="1024" height="415" rx="0" ry="0"
+                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;" />
+                <path
+                    style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px;"
+                    d="M30,0L30,415" />
+                <text
+                    style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                    lineHeight="1.2" class="djs-label"
+                    transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 415)">
+                    <tspan x="123.16666412353516" y="18.6">Proces zavedení nové zastávky</tspan>
+                </text>
+            </g>
+            <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                class="djs-hit djs-hit-no-move" x="0" y="0" width="1024" height="415" />
+            <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                class="djs-hit djs-hit-click-stroke" x="0" y="0" width="1024" height="415" />
+            <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                class="djs-hit djs-hit-all" x="0" y="0" width="30" height="415" />
+            <rect x="-5" y="-5" rx="4" width="1034" height="425" style="fill: none;"
+                class="djs-outline" />
+        </g>
+        <g class="djs-children">
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Lane_Informa_n__syst_m"
+                    transform="matrix(1, 0, 0, 1, 160, 340)" style="display: block;">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="994" height="135" rx="0" ry="0"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(13, 67, 114); stroke-width: 1.5px; fill: rgb(187, 222, 251); fill-opacity: 0.25;" />
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(13, 67, 114);"
+                            lineHeight="1.2" class="djs-label"
+                            transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 135)">
+                            <tspan x="18.5" y="18.6">Informační systém</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-no-move" x="0" y="0" width="994" height="135" />
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-click-stroke" x="0" y="0" width="994" height="135" />
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="30" height="135" />
+                    <rect x="-5" y="-5" rx="4" width="1004" height="145" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Lane_Spr_vce_syst_mu"
+                    transform="matrix(1, 0, 0, 1, 160, 195)" style="display: block;">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="994" height="145" rx="0" ry="0"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(32, 80, 34); stroke-width: 1.5px; fill: rgb(200, 230, 201); fill-opacity: 0.25;" />
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(32, 80, 34);"
+                            lineHeight="1.2" class="djs-label"
+                            transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 145)">
+                            <tspan x="26.5" y="18.6">Správce systému</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-no-move" x="0" y="0" width="994" height="145" />
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-click-stroke" x="0" y="0" width="994" height="145" />
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="30" height="145" />
+                    <rect x="-5" y="-5" rx="4" width="1004" height="155" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Lane_Dopravce"
+                    transform="matrix(1, 0, 0, 1, 160, 60)" style="display: block;">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="994" height="135" rx="0" ry="0"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(107, 60, 0); stroke-width: 1.5px; fill: rgb(255, 224, 178); fill-opacity: 0.25;" />
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(107, 60, 0);"
+                            lineHeight="1.2" class="djs-label"
+                            transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 135)">
+                            <tspan x="43.83333396911621" y="18.6">Dispečer</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-no-move" x="0" y="0" width="994" height="135" />
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-click-stroke" x="0" y="0" width="994" height="135" />
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="30" height="135" />
+                    <rect x="-5" y="-5" rx="4" width="1004" height="145" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Zm_na_j_zdn_ho___du"
+                    transform="matrix(1, 0, 0, 1, 245, 105)" style="display: block;">
+                    <g class="djs-visual">
+                        <circle cx="25" cy="25" r="25"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;" />
+                        <circle cx="25" cy="25" r="22"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: none;" />
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" />
+                    <circle cx="25" cy="25" r="30" style="fill: none;" class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Zm_na_j_zdn_ho___du_label"
+                    transform="matrix(1, 0, 0, 1, 233, 155)" style="display: block;">
+                    <g class="djs-visual">
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);"
+                            lineHeight="1.2" class="djs-label">
+                            <tspan x="0" y="9.899999999999999">Zavedení nové </tspan>
+                            <tspan x="16.50833511352539" y="23.099999999999998">zastávky</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="76" height="27" />
+                    <rect x="-5" y="-5" rx="4" width="86" height="37" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0sp6pku"
+                    transform="matrix(1, 0, 0, 1, 370, 90)" style="display: block;">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;" />
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                            lineHeight="1.2" class="djs-label">
+                            <tspan x="39.666666984558105" y="14.799999999999999">T19</tspan>
+                            <tspan x="25.21666717529297" y="29.199999999999996">Vyplnění </tspan>
+                            <tspan x="12.666667938232422" y="43.599999999999994">formuláře pro </tspan>
+                            <tspan x="30" y="57.99999999999999">úpravu </tspan>
+                            <tspan x="26.66666603088379" y="72.39999999999999">zastávky</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" />
+                    <rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_18qa613"
+                    transform="matrix(1, 0, 0, 1, 540, 370)" style="display: block;">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;" />
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                            lineHeight="1.2" class="djs-label">
+                            <tspan x="39.666666984558105" y="22">T12</tspan>
+                            <tspan x="17.666667938232422" y="36.4">Přijmutí dat </tspan>
+                            <tspan x="25" y="50.8">zastávky </tspan>
+                            <tspan x="21.66666603088379" y="65.19999999999999">formulářem</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" />
+                    <rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0edxqx6"
+                    transform="matrix(1, 0, 0, 1, 710, 370)" style="display: block;">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;" />
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                            lineHeight="1.2" class="djs-label">
+                            <tspan x="39.666666984558105" y="29.200000000000003">T20</tspan>
+                            <tspan x="9.333332061767578" y="43.6">Aktualizace dat</tspan>
+                            <tspan x="26.66666603088379" y="58">zastávky</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" />
+                    <rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape" data-element-id="Activity_0b75zoj"
+                    transform="matrix(1, 0, 0, 1, 880, 370)" style="display: block;">
+                    <g class="djs-visual">
+                        <rect x="0" y="0" width="100" height="80" rx="10" ry="10"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; fill: white; fill-opacity: 0.95;" />
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
+                            lineHeight="1.2" class="djs-label">
+                            <tspan x="39.666666984558105" y="29.200000000000003">T13</tspan>
+                            <tspan x="20.66666603088379" y="43.6">Aplikování </tspan>
+                            <tspan x="9" y="58">změn v aplikaci</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="100" height="80" />
+                    <rect x="-5" y="-5" rx="14" width="110" height="90" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape"
+                    data-element-id="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS"
+                    transform="matrix(1, 0, 0, 1, 1065, 385)" style="display: block;">
+                    <g class="djs-visual">
+                        <circle cx="25" cy="25" r="25"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: white; fill-opacity: 0.95;" />
+                        <circle cx="25" cy="25" r="22"
+                            style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1.5px; fill: none;" />
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="50" height="50" />
+                    <circle cx="25" cy="25" r="30" style="fill: none;" class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-shape"
+                    data-element-id="Aktualizovan__data_j_zdn_ch___d__dostupn__v_IS_label"
+                    transform="matrix(1, 0, 0, 1, 1045, 435)" style="display: block;">
+                    <g class="djs-visual">
+                        <text
+                            style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);"
+                            lineHeight="1.2" class="djs-label">
+                            <tspan x="8.841667175292969" y="9.899999999999999">Aktualizovaná </tspan>
+                            <tspan x="0" y="23.099999999999998">data zastávky v IS</tspan>
+                        </text>
+                    </g>
+                    <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-all" x="0" y="0" width="90" height="27" />
+                    <rect x="-5" y="-5" rx="4" width="100" height="37" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection"
+                    data-element-id="Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward"
+                    style="display: block;">
+                    <g class="djs-visual">
+                        <defs>
+                            <marker id="marker-2dly3bb8y2p3sw67zytm3xgip" viewBox="0 0 20 20"
+                                refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+                                <path d="M 1 5 L 11 10 L 1 15 Z"
+                                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);" />
+                            </marker>
+                        </defs>
+                        <path
+                            style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-2dly3bb8y2p3sw67zytm3xgip');"
+                            data-corner-radius="5" d="M295,130L370,130" />
+                    </g>
+                    <path d="M295,130L370,130"
+                        style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-stroke" />
+                    <rect x="290" y="125" rx="4" width="85" height="10" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_1i2h7os"
+                    style="display: block;">
+                    <g class="djs-visual">
+                        <defs>
+                            <marker id="marker-esl91d011wv0r9uezkr14953q" viewBox="0 0 20 20"
+                                refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+                                <path d="M 1 5 L 11 10 L 1 15 Z"
+                                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);" />
+                            </marker>
+                        </defs>
+                        <path
+                            style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-esl91d011wv0r9uezkr14953q');"
+                            data-corner-radius="5"
+                            d="M470,130L500,130C502.5,130,505,132.5,505,135L505,405C505,407.5,507.5,410,510,410L540,410" />
+                    </g>
+                    <path d="M470,130L505,130L505,410L540,410"
+                        style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-stroke" />
+                    <rect x="465" y="125" rx="4" width="80" height="290" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_00dzndh"
+                    style="display: block;">
+                    <g class="djs-visual">
+                        <defs>
+                            <marker id="marker-c14nb6t74wsnhxu29frpznb5a" viewBox="0 0 20 20"
+                                refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+                                <path d="M 1 5 L 11 10 L 1 15 Z"
+                                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);" />
+                            </marker>
+                        </defs>
+                        <path
+                            style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-c14nb6t74wsnhxu29frpznb5a');"
+                            data-corner-radius="5" d="M640,410L710,410" />
+                    </g>
+                    <path d="M640,410L710,410"
+                        style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-stroke" />
+                    <rect x="635" y="405" rx="4" width="80" height="10" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_1frxcbu"
+                    style="display: block;">
+                    <g class="djs-visual">
+                        <defs>
+                            <marker id="marker-bzp9ngn1zudegqwoym9kydmyq" viewBox="0 0 20 20"
+                                refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+                                <path d="M 1 5 L 11 10 L 1 15 Z"
+                                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);" />
+                            </marker>
+                        </defs>
+                        <path
+                            style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-bzp9ngn1zudegqwoym9kydmyq');"
+                            data-corner-radius="5" d="M810,410L880,410" />
+                    </g>
+                    <path d="M810,410L880,410"
+                        style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-stroke" />
+                    <rect x="805" y="405" rx="4" width="80" height="10" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+            <g class="djs-group">
+                <g class="djs-element djs-connection" data-element-id="Flow_06jfo1a"
+                    style="display: block;">
+                    <g class="djs-visual">
+                        <defs>
+                            <marker id="marker-dgdufmsvj9jkg46c16d88wak1" viewBox="0 0 20 20"
+                                refX="11" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+                                <path d="M 1 5 L 11 10 L 1 15 Z"
+                                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 1px; fill: rgb(34, 36, 42);" />
+                            </marker>
+                        </defs>
+                        <path
+                            style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(34, 36, 42); stroke-width: 2px; marker-end: url('#marker-dgdufmsvj9jkg46c16d88wak1');"
+                            data-corner-radius="5" d="M980,410L1065,410" />
+                    </g>
+                    <path d="M980,410L1065,410"
+                        style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                        class="djs-hit djs-hit-stroke" />
+                    <rect x="975" y="405" rx="4" width="95" height="10" style="fill: none;"
+                        class="djs-outline" />
+                </g>
+            </g>
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-shape djs-frame" data-element-id="Group_0jtovuw"
+            transform="matrix(1, 0, 0, 1, 330, 70)" style="display: block;">
+            <g class="djs-visual">
+                <rect x="0" y="0" width="680" height="390" rx="10" ry="10"
+                    style="stroke-linecap: round; stroke-linejoin: round; stroke: rgb(131, 19, 17); stroke-width: 1.5px; fill: none; stroke-dasharray: 10px, 6px, 0px, 6px; pointer-events: none;" />
+            </g>
+            <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                class="djs-hit djs-hit-stroke" x="0" y="0" width="680" height="390" />
+            <rect x="-5" y="-5" rx="14" width="690" height="400" style="fill: none;"
+                class="djs-outline" />
+        </g>
+    </g>
+    <g class="djs-group">
+        <g class="djs-element djs-shape" data-element-id="Group_0jtovuw_label"
+            transform="matrix(1, 0, 0, 1, 917, 73)" style="display: block;">
+            <g class="djs-visual">
+                <text
+                    style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(131, 19, 17);"
+                    lineHeight="1.2" class="djs-label">
+                    <tspan x="0" y="9.899999999999999">Návrh změn v </tspan>
+                    <tspan x="15.883333206176758" y="23.099999999999998">procesu</tspan>
+                </text>
+            </g>
+            <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
+                class="djs-hit djs-hit-all" x="0" y="0" width="71" height="27" />
+            <rect x="-5" y="-5" rx="4" width="81" height="37" style="fill: none;"
+                class="djs-outline" />
+        </g>
+    </g>
+</svg>

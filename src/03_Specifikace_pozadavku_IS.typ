@@ -110,7 +110,7 @@ Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
       table(
         columns: (auto, auto, auto, auto, auto, auto),
         align: left,
-        table.header([ID], [Činnost], [Role], [Chybovost], [Časová náročnost], [Procesy]),
+        table.header([ID], [Činnost], [Role], [Chybovost], [Časová#linebreak()náročnost], [Procesy]),
         "T01", "Notifikování správce o změně", "Dispečer", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
         "T02", "Převzetí dat o změně", "Správce", "Bezchybná", "Rychlá", "Pr1, Pr2, Pr3",
         "T03", "Transformace zdrojových dat do datového balíku", "Systém", "Možnost chyby", "Rychlá", "Pr1, Pr2",
@@ -280,7 +280,7 @@ Požadavky jsou souhrnně sepsány v @requirementsTable[Tabulce].
           "Po06", "Formulář pro úpravu zastávky", "Formulář v administraci umožní dispečerovi upravit vlastnosti zastávky. Data o zastávce a GPS souřadnice jsou odesílány společně.", "Ověření existence a kontrola funkčnosti formuláře v administraci", "Funkční", "Návrh optimalizace procesů",
           "Po07", "Podpora datových formátů", "IS musí podporovat datové formáty JDF pro načtení dat jízdního řádu. Formáty dodatečných datových zdrojů, které by IS případně vyžadoval, uvede dodavatel v prozní dokumentaci.", "Ověření aktualizací dat jízdního řádu původním datovým souborem", "Funkční", "Návrh optimalizace procesů",
           "Po08", "Výkonnost a rychlost odezvy", "Doba odezvy běžných požadavků nesmí překročit 1 sekundu. Delší odpovědi systému jsou mimo vyhrazené časové okna, pro např. nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.", "Pravidelné monitorování času odezvy na požadavek", "Nefunkční", "Návrh inovovaného IS",
-          "Po09", "Dostupnost a spolehlivost aplikace", "Systém musí být dostupný 99,9% času.", "Monitorování dostupnosti", "Nefunkční", "Návrh inovovaného IS",
+          "Po09", "Dostupnost a spolehlivost aplikace", "Systém musí být dostupný 99,9% času.", "Pravidelné monitorování dostupnosti", "Nefunkční", "Návrh inovovaného IS",
         ),
         caption: [Tabulka požadavků],
       ) <requirementsTable>

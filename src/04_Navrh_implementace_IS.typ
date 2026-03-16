@@ -100,18 +100,32 @@ Na základě vyhodnocených požadavků bude vytvořen návrh nových optimalizo
 Nové procesy budou využívat nových funkcí IS, s cílem automatizace ručních kroků.
 @FreundRucker2014
 
-Rozdělením IS dle architektury *klient-server* dochází k nutnosti upravení aktuálních podnikových procesů, aby se lépe shodovali s IS.
-Hlavními procesy, kterých se transformace týká, jsou *Pr1*, *Pr2* a *Pr3*.
-Existence administrativního rozhraní a formulářových prvků dojde k automatizaci určitých kroků těchto procesů.
-Zároveň bude pro většinový případ odebrána závislost procesů na dostupnosti administrátora, čímž bude zajištěn plynulejší chod podnikových cílů.
+Rozdělením IS dle architektury *klient-server* vznikla potřeba upravit stávající podnikové procesy tak, aby lépe odpovídaly navrženému řešení.
+Hlavní procesy *Pr1*, *Pr2* a *Pr3* byly proto optimalizovány s ohledem na nové požadavky kladené na IS.
+Zapojením administrativního rozhraní a formulářových prvků dochází k automatizaci části dříve manuálně prováděných činností.
+Současně je ve většině případů odstraněna závislost procesů na přímé dostupnosti administrátora systému, což přispívá k plynulejšímu průběhu podnikových procesů.
 
-Optimalizovaný proces *Pr1* byl zpracován v podobě BPMN diagramu na @bpmnPr1New[Obrázku].
-Optimalizovaný proces *Pr2* byl zpracován v podobě BPMN diagramu na @bpmnPr2New[Obrázku].
-Optimalizovaný proces *Pr3* byl zpracován v podobě BPMN diagramu na @bpmnPr3New[Obrázku].
+Ze všech procesů byla odebrána činnost *T09 Nasazení nové verze aplikace*.
+Tato činnost bude nově vyhrazena pouze pro vývoj nových funkcionalit, nebo opravy chyb systému.
+Namísto této činnosti bude v procesech využívána činnost *T13 Aplikování změn v aplikaci*.
+Tato změna představuje změnu v přístupu ke správě stavových dat systému.
+Namísto pevně definovaných hodnot v aplikační logice jsou konfigurační hodnoty ukládány do databáze.
+Tím dochází k oddělení aplikační logiky od datové vrstvy a zároveň k omezení nutnosti nasazovat novou verzi aplikace při změně konfiguračních údajů.
 
-#config.todo[
-  Popsat proč došlo ke kterým změnám.
-]
+Proces *Pr1* byl přepracován tak, aby v případě bezchybného průběhu umožňoval provedení změny jízdního řádu dispečerem bez nutnosti zásahu správce systému.
+Formulář pro změnu jízdního řádu obsahuje validační mechanismy, které jsou schopny dispečera upozornit na konkrétní chyby v datech.
+Dispečer může po vyhodnocení upozornění provést opravu dat.
+Optimalizovaný proces *Pr1* je znázorněn pomocí BPMN diagramu na @bpmnPr1New[Obrázku].
+
+Proces *Pr2* byl rovněž přepracován.
+Původně sloučený datový balík obsahující data jízdních řádů a zastávek byl rozdělen na samostatné části.
+Toto rozdělení umožňuje nezávislou úpravu dat jízdních řádů a dat zastávek.
+Optimalizovaný proces *Pr2* je znázorněn pomocí BPMN diagramu na @bpmnPr2New[Obrázku].
+
+Proces *Pr3* byl upraven automatizací transformace ikonky do požadovaného formátu.
+Za pomocí interaktivního formuláře je vložená ikonka transformována a předána ke kontrole.
+Úspěšnou automatizací byla odebrána nutnost zásahu správce systému.
+Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New[Obrázku].
 
 #pagebreak()
 
@@ -180,4 +194,46 @@ Optimalizovaný proces *Pr3* byl zpracován v podobě BPMN diagramu na @bpmnPr3N
   )
 
   #v(1fr)
+]
+
+#pagebreak()
+
+#[
+  // #set page(
+  //   paper: "a3",
+  //   margin: auto,
+  //   flipped: true
+  // )
+  
+  Upravené činnosti jednotlivých procesů byly sepsány v @newProcessStepsTable[Tabulce].
+
+  #config.sourcedFigure(
+    [
+      #figure(
+        table(
+          columns: (auto, auto, auto, auto, auto, auto),
+          align: left,
+          table.header([ID], [Činnost], [Role], [Chybovost], [Časová#linebreak()náročnost], [Procesy]),
+          "T05", "Řešení chyby v datech", "Dispečer", "Bezchybná", "Náročná", "Pr1",
+          "T11", "Vyplnění dat jízdního řádu do formuláře", [Dispečer,#linebreak()Správce systému], "Bezchybná", "Střední", "Pr1",
+          "T12", "Přijmutí dat formulářem", "Informační systém", "Možnost chyby", "Rychlá", [Pr1, Pr2,#linebreak()Pr3],
+          "T13", "Aplikace změn v aplikaci", "Informační systém", "Bezchybná", "Rychlá", [Pr1, Pr2,#linebreak()Pr3],
+          "T14", "Zaznamenání chyby", "Informační systém", "Bezchybná", "Rychlá", "Pr1",
+          "T15", "Zobrazení chybové hlášky", "Informační systém", "Bezchybná", "Rychlá", "Pr1",
+          "T16", "Upozornění administrátora", "Dispečer", "Bezchybná", "Rychlá", "Pr1",
+          "T17", "Investigace problému", "Správce systému", "Bezchybná", "Náročná", "Pr1",
+          "T18", "Oprava chyby", "Správce systému", "Bezchybná", "Náročná", "Pr1",
+          "T19", "Vyplnění formuláře pro úpravu zastávky", "Dispečer", "Bezchybná", "Střední", "Pr2",
+          "T20", "Aktualizace dat zastávky", "Informační systém", "Bezchybná", "Rychlá", "Pr2",
+          "T21", "Vyplnění formuláře pro úpravu ikonky vozidla", "Dispečer", "Bezchybná", "Střední", "Pr3",
+          "T22", "Transformace ikonky do požadovaného formátu", "Informační systém", "Bezchybná", "Rychlá", "Pr3",
+          "T23", "Zobrazení upravené ikonky", "Informační systém", "Bezchybná", "Rychlá", "Pr3",
+          "T24", "Kontrola ikonky v interaktivním formuláři", "Dispečer", "Bezchybná", "Střední", "Pr3",
+        ),
+        caption: [Tabulka činností všech procesů],
+      ) <newProcessStepsTable>
+    ],
+    [Vlastní zpracování],
+  )
+
 ]

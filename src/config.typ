@@ -44,6 +44,14 @@
       y: 2.5cm,
     ),
   )
+
+  show table.cell: it => {
+    if it.y == 0 {
+      align(horizon, it)
+    } else {
+      it
+    }
+  }
   doc
 }
 
@@ -92,15 +100,6 @@
     below: 2em,
   )
   doc
-}
-
-#let todoBlock(body) = {
-  block(
-    fill: gradient.repeat(..color.map.rainbow),
-    inset: 8pt,
-    radius: 4pt,
-    body,
-  )
 }
 
 #let headings(doc) = {

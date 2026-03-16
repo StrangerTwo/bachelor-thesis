@@ -46,7 +46,7 @@
       <incoming>Flow_04p72g2</incoming>
       <outgoing>Flow_163dy7j</outgoing>
     </task>
-    <task id="Activity_18qa613" name="T12&#10;Příjmutí dat jízdního řádu fomulářem">
+    <task id="Activity_18qa613" name="T12&#10;Přijmutí dat jízdního řádu formulářem">
       <incoming>Flow_163dy7j</incoming>
       <incoming>Flow_13ap0co</incoming>
       <outgoing>Flow_1eoucqw</outgoing>

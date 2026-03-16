@@ -29,7 +29,7 @@
       <incoming>Flow_rel-Zm_na_j_zdn_ho___du-Informov_n__spr_vce_syst_mu_o_zm_n__j_zdn_ch___d_-forward</incoming>
       <outgoing>Flow_1i2h7os</outgoing>
     </task>
-    <task id="Activity_18qa613" name="T12&#10;Příjmutí dat zastávky fomulářem">
+    <task id="Activity_18qa613" name="T12&#10;Přijmutí dat zastávky formulářem">
       <incoming>Flow_1i2h7os</incoming>
       <outgoing>Flow_00dzndh</outgoing>
     </task>
