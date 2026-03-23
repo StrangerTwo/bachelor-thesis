@@ -38,7 +38,8 @@ Poslední kapitola se věnovala zhodnocení návrhu nového IS.
 Rozdíly mezi aktuálním stavem a návrhem byly zhodnoceny z technické stránky.
 Došlo k zamyšlení nad různými možnostmi pro další rozvoj IS.
 
-Přínosem této práce je návrh inovovaného informačního systému, který může usnadnit cestování cestujícím a sloužit dopravcům při komunikaci s veřejností. 
+Přínosem této práce je systematické a přehledné zpracování funkční a procesní analýzy IS, která může sloužit jako obecný metodický postup při návrhu a inovaci obdobných systémů.
+Práce poskytuje ucelený přehled kroků vedoucích od identifikace nedostatků až po návrh řešení, včetně jejich zdůvodnění a grafického znázornění.
 
 #pagebreak()
 
