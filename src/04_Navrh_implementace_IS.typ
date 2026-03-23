@@ -34,7 +34,7 @@ Topologie nového IS je zobrazena na @topology[Obrázku].
   [Vlastní zpracování],
 )
 
-*Aplikační služba* plní serverovou roli architektury.
+*Aplikační služba* plní serverovou roli v architektuře klient-server.
 Má za úkol obsluhovat všechny příchozí požadavky, uchovává data a je zodpovědná za spolehlivost a bezpečnost IS.
 
 *Uživatelská aplikace* je spouštěna na klientských zařízeních.
@@ -67,7 +67,7 @@ Návrh rozhraní uživatelské aplikace je zobrazen na @appShowcase[Obrázku].
 Administrativní rozhraní bude nová klientská aplikace.
 Přístup do této aplikace je omezen pouze pro administrátora, dispečery a vedení dopravce.
 Administrativní rozhraní je prostor pro monitorování aplikace a správu dat zobrazovaných v uživatelské aplikaci.
-Návrh této administrativního rozhraní je zobrazen na @adminIndex[Obrázku].
+Návrh administrativního rozhraní je zobrazen na @adminIndex[Obrázku].
 
 #config.sourcedFigure(
   [
@@ -80,7 +80,7 @@ Návrh této administrativního rozhraní je zobrazen na @adminIndex[Obrázku].
 )
 
 Součástí administrativního rozhraní budou formuláře pro požadavky *Po04*, *Po05* a *Po06*.
-Na @adminJdfUpload[Obrázku] je zobrazena ilustrace, jak by mohl *Po04 Formulář pro výměnu jízdního řádu* vypadat.
+Na @adminJdfUpload[Obrázku] je zobrazen návrh vzhledu *Po04 Formulář pro výměnu jízdního řádu* v administrativním rozhraní.
 
 #config.sourcedFigure(
   [
@@ -205,7 +205,7 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
   //   flipped: true
   // )
   
-  Upravené činnosti jednotlivých procesů byly sepsány v @newProcessStepsTable[Tabulce].
+  Upravené činnosti inovovaných procesů byly sepsány v @newProcessStepsTable[Tabulce].
 
   #config.sourcedFigure(
     [
@@ -230,7 +230,7 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
           "T23", "Zobrazení upravené ikonky", "Informační systém", "Bezchybná", "Rychlá", "Pr3",
           "T24", "Kontrola ikonky v interaktivním formuláři", "Dispečer", "Bezchybná", "Střední", "Pr3",
         ),
-        caption: [Tabulka činností všech procesů],
+        caption: [Tabulka činností inovovaných procesů],
       ) <newProcessStepsTable>
     ],
     [Vlastní zpracování],

@@ -122,7 +122,7 @@ Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
         "T09", "Nasazení nové verze aplikace", "Správce", "Bezchybná", "Náročná", "Pr1, Pr2, Pr3",
         "T10", "Úprava ikonky do požadovaného formátu", "Správce", "Bezchybná", "Náročná", "Pr3",
       ),
-      caption: [Tabulka činností všech procesů],
+      caption: [Tabulka činností aktuálních procesů],
     ) <processStepsTable>
   ],
   [Vlastní zpracování],

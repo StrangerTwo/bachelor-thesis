@@ -8,20 +8,20 @@ Kapitola odpovídá poslednímu kroku funkční analýzy IS, *dokumentace výsle
 
 ===== Shrnutí výsledků analýz
 
-V průběhu práce byl analyzován původní IS a jeho role v podnikových procesech dopravce.
+V průběhu práce byl analyzován původní IS.
 Na základě provedené funkční a procesní analýzy byly identifikovány nedostatky současného řešení, zejména v oblasti zpracování dat a omezené automatizace procesů.
 
 Na základě zjištěných nedostatků byly definovány funkční a nefunkční požadavky na nový IS.
-Tyto požadavky slouží jako podklad pro návrh architektury systému a pro návrh jeho jednotlivých komponent.
+Tyto požadavky slouží jako podklad pro návrh inovace systému a pro návrh jeho jednotlivých komponent.
 Součástí analýzy bylo také modelování procesů a identifikace míst, kde mohou být činnosti podnikových procesů efektivněji podporovány automatizací.
 
 ===== Přínosy navrženého řešení
 
 Navržené řešení reaguje na identifikované nedostatky původního IS.
-Architektura systému byla navržena jako soustava tří oddělených komponent, které umožňují lepší rozdělení odpovědností mezi jednotlivé části systému a zvyšují jeho přehlednost a rozšiřovatelnost.
+Návrh inovace systému spočívá v soustavě tří oddělených komponent, které umožňují lepší rozdělení odpovědností mezi jednotlivé části systému a zvyšují jeho přehlednost a rozšiřovatelnost.
 
 V rámci návrhu došlo k úpravě podnikových procesů, jejichž cílem je snížení míry manuálních zásahů a zvýšení úrovně automatizace.
-Navržený systém tak umožňuje efektivnější zpracování dat, lepší správu provozních informací a zároveň vytváří vhodný základ pro další rozvoj informačního systému.
+Navržené inovace tak umožňují efektivnější zpracování dat, lepší správu provozních informací a zároveň vytváří vhodný základ pro další rozvoj informačního systému.
 
 ===== Možnosti dalšího rozvoje systému
 
