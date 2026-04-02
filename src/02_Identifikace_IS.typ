@@ -17,7 +17,7 @@ Kombinací metodických přístupů k analýze IS bude vytvořen podklad pro ná
 
 Nyní bude proveden první krok procesní analýzy IS.
 Dojde k obeznámení s podnikem, jeho hlavními činnostmi, strategickými cíli a podnikovým záměrem.
-Bude vymezen rozsah podniku, na jeho části podnikové procesy relevantní pro IS. 
+Bude vymezen rozsah podniku, na jeho části podnikové procesy relevantní pro IS.
 @Weske2012
 
 ===== Podnik
@@ -71,6 +71,18 @@ Jako součást návrhu manažerských a podpůrných IS je vhodné zahrnout i ma
 *Vedení* vyžadují znát metriky o návštěvnosti a návratnosti uživatelů, popř.
 jiné statistiky využívání aplikace.
 
+Diagram přístupů uživatelských skupin je zobrazen na @topologyOld[Obrázku]
+
+#config.sourcedFigure(
+  [
+    #figure(
+      image("../images/topology_old.png", width: 80%),
+      caption: [Topologie optimalizované IS],
+    ) <topologyOld>
+  ],
+  [Vlastní zpracování],
+)
+
 === Klíčové funkce aplikace
 
 Analýzou IS dle funkční analýzy budou identifikovány hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
@@ -80,7 +92,7 @@ K jednotlivým funkcionalitám budou popsány jejich vlastností a způsoby, jak
 
 Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interaktivní mapě.
 Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na aplikačním serveru.
-@currentIndex vyobrazuje funkci současného IS. 
+@currentIndex vyobrazuje funkci současného IS.
 
 #config.sourcedFigure(
   [
@@ -153,7 +165,7 @@ Po vyhledání, nebo zvolení zastávky je možné stejně jako u vozidla zobraz
       table(
         columns: (auto, auto, auto),
         align: left,
-        table.header([ID],[Funkční oblast], [Vazba na funkci]),
+        table.header([ID], [Funkční oblast], [Vazba na funkci]),
         "F1", "Zobrazování aktuálních poloh vozidel na mapě", "-",
         "F2", "Detail spoje jedoucího vozidla", "F1",
         "F3", "Filtrování linky uživatelem", "F1",
@@ -232,16 +244,24 @@ Může jít o ruční zásah a ve kterých IS nenabízí dostatečnou podporu.
       table(
         columns: (auto, auto, auto),
         align: left,
-        table.header([ID],[Proces], [Možné nedostatky]),
-        "Pr1", "Aktualizace dat jízdních řádů", [
+        table.header([ID], [Proces], [Možné nedostatky]),
+        "Pr1",
+        "Aktualizace dat jízdních řádů",
+        [
           - notifikování správce o změně
           - vydání nové verze
         ],
-        "Pr2", "Zavedení nové zastávky", [
+
+        "Pr2",
+        "Zavedení nové zastávky",
+        [
           - lokalizace GPS souřadnic zastávky
           - vydání nové verze
         ],
-        "Pr3", "Výměna ikonky vozidel", [
+
+        "Pr3",
+        "Výměna ikonky vozidel",
+        [
           - notifikování správce o změně
           - obstarání kompatibilní ikonky
           - vydání nové verze
