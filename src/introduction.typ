@@ -6,7 +6,11 @@ Dopravci musí v reakci tyto potřeby naplňovat.
 
 Novou výzvou pro dopravce je informovat své cestující o aktuálním dění.
 Nutnost informovat mají dopravci např. o zpoždění, provozních komplikacích, nebo jenom samotné dostupnosti nových, či existujících spojů.
-Existující řešení aplikace pro zobrazování poloh vozidel již nesplňuje stále zvyšující se požadavky na informační systém.
+
+Existující řešení, aplikace pro zobrazování poloh vozidel, nabízí uživatelům funkcionality zobrazení aktuálních poloh vozidel, existujících zpoždění, nebo detail spojení.
+Aplikace podstoupila období rapidního vývoje nových funkcí v letech 2021-22.
+Nyní je aplikace pravidelně servisována a udržována.
+Požadavky na informační systém se však neustále zvyšují a je proto důležité existující řešení i nadále rozvíjet a modernizovat.
 
 *Cílem práce je provést zhodnocení současného stavu a vytvořit návrh vylepšení Informačního systému pro zobrazování poloh vozidel MHD.
 Práce se zaměří na specifikaci požadavků, návrh a bezpečnost nového informačního systému.*

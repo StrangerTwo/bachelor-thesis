@@ -3,3 +3,4 @@ ignoreRegExpList:
   - /#\w+/g
 words:
   - Investigace
+  - servisována

@@ -7,8 +7,8 @@
 Cílem mé bakalářské práce bylo provést zhodnocení současného stavu a vytvořit návrh vylepšení systému pro zobrazování poloh vozidel MHD.
 
 První kapitola se věnovala porozumění tématu informačních systémů.
-Byly sepsány potřebné teoretická východiska pro tuto práci.
-Představené analýzy IS sloužili jako rámec pro zbylé části práce.
+Byla sepsána potřebná teoretická východiska pro tuto práci.
+Představené analýzy IS sloužily jako rámec pro zbylé části práce.
 
 Druhá kapitola sloužila k představení aktuálního IS.
 Bylo popsáno, jakou roli zaujímá IS v podniku, kteří aktéři k IS přistupují a účel IS pro zájmy podniku.
@@ -16,7 +16,7 @@ Byly identifikovány klíčové části IS a jednotlivé prvky převedeny do mod
 Klíčové funkcionality IS byly zaznamenány hromadně v tabulce hlavních funkcí systému.
 Existující procesy IS byly zaznamenány v tabulce procesů aktuálního IS.
 
-Třetí kapitola se zaměřila na hodnocení vlastností aktuálního IS.
+Třetí kapitola se zaměřila na specifikaci požadavků pro návrh nového IS.
 Procesy IS byly dekomponovány na dílčí činnosti.
 Činnosti procesů byly hodnoceny na základně nutnosti ručních zásahů, chybovosti a časové náročnosti.
 Byly představeny datové formáty, které musí IS podporovat.
@@ -28,7 +28,7 @@ Na základně funkčních a nefunkčních požadavků byl připraven návrh nov�
 Pro návrh inovovaného IS byla zvolena vhodná architektura.
 K naplnění požadavků byly navrhnuty tři komponenty.
 Pro vzniklé komponenty byly vytvořeny designy uživatelského rozhraní.
-Upravené procesy byly zakresleny v podobě BPMN diagramů.
+Návrhy inovovaných procesů byly zakresleny v podobě BPMN diagramů.
 
 Pátá kapitola pojednávala nad informační bezpečností a dohledem na provoz IS.
 Práce se zaměřila na nutnost monitorování IS po jeho nasazení.

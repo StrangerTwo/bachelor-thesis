@@ -43,6 +43,29 @@ IS má za účel podporovat podnik v jeho procesech a komunikaci s cestujícími
 Může zastávat roli informativní a propagační.
 Systém je provozován přímo u koncových zákazníků podniku a proto je možné jej využít jako komunikační kanál dopravců se svými zákazníky.
 
+===== Aktuální stav
+
+Aktuální IS, aplikace Online poloha vozů MHD, je webová aplikace vytvořena v roce 2021 a uvedena do provozu v roce 2022.
+Webová aplikace využívá technologií Progressive Web Application (PWA) a Next JS pro zajištění dostupnosti aplikace na všech zařízeních.
+Technologie PWA umožňuje schopnost uložit aplikaci na telefonních zařízeních Apple, Android i stolních počítačích.
+
+Průměrná denní návštěvnost aplikace je zobrazena v @dailyTraffic[Tabulce].
+
+#config.sourcedFigure(
+  [
+    #figure(
+      table(
+        columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+        align: horizon,
+        table.header([], [Pondělí], [Úterý], [Středa], [Čtvrtek], [Pátek], [Sobota], [Neděle]),
+        [Průměrné zobrazení], $1668$, $6413.5$, $6260.25$, $6185$, $6789.25$, $6359$, $1817$,
+      ),
+      caption: [Návštěvnost za období 13.9.2025 - 10.10.2025],
+    ) <dailyTraffic>
+  ],
+  [@onlineDpmp],
+)
+
 == Sběr požadavků
 
 Nyní bude proveden první krok funkční analýzy IS.

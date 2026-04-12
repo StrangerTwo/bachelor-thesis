@@ -65,6 +65,7 @@ information system, design,
   "UI": "Uživatelské rozhraní",
   "UX": "Uživatelský zážitek (zkušenost)",
   "DFD": "Data Flow Diagram",
+  "PWA": "Progressive Web Application",
 )
 
 #for (term) in terms.keys().sorted() [/ #term: #terms.at(term)]

@@ -6,7 +6,7 @@ Za účelem porozumění tématu nyní vyjmenujeme definice a teoretická výcho
 
 == Informační systém
 
-IS je organizovaná množina prvků, které spolupracují za účelem sběru, zpracovávání, koordinace a zpracovávání informací.
+Informační systém (IS) je organizovaná množina prvků, které spolupracují za účelem sběru, zpracovávání, koordinace a zpracovávání informací.
 IS pomáhají při rozhodování, správě, analýze a vizualizaci procesů podniku.
 IS se skládají z následujících prvků @Bruckner_2012 @Danel2013:
 
