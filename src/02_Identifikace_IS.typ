@@ -58,7 +58,7 @@ Průměrná denní návštěvnost aplikace je zobrazena v @dailyTraffic[Tabulce]
         columns: (auto, auto, auto, auto, auto, auto, auto, auto),
         align: horizon,
         table.header([], [Pondělí], [Úterý], [Středa], [Čtvrtek], [Pátek], [Sobota], [Neděle]),
-        [Průměrné zobrazení], $1668$, $6413.5$, $6260.25$, $6185$, $6789.25$, $6359$, $1817$,
+        [Průměrné zobrazení], $6413.5$, $6260.25$, $6185$, $6789.25$, $6359$, $1817$, $1668$,
       ),
       caption: [Návštěvnost za období 13.9.2025 - 10.10.2025],
     ) <dailyTraffic>
