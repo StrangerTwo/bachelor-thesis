@@ -6,7 +6,7 @@ Za účelem porozumění tématu nyní vyjmenujeme definice a teoretická výcho
 
 == Informační systém
 
-Informační systém (IS) je organizovaná množina prvků, které spolupracují za účelem sběru, zpracovávání, koordinace a zpracovávání informací.
+Informační systém (IS) je organizovaná množina prvků, které spolupracují za účelem sběru, koordinace a zpracovávání informací.
 IS pomáhají při rozhodování, správě, analýze a vizualizaci procesů podniku.
 IS se skládají z následujících prvků @Bruckner_2012 @Danel2013:
 
@@ -52,7 +52,7 @@ Díky funkční analýze lze jednoduše určit hranice systému a jeho hlavních
 Funkční analýza se skládá z celkem pěti navazujících kroků.
 
 Prvním krokem je *sběr požadavků*, jehož hlavním cílem je pochopení problému, který IS řeší.
-Tento krok slouží ke kompletnímu poznání aktuální IS, jeho funkcionalit, vlastností a způsobu využití jednotlivými skupinami uživatelů.
+Tento krok slouží ke kompletnímu poznání aktuálního IS, jeho funkcionalit, vlastností a způsobu využití jednotlivými skupinami uživatelů.
 Jsou identifikovány potřeby uživatelských skupin a základní očekávání kladená na systém.
 @WiegersBeatty2013
 
@@ -79,9 +79,12 @@ Finální návrh budoucího stavu zahrnuje poskytované funkce, způsoby, jakým
 @isManagement
 
 Posledním krokem je *dokumentace výsledků analýzy*.
-Tento krok zahrnuje systematické sepsání všech zjištěných poznatků, popis analyzovaných funkcí a procesů, a přiložení vytvořených diagramů.
-Dokumentace složí jako podklad pro další fáze vývoje IS.
-Je vyžívána pro komunikaci mezi analytiky, vývojáři i jinými zainteresovanými stranami a tudíž je třeba klást důraz na přehlednost a srozumitelnost.
+Tento krok zahrnuje systematické sepsání všech zjištěných poznatků.
+Popisuje analyzované funkce a procesy.
+Dochází k přiložení vytvořených diagramů.
+Dokumentace slouží jako podklad pro další fáze vývoje IS.
+Je využívána pro komunikaci mezi analytiky, vývojáři i jinými zainteresovanými stranami.
+Tudíž je třeba klást důraz na přehlednost a srozumitelnost.
 @StairReynolds2018
 
 ===== Procesní analýza (Business Process Analysis)
@@ -94,15 +97,16 @@ Cílem je pochopit tok činností, vstupy, výstupy a odpovědnosti.
 @Dumas2018
 
 Procesy vyjadřují posloupnost činností, které transformují vstupy na výstupy a přispívají k naplnění podnikových cílů.
-Dokáže odhalit neefektivní procesy a problémová místa podnikových procesů.
+Procesní analýza dokáže odhalit neefektivní procesy a problémová místa podnikových procesů.
 Slouží jako podklad pro manuální operace, které by bylo možné z části, nebo plně automatizovat.
 
 Procesní analýza se skládá z následujících kroků.
 
 Prvním krokem je *identifikace a vymezení podniku*.
-Dochází k obeznámení se s podnikem, jeho hlavními činnostmi, strategickými cíli a podnikovým záměrem.
-V tomto kroku dojde k vymezení rozsahu analýzy, tedy kterých částí podniku a které procesy budou předmětem zkoumání.
-Vymezením rozsahu je zajištěna přehlednost a zaměření na klíčové procesy, na které mají vliv na požadavky kladené na IS.
+V tomto kroku dochází k systematickému seznámení s podnikem, jeho hlavními činnostmi, strategickými cíli a celkovým podnikovým záměrem.
+Současně je vymezen rozsah analýzy, přičemž jsou identifikovány klíčové části podniku a procesy, které budou předmětem dalšího zkoumání.
+Jasné stanovení rozsahu přispívá k přehlednosti a strukturovanosti analýzy.
+Uvedené faktory určují požadavky kladené na IS.
 @Weske2012
 
 Druhým krokem je *mapování stávajícího stavu (As-Is)*.

@@ -22,7 +22,7 @@
                     style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
                     lineHeight="1.2" class="djs-label"
                     transform="matrix(-1.83697e-16, -1, 1, -1.83697e-16, 0, 430)">
-                    <tspan x="134.66666412353516" y="18.6">Proces výměna ikonky vozidel</tspan>
+                    <tspan x="134.66666412353516" y="18.6">Proces výměna ikony vozidel</tspan>
                 </text>
             </g>
             <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
@@ -126,7 +126,7 @@
                             style="font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; fill: rgb(34, 36, 42);"
                             lineHeight="1.2" class="djs-label">
                             <tspan x="0" y="9.899999999999999">Požadavek na </tspan>
-                            <tspan x="1.2249984741210938" y="23.099999999999998">změnu ikonky </tspan>
+                            <tspan x="1.2249984741210938" y="23.099999999999998">změnu ikony </tspan>
                             <tspan x="19.25" y="36.3">vozidel</tspan>
                         </text>
                     </g>
@@ -148,7 +148,7 @@
                             <tspan x="39.666666984558105" y="14.799999999999999">T21</tspan>
                             <tspan x="25.21666717529297" y="29.199999999999996">Vyplnění </tspan>
                             <tspan x="12.666667938232422" y="43.599999999999994">formuláře pro </tspan>
-                            <tspan x="11.333332061767578" y="57.99999999999999">úpravu ikonky </tspan>
+                            <tspan x="11.333332061767578" y="57.99999999999999">úpravu ikony </tspan>
                             <tspan x="31.33333396911621" y="72.39999999999999">vozidla</tspan>
                         </text>
                     </g>
@@ -169,7 +169,7 @@
                             lineHeight="1.2" class="djs-label">
                             <tspan x="39.666666984558105" y="22">T12</tspan>
                             <tspan x="17.666667938232422" y="36.4">Přijmutí dat </tspan>
-                            <tspan x="31.33333396911621" y="50.8">ikonky </tspan>
+                            <tspan x="31.33333396911621" y="50.8">ikony </tspan>
                             <tspan x="21.66666603088379" y="65.19999999999999">formulářem</tspan>
                         </text>
                     </g>
@@ -191,7 +191,7 @@
                             <tspan x="39.666666984558105" y="22">T23</tspan>
                             <tspan x="21.33333396911621" y="36.4">Zobrazení </tspan>
                             <tspan x="23.33333396911621" y="50.8">upravené </tspan>
-                            <tspan x="33" y="65.19999999999999">ikonky</tspan>
+                            <tspan x="33" y="65.19999999999999">ikony</tspan>
                         </text>
                     </g>
                     <rect style="fill: none; stroke-opacity: 0; stroke: white; stroke-width: 15px;"
@@ -230,7 +230,7 @@
                             style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; fill: rgb(34, 36, 42);"
                             lineHeight="1.2" class="djs-label">
                             <tspan x="39.666666984558105" y="22">T24</tspan>
-                            <tspan x="7.333332061767578" y="36.4">Kontrola ikonky </tspan>
+                            <tspan x="7.333332061767578" y="36.4">Kontrola ikony </tspan>
                             <tspan x="9.666667938232422" y="50.8">v interaktivním </tspan>
                             <tspan x="26.66666603088379" y="65.19999999999999">formuláři</tspan>
                         </text>
@@ -252,7 +252,7 @@
                             lineHeight="1.2" class="djs-label">
                             <tspan x="39.666666984558105" y="14.799999999999999">T22</tspan>
                             <tspan x="11.558334350585938" y="29.199999999999996">Transformace </tspan>
-                            <tspan x="23" y="43.599999999999994">ikonky do </tspan>
+                            <tspan x="23" y="43.599999999999994">ikony do </tspan>
                             <tspan x="9" y="57.99999999999999">požadovaného </tspan>
                             <tspan x="29.66666603088379" y="72.39999999999999">formátu</tspan>
                         </text>

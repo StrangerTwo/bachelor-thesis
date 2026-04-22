@@ -122,8 +122,8 @@ Původně sloučený datový balík obsahující data jízdních řádů a zast�
 Toto rozdělení umožňuje nezávislou úpravu dat jízdních řádů a dat zastávek.
 Optimalizovaný proces *Pr2* je znázorněn pomocí BPMN diagramu na @bpmnPr2New[Obrázku].
 
-Proces *Pr3* byl upraven automatizací transformace ikonky do požadovaného formátu.
-Za pomocí interaktivního formuláře je vložená ikonka transformována a předána ke kontrole.
+Proces *Pr3* byl upraven automatizací transformace ikony do požadovaného formátu.
+Za pomocí interaktivního formuláře je vložená ikona transformována a předána ke kontrole.
 Úspěšnou automatizací byla odebrána nutnost zásahu správce systému.
 Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New[Obrázku].
 
@@ -133,7 +133,7 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
   #set page(
     paper: "a3",
     margin: auto,
-    flipped: true
+    flipped: true,
   )
   #v(1fr)
 
@@ -156,7 +156,7 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
   #set page(
     paper: "a3",
     margin: auto,
-    flipped: true
+    flipped: true,
   )
   #v(1fr)
 
@@ -179,15 +179,15 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
   #set page(
     paper: "a3",
     margin: auto,
-    flipped: true
+    flipped: true,
   )
   #v(1fr)
 
   #config.sourcedFigure(
     [
       #figure(
-        image("../images/Pr3_v2 Výměna ikonky vozidel.svg", width: 100%),
-        caption: [BPMN diagram optimalizovaného Pr3 Výměna ikonky vozidel],
+        image("../images/Pr3_v2 Výměna ikony vozidel.svg", width: 100%),
+        caption: [BPMN diagram optimalizovaného Pr3 Výměna ikony vozidel],
       ) <bpmnPr3New>
     ],
     [Vlastní zpracování],
@@ -204,7 +204,7 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
   //   margin: auto,
   //   flipped: true
   // )
-  
+
   Upravené činnosti inovovaných procesů byly sepsány v @newProcessStepsTable[Tabulce].
 
   #config.sourcedFigure(
@@ -215,7 +215,13 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
           align: left,
           table.header([ID], [Činnost], [Role], [Chybovost], [Časová#linebreak()náročnost], [Procesy]),
           "T05", "Řešení chyby v datech", "Dispečer", "Bezchybná", "Náročná", "Pr1",
-          "T11", "Vyplnění dat jízdního řádu do formuláře", [Dispečer,#linebreak()Správce systému], "Bezchybná", "Střední", "Pr1",
+          "T11",
+          "Vyplnění dat jízdního řádu do formuláře",
+          [Dispečer,#linebreak()Správce systému],
+          "Bezchybná",
+          "Střední",
+          "Pr1",
+
           "T12", "Přijmutí dat formulářem", "Informační systém", "Možnost chyby", "Rychlá", [Pr1, Pr2,#linebreak()Pr3],
           "T13", "Aplikace změn v aplikaci", "Informační systém", "Bezchybná", "Rychlá", [Pr1, Pr2,#linebreak()Pr3],
           "T14", "Zaznamenání chyby", "Informační systém", "Bezchybná", "Rychlá", "Pr1",
@@ -225,10 +231,10 @@ Optimalizovaný proces *Pr3* je znázorněn pomocí BPMN diagramu na @bpmnPr3New
           "T18", "Oprava chyby", "Správce systému", "Bezchybná", "Náročná", "Pr1",
           "T19", "Vyplnění formuláře pro úpravu zastávky", "Dispečer", "Bezchybná", "Střední", "Pr2",
           "T20", "Aktualizace dat zastávky", "Informační systém", "Bezchybná", "Rychlá", "Pr2",
-          "T21", "Vyplnění formuláře pro úpravu ikonky vozidla", "Dispečer", "Bezchybná", "Střední", "Pr3",
-          "T22", "Transformace ikonky do požadovaného formátu", "Informační systém", "Bezchybná", "Rychlá", "Pr3",
-          "T23", "Zobrazení upravené ikonky", "Informační systém", "Bezchybná", "Rychlá", "Pr3",
-          "T24", "Kontrola ikonky v interaktivním formuláři", "Dispečer", "Bezchybná", "Střední", "Pr3",
+          "T21", "Vyplnění formuláře pro úpravu ikony vozidla", "Dispečer", "Bezchybná", "Střední", "Pr3",
+          "T22", "Transformace ikony do požadovaného formátu", "Informační systém", "Bezchybná", "Rychlá", "Pr3",
+          "T23", "Zobrazení upravené ikony", "Informační systém", "Bezchybná", "Rychlá", "Pr3",
+          "T24", "Kontrola ikony v interaktivním formuláři", "Dispečer", "Bezchybná", "Střední", "Pr3",
         ),
         caption: [Tabulka činností inovovaných procesů],
       ) <newProcessStepsTable>

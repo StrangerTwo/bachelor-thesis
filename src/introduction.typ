@@ -15,7 +15,7 @@ Požadavky na informační systém se však neustále zvyšují a je proto důle
 *Cílem práce je provést zhodnocení současného stavu a vytvořit návrh vylepšení Informačního systému pro zobrazování poloh vozidel MHD.
 Práce se zaměří na specifikaci požadavků, návrh a bezpečnost nového informačního systému.*
 Cíl bude splněn následujícím obsahem práce.
-V~úvodu budou projednány teoretická východiska.
+V~úvodu budou projednána teoretická východiska.
 Následně bude identifikován stav a klíčové části aktuálního informačního systému.
 Bude vytvořena specifikace požadavků s návrhem pro nový informační systém.
 V závěrečné části bude popsána nutnost informační bezpečnosti a specifika pro dohled nad provozem aplikace.

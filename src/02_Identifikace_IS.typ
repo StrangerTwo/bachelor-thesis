@@ -3,9 +3,9 @@
 = Identifikace klíčových částí aktuálního IS
 
 Cílem této kapitoly je provést identifikaci klíčových částí aktuálního IS.
-Bude proveden krok 1 procesní analýzy IS, *identifikace a vymezení podniku*.
-Následně krok 1 funkční analýzy IS, *sběr požadavků*.
-Druhé kroky funkční analýzy IS, *modelování stávajícího stavu (As-­Is)*, a procesní analýzy IS, *mapování stávajícího stavu (As-­Is)*, budou sjednoceny do jedné podkapitoly.
+Bude proveden první krok procesní analýzy IS, *identifikace a vymezení podniku*.
+Následovat bude první krok funkční analýzy IS, *sběr požadavků*.
+Finální podkapitola se bude zabývat druhými kroky funkční analýzy IS, *modelování stávajícího stavu (As-­Is)*, a procesní analýzy IS, *mapování stávajícího stavu (As-­Is)*.
 @Sommerville2015
 
 Cílem této kapitoly je vymezit hranice IS, identifikovat jeho hlavní funkce, jejich vzájemné vazby a význam pro podporu provozních procesů organizace.
@@ -58,7 +58,7 @@ Průměrná denní návštěvnost aplikace je zobrazena v @dailyTraffic[Tabulce]
         columns: (auto, auto, auto, auto, auto, auto, auto, auto),
         align: horizon,
         table.header([], [Pondělí], [Úterý], [Středa], [Čtvrtek], [Pátek], [Sobota], [Neděle]),
-        [Průměrné zobrazení], $6413,5$, $6260,25$, $6185$, $6789,25$, $6359$, $1817$, $1668$,
+        [Průměrný počet zobrazení], $6413$, $6260$, $6185$, $6789$, $6359$, $1817$, $1668$,
       ),
       caption: [Návštěvnost za období 13.9.2025 - 10.10.2025],
     ) <dailyTraffic>
@@ -91,7 +91,7 @@ Jako součást návrhu manažerských a podpůrných IS je vhodné zahrnout i ma
 *Cestující* jsou primárním uživatelem IS, požadují informace o aktuálním zpoždění a provozních upozorněních.
 *Dispečeři* jsou privilegovaným uživatelem IS, zajišťují přesnost zobrazovaných dat, publikují provozní upozornění.
 *Administrátoři* jsou správci aplikačního serveru, zajišťují bezchybový běh aplikace, sledují zátěž a provozní log serveru.
-*Vedení* vyžadují znát metriky o návštěvnosti a návratnosti uživatelů, popř.
+*Vedení* vyžaduje znát metriky o návštěvnosti a návratnosti uživatelů, popř.
 jiné statistiky využívání aplikace.
 
 Diagram přístupů uživatelských skupin je zobrazen na @topologyOld[Obrázku]
@@ -114,7 +114,7 @@ K jednotlivým funkcionalitám budou popsány jejich vlastností a způsoby, jak
 ===== Zobrazování aktuálních poloh na mapě
 
 Primárním funkčním prvkem aplikace je zobrazování poloh vozidel na interaktivní mapě.
-Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na aplikačním serveru.
+Mapa je aktualizovaná každých 8-12s, kdy dochází i k aktualizaci dat na aplikačním serveru.
 @currentIndex vyobrazuje funkci současného IS.
 
 #config.sourcedFigure(
@@ -130,7 +130,7 @@ Mapa je aktualizovaná každých 8-12s kdy dochází i k aktualizaci dat na apli
 ===== Detail spoje jedoucího vozidla
 
 @currentDetail zobrazuje funkci současného IS.
-Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho rozkliknutí je k dispozici zobrazení detail tohoto spoje.
+Každé zobrazované vozidlo obsluhuje aktuálně provozovaný spoj a po jeho rozkliknutí je k dispozici zobrazení detailu tohoto spoje.
 
 #config.sourcedFigure(
   [
@@ -218,13 +218,13 @@ K výměně jízdního řádu dochází vždy minimálně jednou ročně.
 
 *Vstupem* tohoto procesu je soubor zdrojových dat jízdního řádu, který je poskytován dopravcem ve stanoveném formátu.
 *Výstupem* procesu jsou transformovaná data, strukturována pro strojové čtení informačním systémem.
-*Hlavní kroky* procesu jsou v pořadí nejprve notifikování správce systému o změně jízdních řádů.
+*Hlavní kroky* procesu jsou v pořadí nejprve upozornění správce systému na změnu jízdních řádů.
 Následně probíhá transformace zdrojových dat pomocí specializovaného skriptu na datový balík využívaný IS.
 Po úspěšné transformaci jsou data nahrána do systému a je nasazena nová verze aplikace.
-*IS vstupuje* do procesu v moment transformace dat.
+*IS vstupuje* do procesu ve chvíli transformace dat.
 IS zajišťuje automatické zpracování vstupních souborů, včetně validace pro ověření konzistence dat.
-*Ruční zásahy* procesu se vyskytují ve chvíli notifikování správce o změně.
-Transformace dat a kontrola výstupních souborů vyžaduje ruční dohled, pro případ chyb.
+*Ruční zásahy* procesu se vyskytují ve chvíli upozorňování správce o změně.
+Transformace dat a kontrola výstupních souborů vyžaduje ruční dohled pro případ chyb.
 Nahrání transformovaných dat do produkčního prostředí a vydání nové verze rovněž vyžaduje ruční zásah správce systému.
 
 ===== Zavedení nové zastávky
@@ -232,28 +232,28 @@ Nahrání transformovaných dat do produkčního prostředí a vydání nové ve
 Zavedení nové zastávky (proces Pr2) do systému probíhá v aktuálním IS současně s aktualizací jízdního řádu.
 Zastávka je vázaná na data jízdního řádu.
 Správná identifikace a vazba na jízdní řád je zaručena validací.
-Interní datový formát IS ukládá data jízdních řádů a zastávek společně, do jednoho datového balíku.
-Z tohoto důvodu dochází v tomto procesu o překryv některých kroků mezi oběma procesy.
+Interní datový formát IS ukládá data jízdních řádů a zastávek společně do jednoho datového balíku.
+Z tohoto důvodu dochází v tomto procesu o překrytí některých kroků mezi oběma procesy.
 
 *Vstupem* procesu jsou data o nové zastávce.
 *Výstupem* jsou zpracovaná data o zastávce s její GPS souřadnicí.
-*Hlavními kroky* je notifikování správce systému o nové zastávce včetně její GPS souřadnice.
-Následně probíhá transformace zdrojových dat pomocí skriptu a přepsání datového balíků novými daty.
+*Hlavními kroky* je upozornění správce systému na novou zastávku, včetně její GPS souřadnice.
+Následně probíhá transformace zdrojových dat pomocí skriptu a přepsání datového balíku novými daty.
 Dalším krokem je vydání nové verze aplikace s aktualizovaným jízdním řádem a daty zastávek.
 *IS do procesu vstupuje* zajištěním validace dat.
-*Ruční zásahy* procesu se vyskytují ve chvíli notifikování správce systému, transformaci vstupu a i při vydání nové verze aplikace.
+*Ruční zásahy* procesu se vyskytují ve chvíli upozorňování správce systému, transformaci vstupu a i při vydání nové verze aplikace.
 
-===== Výměna ikonky vozidel
+===== Výměna ikony vozidel
 
-Výměna ikonky vozidel (proces Pr3) v aplikaci je nyní možná pouze pomocí vydání nové verze aplikace.
+Výměna ikony vozidel (proces Pr3) v aplikaci je nyní možná pouze pomocí vydání nové verze aplikace.
 
-*Vstupem* procesu je požadavek dopravce na výměnu ikonky, obsahující přílohu obrázku, který si dopravce přeje využít.
-*Výstupem* je nově vydaná verze aplikace, zobrazující nové ikonky vozidel.
-*Hlavními kroky* je notifikování správce systému o požadavku na změnu.
+*Vstupem* procesu je požadavek dopravce na výměnu ikony, obsahující přílohu obrázku, který si dopravce přeje využít.
+*Výstupem* je nově vydaná verze aplikace, zobrazující nové ikony vozidel.
+*Hlavními kroky* je upozornění správce systému na požadavek o změnu.
 Následně správce systému provede manuální úpravu přílohy.
-Dojde k upravení ikonka do formátu, podporového systémem.
+Dojde k upravení ikony do formátu podporovaného systémem.
 Po tomto kroku dojde k vydání nové verze IS.
-*Ruční zásahy* jsou v procesu v moment notifikování správce systému, při úpravě vstupu a i při vydání nové verze aplikace.
+*Ruční zásahy* jsou v procesu ve chvíli upozorňování správce systému, při úpravě vstupu a i při vydání nové verze aplikace.
 
 ===== Tabulka hlavních procesů
 
@@ -271,7 +271,7 @@ Může jít o ruční zásah a ve kterých IS nenabízí dostatečnou podporu.
         "Pr1",
         "Aktualizace dat jízdních řádů",
         [
-          - notifikování správce o změně
+          - upozornění správce na změnu
           - vydání nové verze
         ],
 
@@ -283,10 +283,10 @@ Může jít o ruční zásah a ve kterých IS nenabízí dostatečnou podporu.
         ],
 
         "Pr3",
-        "Výměna ikonky vozidel",
+        "Výměna ikony vozidel",
         [
-          - notifikování správce o změně
-          - obstarání kompatibilní ikonky
+          - upozornění správce na změnu
+          - obstarání kompatibilní ikony
           - vydání nové verze
         ],
       ),
