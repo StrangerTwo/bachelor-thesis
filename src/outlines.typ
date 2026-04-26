@@ -12,7 +12,7 @@ Byl vytvořen návrh nového informačního systému s dodatečnou rozvahou nad 
 
 = Klíčová slova
 
-informační systém, návrh,
+informační systém, návrh, bezpečnost, BPMN, chytré město
 
 = Title
 
@@ -28,7 +28,7 @@ A design for the new information system was created with additional consideratio
 
 = Keywords
 
-information system, design,
+information system, design, security, BPMN, smart city
 
 #pagebreak()
 
