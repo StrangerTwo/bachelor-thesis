@@ -32,7 +32,7 @@ Na @cpuUsage[Obrázku] je zobrazena ilustrace monitorovacího systému pro měř
 #config.sourcedFigure(
   [
     #figure(
-      image("../images/cpu_usage.png", width: 80%),
+      image("../images/cpu_usage_light.png", width: 80%),
       caption: [Ilustrační obrázek monitorovacího software],
     ) <cpuUsage>
   ],
