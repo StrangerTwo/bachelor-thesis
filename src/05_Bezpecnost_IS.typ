@@ -56,7 +56,7 @@ Jeho výhodou je oddělení samotného procesu ověřování identity od aplika�
 
 ===== Autorizace přístupu
 
-Autorizace je pojem úzce spojený s Autentizací.
+Autorizace je pojem úzce spojený s autentizací.
 V procesu ověření oprávnění autentizace představuje identifikaci uživatele.
 Po identifikaci uživatele je autorizací ověřeno, že uživatel je oprávněn požadovanou akci provést.
 
@@ -72,11 +72,12 @@ Umožňuje jednoznačné řízení přístupových práv a minimalizuje riziko n
 ===== Integrita a ochrana přenášených identitních údajů
 
 Identitní tokeny jsou opatřeny kryptografickým podpisem.
-kryptografický podpis je využit v mechanismu, pro ověření, že pochází od důvěryhodného zdroje a že data nebyla během přenosu podvržena.
+Kryptografický podpis je využíván v ověřovacím mechanismu.
+Je ověřováno, zda podpis pochází od důvěryhodného zdroje a že data nebyla během přenosu podvržena.
 Podpis je kontrolován při každém požadavku aplikační službou.
 
 Tento postup významně snižuje riziko podvržení identity nebo neoprávněné manipulace s přístupovými údaji.
-Ověřování integrity a původu dat je zároveň v souladu s doporučeními pro bezpečný návrh webových aplikací uvedenými v rámci OWASP Top 10.
+Ověřování integrity a původu dat je zároveň v souladu s doporučeními pro bezpečný návrh webových aplikací, uvedenými v rámci OWASP Top 10.
 @OWASPTop10
 
 ===== Využití externí služby pro správu identit

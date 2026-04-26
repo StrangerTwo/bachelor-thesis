@@ -16,7 +16,7 @@ const watcher = watch(WATCH_DIR, { recursive: true }, (eventType, filename) => {
         last = filename;
         return;
     }
-    if (filename && filename.endsWith(".typ")) {
+    if (filename && (filename.endsWith(".typ") || filename.endsWith(".bib"))) {
         console.log(`[${new Date().toLocaleTimeString()}] ${eventType}: ${filename}`);
         exec(SCRIPT, (error, stdout, stderr) => {
             if (error) {

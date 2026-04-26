@@ -142,7 +142,7 @@ Byl vytvořen s cílem sjednotit způsob jejich dokumentace a zlepšit komunikac
 Modely BPMN jsou jedním z průmyslových standardů.
 Umožňuje identifikovat, které části procesu jsou v IS podporovány.
 K jakým interakcím uživatele se systémem dochází.
-@freund2012reallifebpmn
+@FreundRucker2014
 
 BPMN poskytuje soubor grafických elementů, pro přehledné modelování procesů.
 Hromadně se jedná o *komponenty a notace BPMN* @omg2013bpmn202:
@@ -165,9 +165,9 @@ Jsou vhodné pro vymezení hranic systému a zobrazení komunikačních toků.
 @omg2013bpmn202
 *Choreography / Conversation diagramy* umožňují sledovat výměnu zpráv účastníků procesu.
 Tyto diagramy jsou důležité při modelování interakcí napříč různými systémy, nebo moduly IS.
-@freund2012reallifebpmn
+@FreundRucker2014
 
-Modelování BPMN má *využití při návrhu IS* @freund2012reallifebpmn @Dumas2018:
+Modelování BPMN má *využití při návrhu IS* @FreundRucker2014 @Dumas2018:
 
 
 Může sloužit k *zmapování stávajících procesů (As-Is)* a pro identifikaci částí procesů s podporou IS.

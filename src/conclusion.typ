@@ -30,7 +30,7 @@ K naplnění požadavků byly navrhnuty tři komponenty.
 Pro vzniklé komponenty byly vytvořeny designy uživatelského rozhraní.
 Návrhy inovovaných procesů byly zakresleny v podobě BPMN diagramů.
 
-Pátá kapitola pojednávala nad informační bezpečností a dohledem na provoz IS.
+Pátá kapitola pojednávala o informační bezpečností a dohledem na provoz IS.
 Práce se zaměřila na nutnost monitorování IS po jeho nasazení.
 Byla představena vybraná doporučení pro zajištění informační bezpečnosti, převážně v oblasti autentizace a autorizace uživatele.
 

@@ -8,7 +8,7 @@ Následně krok 4 procesní analýzy IS, *návrh optimalizace procesů*.
 
 ===== Návrh budoucího stavu
 
-Krok 4 funkční analýzy IS.
+Nyní bude proveden čtvrtý krok funkční analýzy IS.
 Dle definovaných požadavků budou finalizovány cíle nového IS.
 Návrh budoucího stavu obsahuje funkce, datové toky i úložiště nového IS.
 @isManagement
@@ -41,7 +41,7 @@ Má za úkol obsluhovat všechny příchozí požadavky, uchovává data a je zo
 Obstarává uživatelské rozhraní, včetně umožňování využití různých zobrazovacích funkcí pro cestujícího.
 Komunikuje s aplikační službou pro získávání aktuálních dat.
 
-*Administrativní rozhraní* je spouštěna na klientských zařízeních.
+*Administrativní rozhraní* je spouštěno na klientských zařízeních.
 Přístup do této klientské aplikace je zabezpečen autentizací přihlášeného uživatele.
 Obsahuje administrativní prvky, ovlivňující uživatelskou aplikaci.
 Požadavky administrativní aplikace je nutné autorizovat a validovat i na straně aplikační služby.
@@ -95,7 +95,7 @@ Na @adminJdfUpload[Obrázku] je zobrazen návrh vzhledu *Po04 Formulář pro vý
 
 ===== Návrh optimalizace procesů
 
-Krok 4 procesní analýzy IS.
+Nyní bude proveden čtvrtý krok procesní analýzy IS.
 Na základě vyhodnocených požadavků bude vytvořen návrh nových optimalizovaných procesů.
 Nové procesy budou využívat nových funkcí IS, s cílem automatizace ručních kroků.
 @FreundRucker2014
@@ -106,7 +106,7 @@ Zapojením administrativního rozhraní a formulářových prvků dochází k au
 Současně je ve většině případů odstraněna závislost procesů na přímé dostupnosti administrátora systému, což přispívá k plynulejšímu průběhu podnikových procesů.
 
 Ze všech procesů byla odebrána činnost *T09 Nasazení nové verze aplikace*.
-Tato činnost bude nově vyhrazena pouze pro vývoj nových funkcionalit, nebo opravy chyb systému.
+Tato činnost bude nově vyhrazena pouze pro vývoj nových funkcionalit, nebo nasazení oprav chyb systému.
 Namísto této činnosti bude v procesech využívána činnost *T13 Aplikování změn v aplikaci*.
 Tato změna představuje změnu v přístupu ke správě stavových dat systému.
 Namísto pevně definovaných hodnot v aplikační logice jsou konfigurační hodnoty ukládány do databáze.

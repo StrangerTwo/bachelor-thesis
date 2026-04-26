@@ -130,7 +130,7 @@ Proces *Pr3* je zpracován v podobě BPMN diagramu na @bpmnPr3[Obrázku].
 
 Na základě hodnot v @processStepsTable[Tabulce] lze jednoduše vyhledat činnosti, na kterých se projevují nedostatky aktuálního IS.
 Tyto činnosti lze identifikovat na základě chybovosti, časové náročnosti.
-Prioritu těmto nedostatkům byla určena, dle počtu procesů, ve kterých je činnost prováděna.
+Nedostatkům byla určena priorita, dle počtu procesů, ve kterých je činnost prováděna.
 
 Činnosti, které jsou bezchybné s nízkou časovou náročností nejsou považovány za nedostatky.
 Seřazené a vybrané činnosti jsou: *T05, T09, T10, T03*.
@@ -142,21 +142,22 @@ Po prověření situace dojde k opravě správcem systému.
 Chyba může mít různý charakter, zejména charakter chyby ve zdrojových datech, nebo chyby IS.
 
 Činnost *T09 Nasazení nové verze aplikace* má vliv na všechny procesy IS.
-Jedná se o časově náročnou činnost, který kvůli častému výskytu limituje informačnímu systému svižně reagovat na příchozí požadavky, bez delších prodlev.
+Jedná se o časově náročnou činnost s častým výskytem.
+Limituje informačnímu systému svižně reagovat na příchozí požadavky a způsobuje delší prodlevy.
 V době nasazování nové verze je IS nedostupný a tím omezuje plynulé užívání IS.
 
-*T10 Úprava ikony do požadovaného formátu* je činnost prováděna správcem systému pro sjednocení formátu ikony.
+*T10 Úprava ikony do požadovaného formátu* je činnost prováděná správcem systému pro sjednocení formátu ikony.
 Kvůli vysoké časové náročnosti se jedná o činnost vhodnou pro automatizaci.
 
 Činnost *T03 Transformace zdrojových dat do datového balíku* obsahuje možnost chyby.
 Jedná se o místo slučování dat jízdních řádů s podkladem geografických dat IS.
 V případě změn procesů dopravce mohou nové změny vyprodukovat chybu při transformaci dat.
-Následující činností validace tedy dojde k chybě.
-Chyba je pak následně prověřena a oprava ve zdrojových datech, nebo opravou IS.
+Následnou činností validace tedy dojde k chybě.
+Chyba je poté prověřena a opravena ve zdrojových datech, nebo je opraven IS.
 
 === Hodnocení datových formátů
 
-Funkční požadavky na IS jsou kladeny i v podobě existujících datových formátů, který musí nový IS podporovat.
+Funkční požadavky na IS jsou kladeny i v podobě existujících datových formátů, které musí nový IS podporovat.
 Jedná se o přesně specifikovaný datový formát otevřených dat ČR pro jízdní řády.
 
 ===== Otevřená data ČR
@@ -187,7 +188,7 @@ V současném systému jsou GPS souřadnice předávány vlastní komunikací di
 
 == Definování funkčních a nefunkčních požadavků
 
-Krok 3 funkční analýzy IS.
+Nyní bude proveden třetí krok funkční analýzy IS.
 Dojde k definování požadavků na nový IS.
 Požadavky budou vycházet z očekávání uživatelů, nebo jako důsledek analýz předchozích kroků.
 @SommervilleSawyer1997
@@ -210,12 +211,12 @@ Po nahrání dat skrze administrativní rozhraní dojde k automatickému nasazen
 Proto vznikají funkční požadavky pro *Po04 Formulář pro výměnu jízdního řádu*, *Po05 Formulář pro úpravu ikony vozidla*, *Po06 Formulář pro úpravu zastávky*.
 
 Nedostatek rozdílných datových zdrojů pro vstup procesu *Pr2* bude vyřešen v rámci funkčního požadavku *Po06*.
-Formulář pro úpravu zastávky sjednotí datové soubory a provede validaci je.
-IS data zastávky převezme vždy v uceleném stavu.
+Formulář pro úpravu zastávky sjednotí datové soubory a provede validaci.
+IS data zastávky převezme vždy v ucelené formě.
 
 Nedostatek dokumentace a přehlednosti požadavků na ikony klientské aplikace pro vstup procesu *Pr3* bude vyřešen v rámci funkčního požadavku *Po05*.
 Formulář bude obsahovat interaktivní validace pro ikonu s informačním dialogem.
-Zadávání nové ikony bude probíhat přes interaktivní formulář, tak aby IS dokázal přijmout libovolnou ikonu a případné nesrovnalosti s rozlišením ikony byl schopen vyřešit dispečer z formuláře (např. oříznutím).
+Zadávání nové ikony bude probíhat přes interaktivní formulář, tak aby IS dokázal přijmout libovolnou ikonu. Případné nesrovnalosti, např. v rozlišení ikony, bude dispečer schopen vyřešit za pomoci formuláře (např. oříznutím).
 
 Dalším funkčním požadavkem je zachování podpory IS pro datový formát JDF.
 Funkční požadavek *Po07 Podpora datových formátů* je klíčový pro načtení dat jízdních řádů, bez dodatečných nároků na dopravce využívající IS.
@@ -295,14 +296,14 @@ Požadavky jsou souhrnně sepsány v @requirementsTable[Tabulce].
 
           "Po04",
           "Formulář pro výměnu jízdního řádů",
-          "Formulář v administraci umožní dispečerovi nahrát data nového jízdního řádu v datovém formátu JDF. Následně bude v administraci proveden změnou dat a jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.",
+          "Formulář v administraci umožní dispečerovi nahrát data nového jízdního řádu v datovém formátu JDF. Následně bude v administraci provedena změna dat. Jakékoliv validační chyby jsou zobrazeny hned v administraci. Po odeslání formuláře dochází k okamžité změně jízdního řádu v IS.",
           "Ověření existence a kontrola funkčnosti formuláře v administraci",
           "Funkční",
           "Návrh optimalizace procesů",
 
           "Po05",
           "Formulář pro úpravu ikony vozidla",
-          "Formulář v administraci umožní dispečerovi nahrát novou ikonu do aplikace. Dostupné ikony ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikonek v aplikaci, bez nutnosti ručního zásahu.",
+          "Formulář v administraci umožní dispečerovi nahrát novou ikonu do aplikace. Dostupné ikony ke změně jsou předem definovány a formulář vždy povolí pouze akceptované rozlišení. Po odeslání formuláře dochází k aktualizaci ikony v aplikaci, bez nutnosti ručního zásahu.",
           "Ověření existence a kontrola funkčnosti formuláře v administraci",
           "Funkční",
           "Návrh optimalizace procesů",
@@ -316,14 +317,14 @@ Požadavky jsou souhrnně sepsány v @requirementsTable[Tabulce].
 
           "Po07",
           "Podpora datových formátů",
-          "IS musí podporovat datové formáty JDF pro načtení dat jízdního řádu. Formáty dodatečných datových zdrojů, které by IS případně vyžadoval, uvede dodavatel v prozní dokumentaci.",
+          "IS musí podporovat datové formáty JDF pro načtení dat jízdního řádu. Formáty dodatečných datových zdrojů, které by IS případně vyžadoval, uvede dodavatel v provozní dokumentaci.",
           "Ověření aktualizací dat jízdního řádu původním datovým souborem",
           "Funkční",
           "Návrh optimalizace procesů",
 
           "Po08",
           "Výkonnost a rychlost odezvy",
-          "Doba odezvy běžných požadavků nesmí překročit 1 sekundu. Delší odpovědi systému jsou mimo vyhrazené časové okna, pro např. nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.",
+          "Doba odezvy běžných požadavků nesmí překročit 1 sekundu. Delší odpovědi systému jsou mimo vyhrazená časová okna, např. pro nasazování nové verze IS, neakceptovatelné a vyžadují nápravu.",
           "Pravidelné monitorování času odezvy na požadavek",
           "Nefunkční",
           "Návrh inovovaného IS",

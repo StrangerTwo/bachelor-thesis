@@ -259,7 +259,7 @@ Po tomto kroku dojde k vydání nové verze IS.
 
 @currentProcesses obsahuje seznam procesů, týkajících se aktuálního IS.
 Zvlášť jsou poznamenány kroky, které v aktuálním IS mohou znamenat možné nedostatky.
-Může jít o ruční zásah a ve kterých IS nenabízí dostatečnou podporu.
+Může jít například o ruční zásahy ve kterých IS nenabízí dostatečnou podporu.
 
 #config.sourcedFigure(
   [
